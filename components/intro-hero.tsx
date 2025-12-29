@@ -44,10 +44,12 @@ export function IntroHero() {
   const translateZ_buttons = useTransform(smoothY, [-1, 1], [15, -15])
 
   const services = [
-    t.hero.immigration,
     t.hero.nationality,
     t.hero.arraigo,
-    t.hero.familyReunification
+    t.hero.familyReunification,
+    t.hero.penal,
+    t.hero.civil,
+    t.hero.accidents
   ]
 
   return (

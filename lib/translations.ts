@@ -27,10 +27,12 @@ type TranslationKeys = {
     }
     // Hero
     hero: {
-        immigration: string
         nationality: string
         arraigo: string
         familyReunification: string
+        penal: string
+        civil: string
+        accidents: string
     }
     // About Section
     about: {
@@ -165,10 +167,12 @@ export const translations: Record<Locale, TranslationKeys> = {
             news: 'Novedades'
         },
         hero: {
-            immigration: 'Extranjería',
             nationality: 'Nacionalidad',
             arraigo: 'Arraigos',
-            familyReunification: 'Reagrupación Familiar'
+            familyReunification: 'Reagrupación Familiar',
+            penal: 'Derecho Penal',
+            civil: 'Derecho Civil',
+            accidents: 'Accidentes'
         },
         about: {
             title: 'Sobre',
@@ -292,10 +296,12 @@ export const translations: Record<Locale, TranslationKeys> = {
             news: 'News'
         },
         hero: {
-            immigration: 'Immigration',
             nationality: 'Nationality',
-            arraigo: 'Residency',
-            familyReunification: 'Family Reunification'
+            arraigo: 'Arraigo',
+            familyReunification: 'Family Reunification',
+            penal: 'Criminal Law',
+            civil: 'Civil Law',
+            accidents: 'Accidents'
         },
         about: {
             title: 'About',
@@ -419,10 +425,12 @@ export const translations: Record<Locale, TranslationKeys> = {
             news: 'Actualités'
         },
         hero: {
-            immigration: 'Immigration',
             nationality: 'Nationalité',
-            arraigo: 'Résidence',
-            familyReunification: 'Regroupement Familial'
+            arraigo: 'Arraigo',
+            familyReunification: 'Regroupement Familial',
+            penal: 'Droit Pénal',
+            civil: 'Droit Civil',
+            accidents: 'Accidents de la Route'
         },
         about: {
             title: 'À propos de',
@@ -546,10 +554,12 @@ export const translations: Record<Locale, TranslationKeys> = {
             news: 'أخبار'
         },
         hero: {
-            immigration: 'الهجرة',
             nationality: 'الجنسية',
-            arraigo: 'الإقامة',
-            familyReunification: 'لم شمل الأسرة'
+            arraigo: 'تصريح الإقامة (Arraigo)',
+            familyReunification: 'لم شمل الأسرة',
+            penal: 'القانون الجنائي',
+            civil: 'القانون المدني',
+            accidents: 'مطالبات الحوادث'
         },
         about: {
             title: 'حول',
@@ -673,10 +683,12 @@ export const translations: Record<Locale, TranslationKeys> = {
             news: 'Novidades'
         },
         hero: {
-            immigration: 'Imigração',
             nationality: 'Nacionalidade',
-            arraigo: 'Residência',
-            familyReunification: 'Reagrupamento Familiar'
+            arraigo: 'Arraigo',
+            familyReunification: 'Reagrupamento Familiar',
+            penal: 'Direito Penal',
+            civil: 'Direito Civil',
+            accidents: 'Acidentes'
         },
         about: {
             title: 'Sobre',
@@ -800,10 +812,12 @@ export const translations: Record<Locale, TranslationKeys> = {
             news: '新闻'
         },
         hero: {
-            immigration: '移民',
             nationality: '国籍',
-            arraigo: '居留',
-            familyReunification: '家庭团聚'
+            arraigo: '扎根居留 (Arraigo)',
+            familyReunification: '家庭团聚',
+            penal: '刑法',
+            civil: '民法',
+            accidents: '事故理赔'
         },
         about: {
             title: '关于',
@@ -927,10 +941,12 @@ export const translations: Record<Locale, TranslationKeys> = {
             news: 'Noutăți'
         },
         hero: {
-            immigration: 'Imigrație',
-            nationality: 'Naționalitate',
-            arraigo: 'Rezidență',
-            familyReunification: 'Reîntregirea Familiei'
+            nationality: 'Cetățenie',
+            arraigo: 'Arraigo',
+            familyReunification: 'Reîntregirea Familiei',
+            penal: 'Drept Penal',
+            civil: 'Drept Civil',
+            accidents: 'Accidente de Trafic'
         },
         about: {
             title: 'Despre',
