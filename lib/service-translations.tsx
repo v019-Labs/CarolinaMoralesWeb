@@ -232,7 +232,7 @@ export const serviceTranslations: Record<Locale, Record<string, ServiceData>> = 
             description: "Gestión de divorcios, separaciones y convenios reguladores.",
             content: (
                 <div className="space-y-6 text-justify">
-                    <p>Le acompañamos en los procesos de derecho de familia, buscando siempre la solución más beneficiosa para todas las partes implicadas.</p>
+                    <p>Le asesoramos en los procesos de derecho de familia, buscando siempre la solución más beneficiosa para todas las partes implicadas.</p>
                     <div className="mt-10">
                         <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Divorcios mutuo acuerdo</h2>
                         <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Divorcio ante Notario</h2>
@@ -720,7 +720,7 @@ export const serviceTranslations: Record<Locale, Record<string, ServiceData>> = 
             description: "Gestion des divorces, séparations et accords réglementaires.",
             content: (
                 <div className="space-y-6 text-justify">
-                    <p>Nous vous accompagnons dans les procédures de droit de la famille, en recherchant toujours la solution la plus bénéfique pour toutes las parties impliquées.</p>
+                    <p>Nous vous conseillons dans les procédures de droit de la famille, en recherchant toujours la solution la plus bénéfique pour toutes les parties impliquées.</p>
                     <div className="mt-10">
                         <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Divorces par consentement mutuel</h2>
                         <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Divorce devant Notaire</h2>
@@ -961,7 +961,7 @@ export const serviceTranslations: Record<Locale, Record<string, ServiceData>> = 
             description: "Gestão de divórcios, separações e acordos regulamentares.",
             content: (
                 <div className="space-y-6 text-justify">
-                    <p>Acompanhamos você nos processos de direito de família, buscando sempre a solução mais benéfica para todas as partes envolvidas.</p>
+                    <p>Nós lhe assessoramos nos processos de direito de família, buscando sempre a solução mais benéfica para todas as partes envolvidas.</p>
                     <div className="mt-10">
                         <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Divórcios por mútuo acordo</h2>
                         <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Divórcio perante Notário</h2>

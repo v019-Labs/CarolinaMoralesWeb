@@ -206,7 +206,7 @@ export const translations: Record<Locale, TranslationKeys> = {
             },
             penal: {
                 title: 'Derecho Penal',
-                description: 'Defensa y asesoramiento jurídico en todo tipo de procesos penales y delitos.'
+                description: 'Defensa en todo tipo de procedimientos penales (leve, rápido, abreviado, sumario y jurado popular) así como asesoramiento específico enfocado a la mejor defensa.'
             },
             civil: {
                 title: 'Derecho Civil Matrimonial',
@@ -335,7 +335,7 @@ export const translations: Record<Locale, TranslationKeys> = {
             },
             penal: {
                 title: 'Criminal Law',
-                description: 'Legal defense and advice in all types of criminal proceedings and offenses.'
+                description: 'Defense in all types of criminal proceedings (minor, rapid, abbreviated, summary, and jury trial) as well as specific advice focused on the best defense.'
             },
             civil: {
                 title: 'Family Law',
@@ -464,7 +464,7 @@ export const translations: Record<Locale, TranslationKeys> = {
             },
             penal: {
                 title: 'Droit Pénal',
-                description: 'Défense et conseil juridique dans tous types de procédures pénales et délits.'
+                description: 'Défense dans tous types de procédures pénales (mineures, rapides, abrégées, sommaires et jury populaire) ainsi que des conseils spécifiques axés sur la meilleure défense.'
             },
             civil: {
                 title: 'Droit de la Famille',
@@ -593,7 +593,7 @@ export const translations: Record<Locale, TranslationKeys> = {
             },
             penal: {
                 title: 'القانون الجنائي',
-                description: 'الدفاع والاستشارة القانونية في جميع أنواع الإجراءات الجنائية والجرائم.'
+                description: 'الدفاع في جميع أنواع الإجراءات الجنائية (البسيطة، السريعة، المختصرة، الموجزة، والمحاكمة أمام هيئة المحلفين) بالإضافة إلى المشورة المحددة التي تركز على أفضل دفاع.'
             },
             civil: {
                 title: 'قانون الأسرة',
@@ -722,7 +722,7 @@ export const translations: Record<Locale, TranslationKeys> = {
             },
             penal: {
                 title: 'Direito Penal',
-                description: 'Defesa e assessoria jurídica em todos os tipos de processos penais e delitos.'
+                description: 'Defesa em todos os tipos de processos penais (leves, rápidos, abreviados, sumários e júri popular), bem como assessoria específica focada na melhor defesa.'
             },
             civil: {
                 title: 'Direito de Família',
@@ -851,7 +851,7 @@ export const translations: Record<Locale, TranslationKeys> = {
             },
             penal: {
                 title: '刑法',
-                description: '各类刑事诉讼和犯罪案件的辩护和法律咨询。'
+                description: '在各种类型的刑事诉讼（轻微、快速、简略、简易程序和陪审团审判）中提供辩护，以及专注于最佳辩护的具体建议。'
             },
             civil: {
                 title: '家庭法',
@@ -980,7 +980,7 @@ export const translations: Record<Locale, TranslationKeys> = {
             },
             penal: {
                 title: 'Drept Penal',
-                description: 'Apărare și consultanță juridică în toate tipurile de proceduri penale și infracțiuni.'
+                description: 'Apărarea în toate tipurile de proceduri penale (minore, rapide, prescurtate, sumare și proces cu juriu), precum și consiliere specifică axată pe cea mai bună apărare.'
             },
             civil: {
                 title: 'Dreptul Familiei',

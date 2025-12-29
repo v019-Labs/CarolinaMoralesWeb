@@ -43,7 +43,7 @@ export function ServicesSection() {
       title: t.services.arraigo.title,
       slug: "arraigo",
       description: t.services.arraigo.description,
-      image: "/images/arraigos.png",
+      image: "/images/arraigo.png",
     },
     {
       title: t.services.reagrupacion.title,
@@ -137,12 +137,12 @@ function ServiceCard({ service, index, learnMore }: { service: any; index: numbe
 
         <div className="relative space-y-6 flex-grow">
           {service.image && (
-            <div className="relative w-full aspect-video rounded-2xl overflow-hidden mb-2">
+            <div className="relative w-full aspect-video rounded-2xl overflow-hidden mb-2 bg-primary/5">
               <Image
                 src={service.image}
                 alt={service.title}
                 fill
-                className="object-cover group-hover:scale-105 transition-transform duration-700"
+                className={`${service.slug === 'arraigo' ? 'object-contain p-0 scale-[1.1]' : 'object-cover'} group-hover:scale-[1.15] transition-transform duration-700`}
               />
             </div>
           )}

@@ -87,7 +87,7 @@ export function IntroHero() {
         style={{ transformStyle: isMobile ? "flat" : "preserve-3d" }}
         className="text-center space-y-8 md:space-y-12 w-full"
       >
-        {/* Banner/Photo with Parallax (desktop) or static (mobile) */}
+        {/* Banner with Parallax (desktop) or static (mobile) */}
         <motion.div
           style={{
             rotateX: isMobile ? 0 : rotateX_logo,
@@ -95,18 +95,18 @@ export function IntroHero() {
             translateZ: isMobile ? 0 : translateZ_logo,
             transformStyle: isMobile ? "flat" : "preserve-3d",
           }}
-          className="relative w-full max-w-sm md:max-w-5xl mx-auto"
+          className="relative w-full max-w-5xl mx-auto px-4"
         >
           <motion.div
             style={{ transform: isMobile ? "none" : "translateZ(40px)" }}
-            className="relative w-full aspect-[3/4] md:aspect-[3/1] rounded-2xl md:rounded-3xl overflow-hidden shadow-xl md:shadow-2xl shadow-primary/30 md:shadow-primary/40"
+            className="relative w-full aspect-[21/9] md:aspect-[3/1] rounded-2xl md:rounded-3xl overflow-hidden shadow-xl md:shadow-2xl shadow-primary/30 md:shadow-primary/40"
           >
-            {/* Image */}
+            {/* Banner Image */}
             <Image
               src="/images/banner.jpg"
               alt="Carolina Morales - Abogada"
               fill
-              className="object-cover object-top md:object-center"
+              className="object-cover object-center"
               priority
             />
             {/* Golden border frame */}
