@@ -1,7 +1,7 @@
 "use client"
 
-import { FileText, Users, Home, Scale, Landmark, Gavel, Car } from "lucide-react"
 import { useEffect, useRef } from "react"
+import Image from "next/image"
 import { useTranslation } from "@/lib/i18n"
 import { AnimatedLink } from "@/components/animated-link"
 
@@ -33,45 +33,44 @@ export function ServicesSection() {
   }, [])
 
   const mainServices = [
-
     {
-      icon: Landmark,
       title: t.services.nacionalidad.title,
       slug: "nacionalidad",
       description: t.services.nacionalidad.description,
+      image: "/images/nacionalidad.png"
     },
     {
-      icon: Home,
       title: t.services.arraigo.title,
       slug: "arraigo",
       description: t.services.arraigo.description,
+      image: "/images/arraigos.png",
     },
     {
-      icon: Users,
       title: t.services.reagrupacion.title,
       slug: "reagrupacion-familiar",
       description: t.services.reagrupacion.description,
+      image: "/images/reagrupacion.jpg"
     },
   ]
 
   const otherServices = [
     {
-      icon: Gavel,
       title: t.services.penal.title,
       slug: "derecho-penal",
       description: t.services.penal.description,
+      image: "/images/penal.jpg",
     },
     {
-      icon: Users,
       title: t.services.civil.title,
       slug: "derecho-civil",
       description: t.services.civil.description,
+      image: "/images/matrimonial.jpg",
     },
     {
-      icon: Car,
       title: t.services.accidentes.title,
       slug: "reclamacion-accidentes",
       description: t.services.accidentes.description,
+      image: "/images/accidente.jpg",
     },
   ]
 
@@ -103,12 +102,9 @@ export function ServicesSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
-          {mainServices.map((service, index) => {
-            const Icon = service.icon
-            return (
-              <ServiceCard key={index} service={service} index={index} Icon={Icon} learnMore={t.services.learnMore} />
-            )
-          })}
+          {mainServices.map((service, index) => (
+            <ServiceCard key={index} service={service} index={index} learnMore={t.services.learnMore} />
+          ))}
         </div>
 
         <div className="space-y-12 animate-slide-in-up animation-delay-400">
@@ -120,12 +116,9 @@ export function ServicesSection() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {otherServices.map((service, index) => {
-              const Icon = service.icon
-              return (
-                <ServiceCard key={index} service={service} index={index + 4} Icon={Icon} learnMore={t.services.learnMore} />
-              )
-            })}
+            {otherServices.map((service, index) => (
+              <ServiceCard key={index} service={service} index={index + 4} learnMore={t.services.learnMore} />
+            ))}
           </div>
         </div>
       </div>
@@ -133,39 +126,46 @@ export function ServicesSection() {
   )
 }
 
-function ServiceCard({ service, index, Icon, learnMore }: { service: any; index: number; Icon: any; learnMore: string }) {
+function ServiceCard({ service, index, learnMore }: { service: any; index: number; learnMore: string }) {
   return (
     <AnimatedLink href={`/servicios/${service.slug}`} className="block h-full">
       <div
-        className="group relative p-8 bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-md border border-primary/15 rounded-3xl hover:shadow-xl hover:shadow-primary/20 hover:border-primary/40 transition-all duration-500 ease-out hover:-translate-y-1 animate-slide-in-up h-full cursor-pointer"
+        className="group relative p-8 bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-md border border-primary/15 rounded-3xl hover:shadow-xl hover:shadow-primary/20 hover:border-primary/40 transition-all duration-500 ease-out hover:-translate-y-1 animate-slide-in-up h-full cursor-pointer flex flex-col"
         style={{ animationDelay: `${index * 80}ms` }}
       >
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-        <div className="relative space-y-6">
-          <div className="inline-flex p-4 bg-gradient-to-br from-primary/15 to-accent/5 rounded-2xl group-hover:bg-primary group-hover:shadow-lg group-hover:shadow-primary/30 transition-all duration-500 ease-out">
-            <Icon className="w-8 h-8 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
-          </div>
+        <div className="relative space-y-6 flex-grow">
+          {service.image && (
+            <div className="relative w-full aspect-video rounded-2xl overflow-hidden mb-2">
+              <Image
+                src={service.image}
+                alt={service.title}
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+          )}
 
           <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300 font-dancing text-3xl">
             {service.title}
           </h3>
 
           <p className="text-muted-foreground leading-relaxed text-sm">{service.description}</p>
+        </div>
 
-          <div className="pt-2 opacity-0 group-hover:opacity-100 transition-all duration-400 ease-out transform translate-y-2 group-hover:translate-y-0 text-sm">
-            <span className="text-primary font-medium inline-flex items-center gap-2">
-              {learnMore}
-              <svg
-                className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </span>
-          </div>
+        <div className="relative pt-6 opacity-0 group-hover:opacity-100 transition-all duration-400 ease-out transform translate-y-2 group-hover:translate-y-0 text-sm">
+          <span className="text-primary font-medium inline-flex items-center gap-2">
+            {learnMore}
+            <svg
+              className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </span>
         </div>
       </div>
     </AnimatedLink>

@@ -84,7 +84,11 @@ export const legalTranslations: Record<Locale, LegalTranslations> = {
                     content: "El Usuario se compromete a respetar los derechos de propiedad intelectual e industrial de Carolina Morales Abogada. Podrá visualizar los elementos del Sitio Web o incluso imprimirlos, copiarlos y almacenarlos en el disco duro de su ordenador o en cualquier otro soporte físico siempre y cuando sea, exclusivamente, para su uso personal. El Usuario, sin embargo, no podrá suprimir, alterar, o manipular cualquier dispositivo de protección o sistema de seguridad que estuviera instalado en el Sitio Web."
                 },
                 {
-                    title: "VI. ACCIONES LEGALES, LEGISLACIÓN APLICABLE Y JURISDICCIÓN",
+                    title: "VI. USO DE IMÁGENES Y CONTENIDO VISUAL",
+                    content: "Las imágenes y contenidos visuales utilizados en este Sitio Web son de dominio público o cuentan con las licencias correspondientes para su uso. Asimismo, se informa al Usuario que algunas de las imágenes mostradas han sido generadas mediante herramientas de Inteligencia Artificial (IA) con fines ilustrativos y decorativos."
+                },
+                {
+                    title: "VII. ACCIONES LEGALES, LEGISLACIÓN APLICABLE Y JURISDICCIÓN",
                     content: "Carolina Morales Abogada se reserva la facultad de presentar las acciones civiles o penales que considere necesarias por la utilización indebida del Sitio Web y Contenidos, o por el incumplimiento de las presentes Condiciones. La relación entre el Usuario y Carolina Morales Abogada se regirá por la normativa vigente y de aplicación en el territorio español. De surgir cualquier controversia en relación con la interpretación y/o a la aplicación de estas Condiciones las partes someterán sus conflictos a la jurisdicción ordinaria sometiéndose a los jueces y tribunales que correspondan conforme a derecho."
                 }
             ]
@@ -211,8 +215,12 @@ export const legalTranslations: Record<Locale, LegalTranslations> = {
                     content: "The User undertakes to respect the intellectual and industrial property rights of Carolina Morales Abogada. You may view the elements of the Website or even print them, copy them and store them on your computer's hard drive or on any other physical medium provided it is exclusively for your personal use. The User, however, may not suppress, alter, or manipulate any protection device or security system that was installed on the Website."
                 },
                 {
-                    title: "VI. LEGAL ACTIONS, APPLICABLE LAW AND JURISDICTION",
-                    content: "Carolina Morales Abogada reserves the right to file civil or criminal actions it deems necessary for the improper use of the Website and Contents, or for the breach of these Conditions. The relationship between the User and Carolina Morales Abogada will be governed by current regulations and applicable in Spanish territory. Should any controversy arise in relation to the interpretation and/or application of these Conditions, the parties will submit their conflicts to ordinary jurisdiction submitting themselves to the corresponding judges and courts according to law."
+                    title: "VI. USE OF IMAGES AND VISUAL CONTENT",
+                    content: "The images and visual content used on this Website are in the public domain or have the corresponding licenses for their use. Users are also informed that some of the images displayed have been generated using Artificial Intelligence (AI) tools for illustrative and decorative purposes."
+                },
+                {
+                    title: "VII. LEGAL ACTIONS, APPLICABLE LEGISLATION AND JURISDICTION",
+                    content: "Carolina Morales Abogada reserves the right to file civil or criminal actions it deems necessary for the improper use of the Website and Contents, or for the breach of these Conditions. The relationship between the User and Carolina Morales Abogada will be governed by the regulations in force and applicable in Spanish territory. Should any controversy arise in relation to the interpretation and/or application of these Conditions, the parties will submit their conflicts to the ordinary jurisdiction, submitting to the judges and courts that correspond according to law."
                 }
             ]
         },
@@ -338,8 +346,12 @@ export const legalTranslations: Record<Locale, LegalTranslations> = {
                     content: "L'Utilisateur s'engage à respecter les droits de propriété intellectuelle et industrielle de Carolina Morales Abogada. Vous pouvez visualiser les éléments du Site Web ou même les imprimer, les copier et les stocker sur le disque dur de votre ordinateur ou sur tout autre support physique à condition que ce soit exclusivement pour votre usage personnel. L'Utilisateur, cependant, ne pourra supprimer, altérer ou manipuler aucun dispositif de protection ou système de sécurité installé sur le Site Web."
                 },
                 {
-                    title: "VI. ACTIONS LÉGALES, LOI APPLICABLE ET JURIDICTION",
-                    content: "Carolina Morales Abogada se réserve le droit d'intenter les actions civiles ou pénales qu'elle juge nécessaires pour l'utilisation abusive du Site Web et des Contenus, ou pour la violation des présentes Conditions. La relation entre l'Utilisateur et Carolina Morales Abogada sera régie par la réglementation en vigueur et applicable sur le territoire espagnol. En cas de controverse relative à l'interprétation et/ou à l'application des présentes Conditions, les parties soumettront leurs conflits à la juridiction ordinaire en se soumettant aux juges et tribunaux correspondants conformément à la loi."
+                    title: "VI. UTILISATION DES IMAGES ET DU CONTENU VISUEL",
+                    content: "Les images et les contenus visuels utilisés sur ce site Web sont dans le domaine public ou disposent des licences correspondantes pour leur utilisation. De plus, l'utilisateur est informé que certaines des images affichées ont été générées à l'aide d'outils d'intelligence artificielle (IA) à des fins illustratives et décoratives."
+                },
+                {
+                    title: "VII. ACTIONS LÉGALES, LÉGISLATION APPLICABLE ET JURIDICTION",
+                    content: "Carolina Morales Abogada se réserve le droit de présenter les actions civiles ou pénales qu'elle jugera nécessaires pour l'utilisation abusive du site Web et de ses contenus, ou pour le non-respect des présentes conditions. La relation entre l'utilisateur et Carolina Morales Abogada sera régie par la réglementation en vigueur et applicable sur le territoire espagnol. En cas de litige relatif à l'interprétation et/ou à l'application des présentes conditions, les parties soumettront leurs conflits à la juridiction ordinaire, en se soumettant aux juges et tribunaux correspondants conformément à la loi."
                 }
             ]
         },
@@ -465,8 +477,12 @@ export const legalTranslations: Record<Locale, LegalTranslations> = {
                     content: "يلتزم المستخدم باحترام حقوق الملكية الفكرية والصناعية لكارولينا موراليس (محامية). يمكنك عرض عناصر الموقع الإلكتروني أو حتى طباعتها ونسخها وتخزينها على القرص الصلب لجهاز الكمبيوتر الخاص بك أو على أي وسيط مادي آخر شريطة أن يكون ذلك حصريًا لاستخدامك الشخصي. ومع ذلك، لا يجوز للمستخدم قمع أو تغيير أو التلاعب بأي جهاز حماية أو نظام أمان تم تثبيته على الموقع الإلكتروني."
                 },
                 {
-                    title: "VI. الإجراءات القانونية والقانون المعمول به والاختصاص القضائي",
-                    content: "تحتفظ كارولينا موراليس (محامية) بالحق في رفع الدعاوى المدنية أو الجنائية التي تراها ضرورية للاستخدام غير السليم للموقع الإلكتروني والمحتويات، أو لخرق هذه الشروط. ستخضع العلاقة بين المستخدم وكارولينا موراليس (محامية) للوائح السارية والمطبقة في الأراضي الإسبانية. في حالة نشوء أي نزاع فيما يتعلق بتفسير و/أو تطبيق هذه الشروط، ستقدم الأطراف نزاعاتها إلى الاختصاص القضائي العادي وتخضع للقضاة والمحاكم المقابلة وفقًا للقانون."
+                    title: "6. استخدام الصور والمحتوى المرئي",
+                    content: "الصور والمحتويات المرئية المستخدمة في هذا الموقع هي من الملكية العامة أو لديها التراخيص المقابلة لاستخدامها. وبالمثل، يتم إبلاغ المستخدم أن بعض الصور المعروضة قد تم إنشاؤها باستخدام أدوات الذكاء الاصطناعي (AI) لأغراض توضيحية وزخرفية."
+                },
+                {
+                    title: "7. الإجراءات القانونية، التشريعات المعمول بها والاختصاص القضائي",
+                    content: "تحتفظ كارولينا موراليس المحامية بالحق في تقديم الإجراءات المدنية أو الجنائية التي تراها ضرورية للاستخدام غير السليم للموقع والمحتويات، أو لخرق هذه الشروط. تخضع العلاقة بين المستخدم وكارولينا موراليس لـ القانون المعمول به في الأراضي الإسبانية. في حالة ظهور أي نزاع فيما يتعلق بتفسير و/أو تطبيق هذه الشروط، سيعرض الأطراف نزاعاتهم على الاختصاص القضائي العادي، ويخضعون للقضاة والمحاكم التي تتوافق مع القانون."
                 }
             ]
         },
@@ -493,15 +509,15 @@ export const legalTranslations: Record<Locale, LegalTranslations> = {
                 },
                 {
                     title: "3. الأساس القانوني",
-                    content: "الأساس القانوني لمعالجة بياناتك هو موافقة صاحب البيانات، وتنفيذ عقد خدمات مهنية، والامتثال للالتزامات القانونية المعمول بها."
+                    content: "الأساس القانوني لمعالجة بياناتك هو موافقة صاحب البيانات، وتنفيذ عقد خدمات مهنية، والامتثال للالتزامات القانونية المعمول بها.",
                 },
                 {
                     title: "4. حقوق صاحب البيانات",
-                    content: "يمكنك ممارسة حقوق الوصول والتصحيح والحذف والمعارضة والتقييد ونقل البيانات من خلال الاتصال بنا. لديك أيضاً الحق في تقديم شكوى إلى الوكالة الإسبانية لحماية البيانات (www.aepd.es)."
+                    content: "يمكنك ممارسة حقوق الوصول والتصحيح والحذف والمعارضة والتقييد ونقل البيانات من خلال الاتصال بنا. لديك أيضاً الحق في تقديم شكوى إلى الوكالة الإسبانية لحماية البيانات (www.aepd.es).",
                 },
                 {
                     title: "5. الاحتفاظ بالبيانات",
-                    content: "سيتم الاحتفاظ بالبيانات الشخصية طالما استمرت العلاقة المهنية، ولاحقاً خلال الفترات المحددة قانوناً."
+                    content: "سيتم الاحتفاظ بالبيانات الشخصية طالما استمرت العلاقة المهنية، ولاحقاً خلال الفترات المحددة قانوناً.",
                 }
             ]
         },
@@ -511,7 +527,7 @@ export const legalTranslations: Record<Locale, LegalTranslations> = {
             sections: [
                 {
                     title: "1. ما هي ملفات تعريف الارتباط؟",
-                    content: "ملفات تعريف الارتباط هي ملفات نصية صغيرة يتم تخزينها على جهازك عند زيارة موقع ويب. يتم استخدامها لتذكر تفضيلاتك وتحسين تجربة التصفح الخاصة بك."
+                    content: "ملفات تعريف الارتباط هي ملفات نصية صغيرة يتم تخزينها على جهازك عند زيارة موقع ويب. يتم استخدامها لتذكر تفضيلاتك وتحسين تجربة التصفح الخاصة بك.",
                 },
                 {
                     title: "2. ملفات تعريف الارتباط التي نستخدمها",
@@ -523,7 +539,7 @@ export const legalTranslations: Record<Locale, LegalTranslations> = {
                 },
                 {
                     title: "3. إدارة ملفات تعريف الارتباط",
-                    content: "يمكنك تهيئة متصفحك لرفض ملفات تعريف الارتباط أو لإعلامك عند إرسالها. ومع ذلك، قد لا تتوفر بعض وظائف الموقع."
+                    content: "يمكنك تهيئة متصفحك لرفض ملفات تعريف الارتباط أو لإعلامك عند إرسالها. ومع ذلك، قد لا تتوفر بعض وظائف الموقع.",
                 }
             ]
         }
@@ -592,8 +608,12 @@ export const legalTranslations: Record<Locale, LegalTranslations> = {
                     content: "O Usuário compromete-se a respeitar os direitos de propriedade intelectual e industrial de Carolina Morales Abogada. Poderá visualizar os elementos do Site ou até imprimi-los, copiá-los e armazená-los no disco rígido do seu computador ou em qualquer outro suporte físico sempre e quando seja, exclusivamente, para seu uso pessoal. O Usuário, no entanto, não poderá suprimir, alterar, ou manipular qualquer dispositivo de proteção ou sistema de segurança que estivesse instalado no Site."
                 },
                 {
-                    title: "VI. AÇÕES LEGAIS, LEGISLAÇÃO APLICÁVEL E JURISDIÇÃO",
-                    content: "Carolina Morales Abogada reserva-se a faculdade de apresentar as ações civis ou penais que considere necessárias pela utilização indevida do Site e Conteúdos, ou pelo descumprimento das presentes Condições. A relação entre o Usuário e Carolina Morales Abogada se regerá pela normativa vigente e de aplicação no território espanhol. De surgir qualquer controvérsia em relação à interpretação e/ou à aplicação destas Condições as partes submeterão seus conflitos à jurisdição ordinária submetendo-se aos juízes e tribunais que correspondam conforme a direito."
+                    title: "VI. USO DE IMAGENS E CONTEÚDO VISUAL",
+                    content: "As imagens e conteúdos visuais utilizados neste Site são de domínio público ou possuem as licenças correspondentes para seu uso. Além disso, informa-se ao Usuário que algumas das imagens exibidas foram geradas por meio de ferramentas de Inteligência Artificial (IA) para fins ilustrativos e decorativos."
+                },
+                {
+                    title: "VII. AÇÕES LEGAIS, LEGISLAÇÃO APLICÁVEL E JURISDIÇÃO",
+                    content: "Carolina Morales Abogada reserva-se a faculdade de apresentar as ações civis ou penais que considere necessárias pela utilização indevida do Site e Conteúdos, ou pelo descumprimento das presentes Condições. A relação entre o Usuário e Carolina Morales Abogada reger-se-á pela normativa vigente e de aplicação no território espanhol. Caso surja qualquer controvérsia em relação à interpretação e/ou aplicação destas Condições, as partes submeterão seus conflitos à jurisdição ordinária, submetendo-se aos juízes e tribunais que correspondam conforme o direito."
                 }
             ]
         },
@@ -645,7 +665,7 @@ export const legalTranslations: Record<Locale, LegalTranslations> = {
                     content: "Utilizamos cookies técnicos necessários para o funcionamento do site:",
                     list: [
                         "locale: Armazena a sua preferência de idioma (1 ano)",
-                        "introSeen: Lembra se já viu a animação de introdução (sessão)"
+                        "introSeen: Lembra se já viu a animação de introdução (sesión)"
                     ]
                 },
                 {
@@ -719,8 +739,12 @@ export const legalTranslations: Record<Locale, LegalTranslations> = {
                     content: "用户承诺尊重 Carolina Morales Abogada 的知识产权和工业产权。您可以查看网站的元素，甚至可以将它们打印、复制并存储在您计算机的硬盘或任何其他物理介质上，只要这完全是为您个人使用。但是，用户不得删除、更改或操纵安装在网站上的任何保护装置或安全系统。"
                 },
                 {
-                    title: "VI. 法律行动、适用法律和管辖权",
-                    content: "Carolina Morales Abogada 保留对不正当使用网站和内容或违反本条件的行为提起其认为必要的民事或刑事诉讼的权利。用户与 Carolina Morales Abogada 之间的关系将受现行法规和西班牙领土适用法规的管辖。如果就本条件的解释和/或适用发生任何争议，双方将把冲突提交给普通管辖法院，并依法提交给相应的法官和法院。"
+                    title: "六、图片和视觉内容的使用",
+                    content: "本网站使用的图片和视觉内容属于公共领域或已获得相应的使用许可。同时，告知用户，部分显示的图片是使用人工智能（AI）工具生成的，用于说明和装饰目的。"
+                },
+                {
+                    title: "七、法律行动、适用法律和管辖权",
+                    content: "Carolina Morales 律师保留对因不当使用网站及其内容或违反本条款而认为必要的民事或刑事行动的权力。用户与 Carolina Morales 律师之间的关系将受西班牙境内现行且适用的法规管辖。如果对这些条款的解释和/或应用出现任何争议，双方应将冲突提交至普通管辖权，并根据法律提交至相应的法官和法院。"
                 }
             ]
         },
@@ -769,7 +793,7 @@ export const legalTranslations: Record<Locale, LegalTranslations> = {
                 },
                 {
                     title: "2. 我们使用的 Cookie",
-                    content: "我们使用网站运行所需的必要技术 Cookie：",
+                    content: "我们使用 ملفات تعريف الارتباط التقنية اللازمة لتشغيل الموقع:",
                     list: [
                         "locale: 存储您的语言偏好（1年）",
                         "introSeen: 记录您是否看过片头动画（会话）"
@@ -821,7 +845,7 @@ export const legalTranslations: Record<Locale, LegalTranslations> = {
                     title: "Responsabilitatea Utilizatorului",
                     content: "Site-ul Web al Carolina Morales Abogada oferă o mare diversitate de informații, servicii și date. Utilizatorul își asumă responsabilitatea pentru utilizarea corectă a Site-ului Web. Această responsabilitate se va extinde la:",
                     list: [
-                        "O utilizare a informațiilor, Conținuturilor și/sau Serviciilor și datelor oferite de Carolina Morales Abogada fără a fi contrară dispozițiilor prezentelor Condiții, Legii, moralei sau ordinii publice, sau care în orice alt mod ar putea presupune o lezare a drepturilor terților sau a funcționării Site-ului Web în sine.",
+                        "O utilizare a informațiilor, Conținuturilor și/sau Serviciilor și datelor oferite de Carolina Morales Abogada fără a fi contrarie dispozițiilor prezentelor Condiții, Legii, moralei sau ordinii publice, sau care în orice alt mod ar putea presupune o lezare a drepturilor terților sau a funcționării Site-ului Web în sine.",
                         "Veridicitatea și legalitatea informațiilor furnizate de Utilizator în formularele extinse de Carolina Morales Abogada pentru accesul la anumite Conținuturi sau Servicii oferite de Site-ul Web. În orice caz, Utilizatorul va notifica imediat Carolina Morales Abogada cu privire la orice fapt care permite utilizarea necorespunzătoare a informațiilor înregistrate în respectivele formulare, cum ar fi, dar fără a se limita la, furtul, pierderea sau accesul neautorizat la identificatori și/sau parole, în scopul de a proceda la anularea imediată a acestora."
                     ]
                 },
@@ -846,8 +870,12 @@ export const legalTranslations: Record<Locale, LegalTranslations> = {
                     content: "Utilizatorul se angajează să respecte drepturile de proprietate intelectuală și industrială ale Carolina Morales Abogada. Va putea vizualiza elementele Site-ului Web sau chiar să le imprime, să le copieze și să le stocheze pe hard disk-ul computerului său sau pe orice alt suport fizic atâta timp cât este, exclusiv, pentru uzul său personal. Utilizatorul, totuși, nu va putea suprima, altera sau manipula niciun dispozitiv de protecție sau sistem de securitate care ar fi instalat pe Site-ul Web."
                 },
                 {
-                    title: "VI. ACȚIUNI LEGALE, LEGISLAȚIE APLICABILĂ ȘI JURISDICȚIE",
-                    content: "Carolina Morales Abogada își rezervă dreptul de a prezenta acțiunile civile sau penale pe care le consideră necesare pentru utilizarea necorespunzătoare a Site-ului Web și a Conținuturilor, sau pentru încălcarea prezentelor Condiții. Relația dintre Utilizator și Carolina Morales Abogada va fi guvernată de reglementările în vigoare și aplicabile pe teritoriul spaniol. În cazul apariției oricărei controverse în legătură cu interpretarea și/sau aplicarea acestor Condiții, părțile își vor supune conflictele jurisdicției ordinare supunându-se judecătorilor și tribunalelor care corespund conform legii."
+                    title: "VI. UTILIZAREA IMAGINILOR ȘI A CONȚINUTULUI VIZUAL",
+                    content: "Imaginile și conținutul vizual utilizate pe acest site web sunt din domeniul public sau au licențele corespunzătoare pentru utilizarea lor. De asemenea, utilizatorul este informat că unele dintre imaginile afișate au fost generate prin instrumente de Inteligență Artificială (IA) în scopuri ilustrative și decorative."
+                },
+                {
+                    title: "VII. ACȚIUNI LEGALE, LEGISLAȚIE APLICABILĂ ȘI JURISDICȚIE",
+                    content: "Carolina Morales Abogada își rezervă dreptul de a introduce acțiunile civile sau penale pe care le consideră necesare pentru utilizarea necorespunzătoare a site-ului web și a conținutului, sau pentru încălcarea acestor condiții. Relația dintre utilizator și Carolina Morales Abogada va fi guvernată de reglementările în vigoare și aplicabile pe teritoriul spaniol. În cazul în care apare orice controversă în legătură cu interpretarea și/sau aplicarea acestor condiții, părțile își vor supune conflictele jurisdicției ordinare, supunându-se judecătorilor și instanțelor care corespund conform legii."
                 }
             ]
         },
