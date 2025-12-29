@@ -66,7 +66,7 @@ export function WebIntro({ onComplete }: { onComplete: () => void }) {
               scale: step >= 1 ? 1 : 0.8
             }}
             transition={{ duration: 3, ease: "easeOut" }}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full pointer-events-none"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[800px] md:h-[800px] rounded-full pointer-events-none"
             style={{
               background: "radial-gradient(circle, rgba(164, 144, 107, 0.2) 0%, transparent 70%)",
               filter: "blur(60px)"
@@ -87,7 +87,7 @@ export function WebIntro({ onComplete }: { onComplete: () => void }) {
                 duration: 1.8,
                 ease: [0.25, 0.1, 0.25, 1]
               }}
-              className="relative mb-12"
+              className="relative mb-8 md:mb-12"
             >
               {/* Elegant outer ring */}
               <motion.div
@@ -97,7 +97,7 @@ export function WebIntro({ onComplete }: { onComplete: () => void }) {
                   scale: step >= 3 ? 1 : 0.9
                 }}
                 transition={{ duration: 1.5, ease: [0.25, 0.1, 0.25, 1] }}
-                className="absolute inset-[-40px] rounded-full"
+                className="absolute inset-[-20px] md:inset-[-40px] rounded-full"
                 style={{
                   border: "1px solid rgba(164, 144, 107, 0.3)",
                 }}
@@ -114,7 +114,7 @@ export function WebIntro({ onComplete }: { onComplete: () => void }) {
                   opacity: { duration: 4, repeat: Infinity, ease: "easeInOut" },
                   scale: { duration: 4, repeat: Infinity, ease: "easeInOut" }
                 }}
-                className="absolute inset-[-20px] rounded-full"
+                className="absolute inset-[-10px] md:inset-[-20px] rounded-full"
                 style={{
                   border: "1px solid rgba(164, 144, 107, 0.4)",
                   boxShadow: "0 0 40px rgba(164, 144, 107, 0.1)"
@@ -141,7 +141,7 @@ export function WebIntro({ onComplete }: { onComplete: () => void }) {
                 alt="Carolina Morales"
                 width={500}
                 height={400}
-                className="relative z-10 object-contain"
+                className="relative z-10 object-contain w-[240px] md:w-[500px] h-auto"
                 style={{
                   filter: "drop-shadow(0 10px 40px rgba(164, 144, 107, 0.15))"
                 }}
@@ -160,7 +160,7 @@ export function WebIntro({ onComplete }: { onComplete: () => void }) {
                   opacity: step >= 4 ? 1 : 0
                 }}
                 transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
-                className="w-32 h-[1px] mx-auto origin-center"
+                className="w-20 md:w-32 h-[1px] mx-auto origin-center"
                 style={{
                   background: "linear-gradient(90deg, transparent, rgba(164, 144, 107, 0.6), transparent)"
                 }}
@@ -175,7 +175,7 @@ export function WebIntro({ onComplete }: { onComplete: () => void }) {
                     opacity: step >= 4 ? 1 : 0
                   }}
                   transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
-                  className="text-2xl md:text-4xl font-vibes tracking-wide"
+                  className="text-xl md:text-4xl font-vibes tracking-wide"
                   style={{ color: "rgba(164, 144, 107, 0.9)" }}
                 >
                   Abogada especializada en
@@ -183,7 +183,7 @@ export function WebIntro({ onComplete }: { onComplete: () => void }) {
               </div>
 
               {/* Services */}
-              <div className="flex items-center justify-center gap-6 md:gap-10">
+              <div className="flex flex-wrap items-center justify-center gap-4 md:gap-10 px-4">
                 {["Extranjería", "Nacionalidad", "Arraigos"].map((text, idx) => (
                   <motion.span
                     key={text}
@@ -197,7 +197,7 @@ export function WebIntro({ onComplete }: { onComplete: () => void }) {
                       delay: 0.15 * idx,
                       ease: [0.25, 0.1, 0.25, 1]
                     }}
-                    className="text-base md:text-xl font-light tracking-[0.15em] uppercase"
+                    className="text-xs md:text-xl font-light tracking-[0.15em] uppercase whitespace-nowrap"
                     style={{ color: "rgba(80, 70, 60, 0.7)" }}
                   >
                     {text}
@@ -210,7 +210,7 @@ export function WebIntro({ onComplete }: { onComplete: () => void }) {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: step >= 5 ? 0.5 : 0 }}
                 transition={{ duration: 1.5 }}
-                className="text-sm tracking-[0.2em] uppercase font-light"
+                className="text-[10px] md:text-sm tracking-[0.2em] uppercase font-light px-4"
                 style={{ color: "rgba(164, 144, 107, 0.7)" }}
               >
                 Experiencia • Compromiso • Resultados
@@ -224,7 +224,7 @@ export function WebIntro({ onComplete }: { onComplete: () => void }) {
                   opacity: step >= 5 ? 0.4 : 0
                 }}
                 transition={{ duration: 1.5, ease: [0.25, 0.1, 0.25, 1] }}
-                className="w-48 h-[1px] mx-auto origin-center"
+                className="w-32 md:w-48 h-[1px] mx-auto origin-center"
                 style={{
                   background: "linear-gradient(90deg, transparent, rgba(164, 144, 107, 0.4), transparent)"
                 }}
