@@ -168,22 +168,22 @@ export const serviceTranslations: Record<Locale, Record<string, ServiceData>> = 
             )
         },
         "arraigo": {
-            title: "Arraigo",
+            title: "Arraigos",
             description: "Reglamento de Extranjería (Real Decreto 1155/2024). Reforma 2024-2025.",
             content: (
                 <div className="space-y-6 text-justify">
                     <p>
-                        El nuevo Reglamento de Extranjería (Real Decreto 1155/2024), en vigor desde mayo de 2025, ha transformado el sistema de arraigos, flexibilizando requisitos y reduciendo los tiempos de permanencia exigidos para facilitar la inclusión socio-laboral.
+                        El nuevo Reglamento de Extranjería (Real Decreto 1155/2024), en vigor a partir de mayo 2025, ha transformado el sistema de Arraigos, flexibilizando requisitos y reduciendo los periodos de estancia para facilitar la inclusión socio-laboral.
                     </p>
 
                     <div className="mt-10">
-                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Arraigo Socio-Laboral</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Arraigos Socio-Laboral</h2>
                         <ul className="list-disc pl-6 space-y-2 mb-8 marker:text-primary/70">
                             <li><strong className="font-semibold text-foreground">Permanencia:</strong> 2 años (antes 3).</li>
                             <li><strong className="font-semibold text-foreground">Contrato:</strong> Mínimo 20 horas semanales.</li>
                         </ul>
 
-                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Arraigo de Segunda Oportunidad</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Arraigos de Segunda Oportunidad</h2>
                         <p className="mb-8">Para quienes tuvieron residencia legal previa y cayeron en irregularidad. Permite trabajar desde el primer momento.</p>
 
                         <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Arraigo Familiar (Modificado)</h2>
@@ -404,35 +404,35 @@ export const serviceTranslations: Record<Locale, Record<string, ServiceData>> = 
             )
         },
         "arraigo": {
-            title: "Arraigo (Residency)",
+            title: "Arraigos",
             description: "New Immigration Regulations (2024-2025).",
             content: (
                 <div className="space-y-6 text-justify">
                     <p>
-                        The new Immigration Regulation (Royal Decree 1155/2024), effective from May 2025, has transformed the Arraigo system, relaxing requirements and reducing required stay periods to facilitate socio-labor inclusion.
+                        The new Immigration Regulation (Royal Decree 1155/2024), effective from May 2025, has transformed the Arraigos system, relaxing requirements and reducing required stay periods to facilitate socio-labor inclusion.
                     </p>
 
                     <div className="mt-10">
-                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Socio-Labor Arraigo</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Socio-Labor Arraigos</h2>
                         <ul className="list-disc pl-6 space-y-2 mb-8 marker:text-primary/70">
                             <li><strong className="font-semibold text-foreground">Stay:</strong> Reduced to 2 years (previously 3).</li>
                             <li><strong className="font-semibold text-foreground">Contract:</strong> Minimum 20 hours per week (SMI).</li>
                         </ul>
 
-                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Second Chance Arraigo</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Second Chance Arraigos</h2>
                         <p className="mb-8">New figure for those who previously had legal residence and fell into irregularity. Allows working from the first day.</p>
 
-                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Family Arraigo (Modified)</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Family Arraigos (Modified)</h2>
                         <p className="mb-8">Reserved exclusively for family members of EU/EEA or Swiss citizens. Family members of Spanish nationals now process the new "Temporary residence for family members of Spanish nationals".</p>
 
-                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Social Arraigo</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Social Arraigos</h2>
                         <p className="mb-4">Stay reduced to <strong>2 years</strong>.</p>
                         <ul className="list-disc pl-6 space-y-2 mb-8 marker:text-primary/70">
                             <li><strong className="font-semibold text-foreground">With Family Ties:</strong> No integration report needed if you have a spouse, parent, or resident children.</li>
                             <li><strong className="font-semibold text-foreground">With Integration Report:</strong> Mandatory if no direct family.</li>
                         </ul>
 
-                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Socio-formative Arraigo</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Socio-formative Arraigos</h2>
                         <p className="mb-4">Requires 2 years in Spain and enrollment in official studies (Vocational Training, etc.).</p>
                         <p><strong className="font-semibold text-foreground">2025 Update:</strong> Allows working up to 30 hours per week while studying.</p>
                     </div>
@@ -648,12 +648,12 @@ export const serviceTranslations: Record<Locale, Record<string, ServiceData>> = 
             )
         },
         "arraigo": {
-            title: "Arraigo",
+            title: "Arraigos",
             description: "Règlement sur l'immigration (2024-2025).",
             content: (
                 <div className="space-y-6 text-justify">
                     <p>
-                        Le nouveau règlement sur l'immigration (Décret royal 1155/2024), en vigueur à partir de mai 2025, a transformé le système d'Arraigo, assouplissant les exigences et réduisant les périodes de séjour pour faciliter l'intégration socio-laborale.
+                        Le nouveau règlement sur l'immigration (Décret royal 1155/2024), en vigueur à partir de mai 2025, a transformé le système d'Arraigos, assouplissant les exigences et réduisant les périodes de séjour pour faciliter l'intégration socio-laborale.
                     </p>
 
                     <div className="mt-10">
@@ -663,10 +663,10 @@ export const serviceTranslations: Record<Locale, Record<string, ServiceData>> = 
                             <li><strong className="font-semibold text-foreground">Contrat:</strong> Minimum 20 heures par semaine (SMI).</li>
                         </ul>
 
-                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Arraigo de Seconde Chance</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Arraigos de Seconde Chance</h2>
                         <p className="mb-8">Nouvelle figure pour ceux qui avaient auparavant une résidence légale et sont tombés dans l'irrégularité. Permet de travailler dès le premier jour.</p>
 
-                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Arraigo Familial (Modifié)</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Arraigos Familial (Modifié)</h2>
                         <p className="mb-8">Réservé exclusivement aux membres de la famille de citoyens de l'UE/EEE ou de la Suisse. Les membres de la famille de ressortissants espagnols traitent désormais la nouvelle "Résidence temporaire pour les membres de la famille de ressortissants espagnols".</p>
 
                         <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Arraigo Social</h2>
@@ -676,7 +676,7 @@ export const serviceTranslations: Record<Locale, Record<string, ServiceData>> = 
                             <li><strong className="font-semibold text-foreground">Avec Rapport d'Intégration:</strong> Obligatoire s'il n'y a pas de famille directe.</li>
                         </ul>
 
-                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Arraigo Socioformatif</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Arraigos Socioformatif</h2>
                         <p className="mb-4">Nécessite 2 ans en Espagne et une inscription dans des études officielles (Formation professionnelle, etc.).</p>
                         <p><strong className="font-semibold text-foreground">Mise à jour 2025:</strong> Permet de travailler jusqu'à 30 heures par semaine tout en étudiant.</p>
                     </div>
@@ -892,12 +892,12 @@ export const serviceTranslations: Record<Locale, Record<string, ServiceData>> = 
             )
         },
         "arraigo": {
-            title: "Arraigo",
+            title: "Arraigos",
             description: "Regulamento de Estrangeiros (2024-2025).",
             content: (
                 <div className="space-y-6 text-justify">
                     <p>
-                        O novo Regulamento de Estrangeiros (Real Decreto 1155/2024), em vigor a partir de Maio de 2025, transformou o sistema de Arraigo, flexibilizando requisitos e reduzindo os períodos de permanência para facilitar a integração socio-laboral.
+                        O novo Regulamento de Estrangeiros (Real Decreto 1155/2024), em vigor a partir de Maio de 2025, transformou o sistema de Arraigos, flexibilizando requisitos e reduzindo os períodos de permanência para facilitar a integração socio-laboral.
                     </p>
 
                     <div className="mt-10">
@@ -907,7 +907,7 @@ export const serviceTranslations: Record<Locale, Record<string, ServiceData>> = 
                             <li><strong className="font-semibold text-foreground">Contrato:</strong> Mínimo 20 horas por semana (SMI).</li>
                         </ul>
 
-                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Arraigo de Segunda Oportunidade</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Arraigos de Segunda Oportunidade</h2>
                         <p className="mb-8">Nova figura para quem teve residência legal prévia e caiu em irregularidade. Permite trabalhar desde o primeiro momento.</p>
 
                         <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Arraigo Familiar (Modificado)</h2>
@@ -1133,7 +1133,7 @@ export const serviceTranslations: Record<Locale, Record<string, ServiceData>> = 
             )
         },
         "arraigo": {
-            title: "الإقامة (Arraigo)",
+            title: "الإقامة (Arraigos)",
             description: "قانون الهجرة الجديد (2024-2025).",
             content: (
                 <div className="space-y-6 text-justify" dir="rtl">
@@ -1377,7 +1377,7 @@ export const serviceTranslations: Record<Locale, Record<string, ServiceData>> = 
             )
         },
         "arraigo": {
-            title: "扎根居留 (Arraigo)",
+            title: "扎根居留 (Arraigos)",
             description: "新移民法规 (2024-2025)。",
             content: (
                 <div className="space-y-6 text-justify">
@@ -1619,12 +1619,12 @@ export const serviceTranslations: Record<Locale, Record<string, ServiceData>> = 
             )
         },
         "arraigo": {
-            title: "Arraigo",
+            title: "Arraigos",
             description: "Regulamentul privind Imigrația (2024-2025).",
             content: (
                 <div className="space-y-6 text-justify">
                     <p>
-                        Noul Regulament privind Imigrația (Decretul Regal 1155/2024), în vigoare din mai 2025, a transformat sistemul de Arraigo, flexibilizând cerințele și reducând perioadele de ședere necesare pentru a facilita incluziunea socio-laborală.
+                        Noul Regulament privind Imigrația (Decretul Regal 1155/2024), în vigoare din mai 2025, a transformat sistemul de Arraigos, flexibilizând cerințele și reducând perioadele de ședere necesare pentru a facilita incluziunea socio-laborală.
                     </p>
 
                     <div className="mt-10">
@@ -1634,10 +1634,10 @@ export const serviceTranslations: Record<Locale, Record<string, ServiceData>> = 
                             <li><strong className="font-semibold text-foreground">Contract:</strong> Minim 20 ore pe săptămână (SMI).</li>
                         </ul>
 
-                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Arraigo de a doua șansă (Segunda Oportunidad)</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Arraigos de a doua șansă (Segunda Oportunidad)</h2>
                         <p className="mb-8">Nouă figură pentru cei care au avut rezidență legală anterioară și au căzut în neregularitate. Permite munca din prima clipă.</p>
 
-                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Arraigo Familial (Modificat)</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Arraigos Familial (Modificat)</h2>
                         <p className="mb-8">Rezervat exclusiv pentru rudele cetățenilor UE/SEE sau Elveția. Rudele cetățenilor spanioli procesează acum noua „Rezidență temporară pentru membrii familiei cetățenilor spanioli”.</p>
 
                         <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Arraigo Social</h2>
@@ -1647,7 +1647,7 @@ export const serviceTranslations: Record<Locale, Record<string, ServiceData>> = 
                             <li><strong className="font-semibold text-foreground">Cu raport de integrare:</strong> Obligatoriu dacă nu există familie directă.</li>
                         </ul>
 
-                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Arraigo Socioformativ</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Arraigos Socioformativ</h2>
                         <p className="mb-4">Necesită 2 ani în Spania și înscrierea în studii oficiale (Formare Profesională etc.).</p>
                         <p><strong className="font-semibold text-foreground">Noutate 2025:</strong> Permite munca până la 30 de ore pe săptămână în timpul studiilor.</p>
                     </div>

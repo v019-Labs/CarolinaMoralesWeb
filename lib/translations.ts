@@ -197,8 +197,8 @@ export const translations: Record<Locale, TranslationKeys> = {
                 description: 'La obtención de la nacionalidad española representa la máxima integración jurídica en el Estado.'
             },
             arraigo: {
-                title: 'Arraigo',
-                description: 'Tramitación de arraigo social, laboral y familiar para regularizar tu situación en España.'
+                title: 'Arraigos',
+                description: 'Tramitación de Arraigos: Social, Laboral, Familiar y para la Formación.'
             },
             reagrupacion: {
                 title: 'Reagrupación Familiar',
@@ -297,7 +297,7 @@ export const translations: Record<Locale, TranslationKeys> = {
         },
         hero: {
             nationality: 'Nationality',
-            arraigo: 'Arraigo',
+            arraigo: 'Arraigos',
             familyReunification: 'Family Reunification',
             penal: 'Criminal Law',
             civil: 'Civil Law',
@@ -326,8 +326,8 @@ export const translations: Record<Locale, TranslationKeys> = {
                 description: 'Obtaining Spanish nationality represents the highest level of legal integration into the State.'
             },
             arraigo: {
-                title: 'Residency Permit',
-                description: 'Processing of social, labor and family residency permits to regularize your situation in Spain.'
+                title: 'Arraigos',
+                description: 'Processing of Social, Labor, Family, and Training Arraigos.'
             },
             reagrupacion: {
                 title: 'Family Reunification',
@@ -426,7 +426,7 @@ export const translations: Record<Locale, TranslationKeys> = {
         },
         hero: {
             nationality: 'Nationalité',
-            arraigo: 'Arraigo',
+            arraigo: 'Arraigos',
             familyReunification: 'Regroupement Familial',
             penal: 'Droit Pénal',
             civil: 'Droit Civil',
@@ -455,8 +455,8 @@ export const translations: Record<Locale, TranslationKeys> = {
                 description: 'L\'obtention de la nationalité espagnole représente le plus haut niveau d\'intégration juridique dans l\'État.'
             },
             arraigo: {
-                title: 'Permis de Séjour',
-                description: 'Traitement des permis de séjour sociaux, professionnels et familiaux pour régulariser votre situation en Espagne.'
+                title: 'Arraigos',
+                description: 'Traitement des permis de séjour sociaux, professionnels, familiaux et de formation.'
             },
             reagrupacion: {
                 title: 'Regroupement Familial',
@@ -555,7 +555,7 @@ export const translations: Record<Locale, TranslationKeys> = {
         },
         hero: {
             nationality: 'الجنسية',
-            arraigo: 'تصريح الإقامة (Arraigo)',
+            arraigo: 'تصاريح الإقامة (Arraigos)',
             familyReunification: 'لم شمل الأسرة',
             penal: 'القانون الجنائي',
             civil: 'القانون المدني',
@@ -584,8 +584,8 @@ export const translations: Record<Locale, TranslationKeys> = {
                 description: 'يمثل الحصول على الجنسية الإسبانية أعلى مستوى من التكامل القانوني في الدولة.'
             },
             arraigo: {
-                title: 'تصريح الإقامة',
-                description: 'معالجة تصاريح الإقامة الاجتماعية والعمالية والعائلية لتنظيم وضعك في إسبانيا.'
+                title: 'تصاريح الإقامة (Arraigos)',
+                description: 'معالجة تصاريح الإقامة الاجتماعية والعمالية والعائلية وللتدريب.'
             },
             reagrupacion: {
                 title: 'لم شمل الأسرة',
@@ -684,7 +684,7 @@ export const translations: Record<Locale, TranslationKeys> = {
         },
         hero: {
             nationality: 'Nacionalidade',
-            arraigo: 'Arraigo',
+            arraigo: 'Arraigos',
             familyReunification: 'Reagrupamento Familiar',
             penal: 'Direito Penal',
             civil: 'Direito Civil',
@@ -713,8 +713,8 @@ export const translations: Record<Locale, TranslationKeys> = {
                 description: 'A obtenção da nacionalidade espanhola representa o nível mais elevado de integração jurídica no Estado.'
             },
             arraigo: {
-                title: 'Permissão de Residência',
-                description: 'Tramitação de permissões de residência social, laboral e familiar para regularizar sua situação na Espanha.'
+                title: 'Arraigos',
+                description: 'Tramitação de permissões de residência social, laboral, familiar e para formação.'
             },
             reagrupacion: {
                 title: 'Reagrupamento Familiar',
@@ -813,7 +813,7 @@ export const translations: Record<Locale, TranslationKeys> = {
         },
         hero: {
             nationality: '国籍',
-            arraigo: '扎根居留 (Arraigo)',
+            arraigo: '扎根居留 (Arraigos)',
             familyReunification: '家庭团聚',
             penal: '刑法',
             civil: '民法',
@@ -842,8 +842,8 @@ export const translations: Record<Locale, TranslationKeys> = {
                 description: '获得西班牙国籍代表了在该国法律层面的最高程度融合。'
             },
             arraigo: {
-                title: '居留许可',
-                description: '办理社会、劳动和家庭居留许可，使您在西班牙的身份合法化。'
+                title: 'Arraigos',
+                description: '处理社会、劳工、家庭及培训扎根居留。'
             },
             reagrupacion: {
                 title: '家庭团聚',
@@ -942,7 +942,7 @@ export const translations: Record<Locale, TranslationKeys> = {
         },
         hero: {
             nationality: 'Cetățenie',
-            arraigo: 'Arraigo',
+            arraigo: 'Arraigos',
             familyReunification: 'Reîntregirea Familiei',
             penal: 'Drept Penal',
             civil: 'Drept Civil',
@@ -971,8 +971,8 @@ export const translations: Record<Locale, TranslationKeys> = {
                 description: 'Obținerea cetățeniei spaniole reprezintă cel mai înalt nivel de integrare legală în stat.'
             },
             arraigo: {
-                title: 'Permis de Ședere',
-                description: 'Procesarea permiselor de ședere sociale, de muncă și familiale pentru a vă regulariza situația în Spania.'
+                title: 'Arraigos',
+                description: 'Procesarea permiselor de ședere Arraigos (social, de muncă, familial și pentru formare) pentru a vă regulariza situația în Spania.'
             },
             reagrupacion: {
                 title: 'Reîntregirea Familiei',

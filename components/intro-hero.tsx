@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef } from "react"
+import { useRef, useState, useEffect } from "react"
 import Image from "next/image"
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion"
 import { useTranslation } from "@/lib/i18n"
@@ -8,6 +8,15 @@ import { useTranslation } from "@/lib/i18n"
 export function IntroHero() {
   const { t } = useTranslation()
   const containerRef = useRef<HTMLDivElement>(null)
+  const [isMobile, setIsMobile] = useState(false)
+
+  // Check for mobile on mount and resize
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768)
+    checkMobile()
+    window.addEventListener("resize", checkMobile)
+    return () => window.removeEventListener("resize", checkMobile)
+  }, [])
 
   const x = useMotionValue(0)
   const y = useMotionValue(0)
@@ -17,7 +26,7 @@ export function IntroHero() {
   const smoothY = useSpring(y, { stiffness: 150, damping: 25, mass: 0.8 })
 
   const handleMouseMove = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    if (!containerRef.current) return
+    if (!containerRef.current || isMobile) return
     const { clientX, clientY } = event
     const { left, top, width, height } = containerRef.current.getBoundingClientRect()
     const xPct = (clientX - (left + width / 2)) / (width / 2)
@@ -31,17 +40,17 @@ export function IntroHero() {
     y.set(0)
   }
 
-  // Transformations for different layers - subtler movements
-  const rotateX_bg = useTransform(smoothY, [-1, 1], [5, -5])
-  const rotateY_bg = useTransform(smoothX, [-1, 1], [-5, 5])
+  // Transformations for different layers - subtler movements (disabled on mobile)
+  const rotateX_bg = useTransform(smoothY, [-1, 1], isMobile ? [0, 0] : [5, -5])
+  const rotateY_bg = useTransform(smoothX, [-1, 1], isMobile ? [0, 0] : [-5, 5])
 
-  const rotateX_logo = useTransform(smoothY, [-1, 1], [4, -4])
-  const rotateY_logo = useTransform(smoothX, [-1, 1], [-4, 4])
-  const translateZ_logo = useTransform(smoothX, [-1, 1], [-10, 10])
+  const rotateX_logo = useTransform(smoothY, [-1, 1], isMobile ? [0, 0] : [4, -4])
+  const rotateY_logo = useTransform(smoothX, [-1, 1], isMobile ? [0, 0] : [-4, 4])
+  const translateZ_logo = useTransform(smoothX, [-1, 1], isMobile ? [0, 0] : [-10, 10])
 
-  const rotateX_buttons = useTransform(smoothY, [-1, 1], [2, -2])
-  const rotateY_buttons = useTransform(smoothX, [-1, 1], [-2, 2])
-  const translateZ_buttons = useTransform(smoothY, [-1, 1], [15, -15])
+  const rotateX_buttons = useTransform(smoothY, [-1, 1], isMobile ? [0, 0] : [2, -2])
+  const rotateY_buttons = useTransform(smoothX, [-1, 1], isMobile ? [0, 0] : [-2, 2])
+  const translateZ_buttons = useTransform(smoothY, [-1, 1], isMobile ? [0, 0] : [15, -15])
 
   const services = [
     t.hero.nationality,
@@ -58,70 +67,82 @@ export function IntroHero() {
       ref={containerRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="min-h-screen flex items-center justify-center relative overflow-hidden px-6"
-      style={{ perspective: "1000px" }}
+      className="min-h-screen flex items-center justify-center relative overflow-hidden px-4 md:px-6 pt-20 md:pt-0"
+      style={{ perspective: isMobile ? "none" : "1000px" }}
     >
       {/* Background Elements */}
       <motion.div
         className="absolute inset-0 -z-20"
-        style={{ rotateX: rotateX_bg, rotateY: rotateY_bg, transformStyle: "preserve-3d" }}
+        style={{
+          rotateX: isMobile ? 0 : rotateX_bg,
+          rotateY: isMobile ? 0 : rotateY_bg,
+          transformStyle: isMobile ? "flat" : "preserve-3d"
+        }}
       >
         <div className="absolute inset-0 bg-gradient-radial from-primary/20 via-background to-background" />
       </motion.div>
 
       {/* Main Content with 3D effect */}
-      <motion.div style={{ transformStyle: "preserve-3d" }} className="text-center space-y-12">
-        {/* Logo */}
+      <motion.div
+        style={{ transformStyle: isMobile ? "flat" : "preserve-3d" }}
+        className="text-center space-y-8 md:space-y-12 w-full"
+      >
+        {/* Banner/Photo with Parallax (desktop) or static (mobile) */}
         <motion.div
           style={{
-            rotateX: rotateX_logo,
-            rotateY: rotateY_logo,
-            translateZ: translateZ_logo,
-            transformStyle: "preserve-3d",
+            rotateX: isMobile ? 0 : rotateX_logo,
+            rotateY: isMobile ? 0 : rotateY_logo,
+            translateZ: isMobile ? 0 : translateZ_logo,
+            transformStyle: isMobile ? "flat" : "preserve-3d",
           }}
-          className="relative inline-block"
+          className="relative w-full max-w-sm md:max-w-5xl mx-auto"
         >
-
           <motion.div
-            style={{ transform: "translateZ(40px)" }}
-            className="relative w-64 h-64 md:w-80 md:h-80 mx-auto"
+            style={{ transform: isMobile ? "none" : "translateZ(40px)" }}
+            className="relative w-full aspect-[3/4] md:aspect-[3/1] rounded-2xl md:rounded-3xl overflow-hidden shadow-xl md:shadow-2xl shadow-primary/30 md:shadow-primary/40"
           >
+            {/* Image */}
             <Image
-              src="/images/png-202.png"
+              src="/images/banner.jpg"
               alt="Carolina Morales - Abogada"
               fill
-              className="object-contain"
+              className="object-cover object-top md:object-center"
               priority
             />
+            {/* Golden border frame */}
+            <div className="absolute inset-0 rounded-2xl md:rounded-3xl ring-2 ring-primary/50 ring-inset" />
           </motion.div>
         </motion.div>
 
-        {/* Buttons */}
+        {/* Service Buttons */}
         <motion.div
           style={{
-            rotateX: rotateX_buttons,
-            rotateY: rotateY_buttons,
-            translateZ: translateZ_buttons,
-            transformStyle: "preserve-3d",
+            rotateX: isMobile ? 0 : rotateX_buttons,
+            rotateY: isMobile ? 0 : rotateY_buttons,
+            translateZ: isMobile ? 0 : translateZ_buttons,
+            transformStyle: isMobile ? "flat" : "preserve-3d",
           }}
-          className="space-y-8"
+          className="space-y-6 md:space-y-8"
         >
-          <div className="h-[2px] w-1/2 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto" />
-          <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+          <div className="h-[2px] w-1/3 md:w-1/2 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto" />
+
+          {/* Mobile: wrap with smaller gaps, Desktop: wrap with larger gaps */}
+          <div className="flex flex-wrap justify-center gap-2 md:gap-6 px-2 md:px-0">
             {services.map((item) => (
               <motion.div
                 key={item}
-                className="group relative"
+                className="group relative flex-shrink-0"
                 whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
                 <div>
                   <div className="absolute -inset-1 bg-gradient-to-r from-primary/30 via-accent/30 to-primary/30 rounded-full blur opacity-0 group-hover:opacity-80 transition-opacity duration-500" />
                   <div
-                    className="relative px-8 py-4 bg-background/80 backdrop-blur-xl border border-primary/40 text-primary rounded-full
+                    className="relative px-5 py-2.5 md:px-8 md:py-4 bg-background/80 backdrop-blur-xl border border-primary/40 text-primary rounded-full
                                transition-all duration-400 overflow-hidden hover:border-primary/60"
                   >
-                    <span className="relative text-lg md:text-2xl font-vibes tracking-wide block">
+                    <span className="relative text-sm md:text-2xl font-vibes tracking-wide block whitespace-nowrap">
                       {item}
                     </span>
                   </div>
