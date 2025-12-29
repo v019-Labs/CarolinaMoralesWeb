@@ -90,6 +90,33 @@ export function Footer() {
                   {t.services.reagrupacion.title}
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/#servicios"
+                  onClick={(e) => handleNavClick(e, "/#servicios")}
+                  className="hover:text-primary transition-colors"
+                >
+                  {t.services.penal.title}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/#servicios"
+                  onClick={(e) => handleNavClick(e, "/#servicios")}
+                  className="hover:text-primary transition-colors"
+                >
+                  {t.services.civil.title}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/#servicios"
+                  onClick={(e) => handleNavClick(e, "/#servicios")}
+                  className="hover:text-primary transition-colors"
+                >
+                  {t.services.accidentes.title}
+                </Link>
+              </li>
             </ul>
           </div>
 

@@ -212,8 +212,36 @@ export const serviceTranslations: Record<Locale, Record<string, ServiceData>> = 
                 </div>
             )
         },
-        "derecho-penal": { title: "Derecho Penal", description: "Próximamente", content: <p>Próximamente</p> },
-        "derecho-civil": { title: "Derecho Civil Matrimonial", description: "Gestión de divorcios, separaciones, convenios reguladores.", content: <p>Falta info</p> },
+        "derecho-penal": {
+            title: "Derecho Penal",
+            description: "Asesoramiento y defensa en materia penal.",
+            content: (
+                <div className="space-y-6 text-justify">
+                    <p>Ofrecemos un servicio integral de asesoramiento y defensa en el ámbito del derecho penal, garantizando la protección de sus derechos en todo momento.</p>
+                    <div className="mt-10">
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Defensa en procesos penales</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Cancelación de antecedentes penales y policiales</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Alcoholemias</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Conducir sin haber obtenido el carnet de conducir Español</h2>
+                    </div>
+                </div>
+            )
+        },
+        "derecho-civil": {
+            title: "Derecho Civil Matrimonial",
+            description: "Gestión de divorcios, separaciones y convenios reguladores.",
+            content: (
+                <div className="space-y-6 text-justify">
+                    <p>Le acompañamos en los procesos de derecho de familia, buscando siempre la solución más beneficiosa para todas las partes implicadas.</p>
+                    <div className="mt-10">
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Divorcios mutuo acuerdo</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Divorcio ante Notario</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Divorcio Contencioso</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Pensión de alimentos y guarda y custodia</h2>
+                    </div>
+                </div>
+            )
+        },
         "reclamacion-accidentes": { title: "Reclamación Accidentes", description: "Gestión de indemnizaciones.", content: <p>Falta info</p> }
     },
     en: {
@@ -428,8 +456,36 @@ export const serviceTranslations: Record<Locale, Record<string, ServiceData>> = 
                 </div>
             )
         },
-        "derecho-penal": { title: "Criminal Law", description: "Coming Soon", content: <p>Coming Soon</p> },
-        "derecho-civil": { title: "Family Law", description: "Coming Soon", content: <p>Coming Soon</p> },
+        "derecho-penal": {
+            title: "Criminal Law",
+            description: "Legal advice and defense in criminal matters.",
+            content: (
+                <div className="space-y-6 text-justify">
+                    <p>We provide comprehensive legal advice and defense services in the area of criminal law, ensuring your rights are protected at all times.</p>
+                    <div className="mt-10">
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Defense in criminal proceedings</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Cancellation of criminal and police records</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Breathalyzer tests</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Driving without a valid Spanish license</h2>
+                    </div>
+                </div>
+            )
+        },
+        "derecho-civil": {
+            title: "Family Law",
+            description: "Management of divorces, separations, and regulatory agreements.",
+            content: (
+                <div className="space-y-6 text-justify">
+                    <p>We guide you through family law processes, always seeking the most beneficial solution for all parties involved.</p>
+                    <div className="mt-10">
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Uncontested Divorces</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Divorce before a Notary</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Contested Divorce</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Child Support and Custody</h2>
+                    </div>
+                </div>
+            )
+        },
         "reclamacion-accidentes": { title: "Accident Claims", description: "Coming Soon", content: <p>Coming Soon</p> }
     },
     fr: {
@@ -644,8 +700,36 @@ export const serviceTranslations: Record<Locale, Record<string, ServiceData>> = 
                 </div>
             )
         },
-        "derecho-penal": { title: "Droit Pénal", description: "Bientôt disponible", content: <p>Bientôt disponible</p> },
-        "derecho-civil": { title: "Droit Civil", description: "Bientôt disponible", content: <p>Bientôt disponible</p> },
+        "derecho-penal": {
+            title: "Droit Pénal",
+            description: "Conseils juridiques et défense en matière pénale.",
+            content: (
+                <div className="space-y-6 text-justify">
+                    <p>Nous fournissons des services complets de conseil juridique et de défense dans le domaine du droit pénal, garantissant la protection de vos droits en tout temps.</p>
+                    <div className="mt-10">
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Défense dans les procédures pénales</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Annulation des casiers judiciaires et policiers</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Tests d'alcoolémie</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Conduite sans permis espagnol</h2>
+                    </div>
+                </div>
+            )
+        },
+        "derecho-civil": {
+            title: "Droit Civil et Matrimonial",
+            description: "Gestion des divorces, séparations et accords réglementaires.",
+            content: (
+                <div className="space-y-6 text-justify">
+                    <p>Nous vous accompagnons dans les procédures de droit de la famille, en recherchant toujours la solution la plus bénéfique pour toutes las parties impliquées.</p>
+                    <div className="mt-10">
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Divorces par consentement mutuel</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Divorce devant Notaire</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Divorce contentieux</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Pension alimentaire et garde d'enfants</h2>
+                    </div>
+                </div>
+            )
+        },
         "reclamacion-accidentes": { title: "Réclamations Accidents", description: "Bientôt disponible", content: <p>Bientôt disponible</p> }
     },
     pt: {
@@ -857,8 +941,36 @@ export const serviceTranslations: Record<Locale, Record<string, ServiceData>> = 
                 </div>
             )
         },
-        "derecho-penal": { title: "Direito Penal", description: "Em breve", content: <p>Em breve</p> },
-        "derecho-civil": { title: "Direito Civil", description: "Em breve", content: <p>Em breve</p> },
+        "derecho-penal": {
+            title: "Direito Penal",
+            description: "Assessoria jurídica e defesa em matéria penal.",
+            content: (
+                <div className="space-y-6 text-justify">
+                    <p>Oferecemos serviços abrangentes de assessoria jurídica e defesa na área do direito penal, garantindo que os seus direitos sejam protegidos em todos os momentos.</p>
+                    <div className="mt-10">
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Defesa em processos penais</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Cancelamento de antecedentes criminais e policiais</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Testes de bafômetro</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Conduzir sem habilitação espanhola</h2>
+                    </div>
+                </div>
+            )
+        },
+        "derecho-civil": {
+            title: "Direito Civil e Matrimonial",
+            description: "Gestão de divórcios, separações e acordos regulamentares.",
+            content: (
+                <div className="space-y-6 text-justify">
+                    <p>Acompanhamos você nos processos de direito de família, buscando sempre a solução mais benéfica para todas as partes envolvidas.</p>
+                    <div className="mt-10">
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Divórcios por mútuo acordo</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Divórcio perante Notário</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Divórcio Litigioso</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Pensão de alimentos e guarda e custódia</h2>
+                    </div>
+                </div>
+            )
+        },
         "reclamacion-accidentes": { title: "Reclamação de Acidentes", description: "Em breve", content: <p>Em breve</p> }
     },
     ar: {
@@ -1073,8 +1185,36 @@ export const serviceTranslations: Record<Locale, Record<string, ServiceData>> = 
                 </div>
             )
         },
-        "derecho-penal": { title: "القانون الجنائي", description: "قريباً", content: <p>قريباً</p> },
-        "derecho-civil": { title: "القانون المدني", description: "قريباً", content: <p>قريباً</p> },
+        "derecho-penal": {
+            title: "القانون الجنائي",
+            description: "المشورة القانونية والدفاع في المسائل الجنائية.",
+            content: (
+                <div className="space-y-6 text-justify" dir="rtl">
+                    <p>نقدم خدمات استشارية دفاعية وقانونية شاملة في مجال القانون الجنائي، مما يضمن حماية حقوقك في جميع الأوقات.</p>
+                    <div className="mt-10">
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6 text-right">الدفاع في الإجراءات الجنائية</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6 text-right">إلغاء السجلات الجنائية والشرطية</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6 text-right">اختبارات الكحول</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6 text-right">القيادة بدون رخصة إسبانية</h2>
+                    </div>
+                </div>
+            )
+        },
+        "derecho-civil": {
+            title: "القانون المدني والزوجي",
+            description: "إدارة حالات الطلاق والانفصال والاتفاقات التنظيمية.",
+            content: (
+                <div className="space-y-6 text-justify" dir="rtl">
+                    <p>نرافقك في إجراءات قانون الأسرة، ونسعى دائماً للحل الأكثر فائدة لجميع الأطراف المعنية.</p>
+                    <div className="mt-10">
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6 text-right">الطلاق بالاتفاق المتبادل</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6 text-right">الطلاق أمام كاتب العدل</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6 text-right">الطلاق المتنازع عليه</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6 text-right">نفقة الطفل وحضانته</h2>
+                    </div>
+                </div>
+            )
+        },
         "reclamacion-accidentes": { title: "مطالبات الحوادث", description: "قريباً", content: <p>قريباً</p> }
     },
     zh: {
@@ -1289,8 +1429,36 @@ export const serviceTranslations: Record<Locale, Record<string, ServiceData>> = 
                 </div>
             )
         },
-        "derecho-penal": { title: "刑法", description: "即将推出", content: <p>即将推出</p> },
-        "derecho-civil": { title: "民法", description: "即将推出", content: <p>即将推出</p> },
+        "derecho-penal": {
+            title: "刑法",
+            description: "刑事事务的法律咨询和辩护。",
+            content: (
+                <div className="space-y-6 text-justify">
+                    <p>我们提供刑法领域的综合法律咨询和辩护服务，确保您的权利始时刻受到保护。</p>
+                    <div className="mt-10">
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">刑事诉讼辩护</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">取消刑事和警务记录</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">酒精测试</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">无西班牙驾照驾驶</h2>
+                    </div>
+                </div>
+            )
+        },
+        "derecho-civil": {
+            title: "民事法律及婚姻事务",
+            description: "处理离婚、分居及相关协议。",
+            content: (
+                <div className="space-y-6 text-justify">
+                    <p>我们在家庭法诉讼过程中为您提供协助，始终寻求对所有相关方最有利的解决方案。</p>
+                    <div className="mt-10">
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">协议离婚</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">公证离婚</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">诉讼离婚</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">子女抚养费及监护权</h2>
+                    </div>
+                </div>
+            )
+        },
         "reclamacion-accidentes": { title: "事故索赔", description: "即将推出", content: <p>即将推出</p> }
     },
     ro: {
@@ -1503,8 +1671,36 @@ export const serviceTranslations: Record<Locale, Record<string, ServiceData>> = 
                 </div>
             )
         },
-        "derecho-penal": { title: "Drept Penal", description: "În curând", content: <p>În curând</p> },
-        "derecho-civil": { title: "Drept Civil", description: "În curând", content: <p>În curând</p> },
+        "derecho-penal": {
+            title: "Drept Penal",
+            description: "Consultanță juridică și apărare în materie penală.",
+            content: (
+                <div className="space-y-6 text-justify">
+                    <p>Oferim servicii complete de consultanță juridică și apărare în domeniul dreptului penal, garantând protecția drepturilor dumneavoastră în orice moment.</p>
+                    <div className="mt-10">
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Apărarea în procesele penale</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Anularea cazierului judiciar și a evidențelor poliției</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Teste de alcoolemie</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Conducerea fără permis spaniol</h2>
+                    </div>
+                </div>
+            )
+        },
+        "derecho-civil": {
+            title: "Drept Civil și Matrimonial",
+            description: "Gestionarea divorțurilor, separărilor și acordurilor de reglementare.",
+            content: (
+                <div className="space-y-6 text-justify">
+                    <p>Vă însoțim în procesele de drept al familiei, căutând întotdeauna soluția cea mai avantajoasă pentru toate părțile implicate.</p>
+                    <div className="mt-10">
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Divorțuri prin acord mutual</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Divorț în fața Notarului</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Divorț Contencios</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary border-b border-primary/20 pb-2 mb-6">Pensie alimentară și custodia copilului</h2>
+                    </div>
+                </div>
+            )
+        },
         "reclamacion-accidentes": { title: "Reclamații Accidente", description: "În curând", content: <p>În curând</p> }
     },
 }
