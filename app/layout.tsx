@@ -59,6 +59,19 @@ export const metadata: Metadata = {
     siteName: 'Carolina Morales Abogada',
     locale: 'es_ES',
     type: 'website',
+    images: [{
+      url: '/carolina.jpeg',
+      width: 800,
+      height: 600,
+      alt: 'Carolina Morales - Abogada de Extranjería',
+    }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Carolina Morales Abogada | Extranjería y Nacionalidad Española',
+    description: "Abogada experta en extranjería, nacionalidad española y migración. Asesoramiento legal en Barcelona y online.",
+    images: ['/carolina.jpeg'],
+    creator: '@carolinamorales', // Optional, can remain generic or be removed if not needed
   },
   robots: {
     index: true,

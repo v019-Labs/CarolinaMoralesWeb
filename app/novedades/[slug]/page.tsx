@@ -30,6 +30,12 @@ export async function generateMetadata(
             description: newsItem.description,
             type: 'article',
             publishedTime: newsItem.date,
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: newsItem.title,
+            description: newsItem.description,
+            images: ['/carolina.jpeg'],
         }
     }
 }

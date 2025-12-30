@@ -29,6 +29,12 @@ export async function generateMetadata(
             description: service.description,
             type: 'website',
             url: `https://www.abogadosmigracionyextranjeria.es/servicios/${slug}`,
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: service.title,
+            description: service.description,
+            images: ['/carolina.jpeg'],
         }
     }
 }
