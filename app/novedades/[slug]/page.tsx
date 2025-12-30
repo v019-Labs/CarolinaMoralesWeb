@@ -90,12 +90,35 @@ export default function NovedadPage({ params }: { params: Promise<{ slug: string
                                     </a>
                                 </div>
 
-                                <div className="w-full h-[800px] border border-border rounded-xl overflow-hidden bg-muted/20">
+                                <div className="w-full h-[70vh] md:h-[850px] border border-border rounded-xl overflow-hidden bg-muted/20 shadow-inner relative group">
                                     <iframe
-                                        src={newsItem.url}
+                                        src={`${newsItem.url}#toolbar=0&navpanes=0`}
                                         className="w-full h-full"
                                         title={newsItem.title}
                                     />
+
+                                    {/* Mobile/Small Screen Overlay Tools */}
+                                    <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-background/80 to-transparent md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                                        <div className="flex items-center justify-center gap-3 pointer-events-auto">
+                                            <a
+                                                href={newsItem.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="bg-primary text-primary-foreground px-4 py-2 rounded-full shadow-lg text-xs font-semibold flex items-center gap-2 hover:scale-105 active:scale-95 transition-all"
+                                            >
+                                                <FileText className="w-4 h-4" />
+                                                {t.newsPage.readMore}
+                                            </a>
+                                            <a
+                                                href={newsItem.url}
+                                                download
+                                                className="bg-background/95 backdrop-blur-sm border border-border text-foreground px-4 py-2 rounded-full shadow-lg text-xs font-semibold flex items-center gap-2 hover:scale-105 active:scale-95 transition-all"
+                                            >
+                                                <Download className="w-4 h-4" />
+                                                {t.newsPage.downloadPdf}
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         ) : (
