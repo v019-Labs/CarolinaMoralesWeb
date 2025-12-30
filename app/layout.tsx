@@ -36,16 +36,16 @@ export const metadata: Metadata = {
     default: "Carolina Morales Abogada | Extranjería y Nacionalidad Española",
     template: "%s | Carolina Morales Abogada"
   },
-  description: "Abogada experta en extranjería, nacionalidad española y migración. Asesoramiento legal en Barcelona y online para reagrupación familiar, arraigos y visados.",
+  description: "Abogada experta en Arraigos, Nacionalidad Española y Reagrupación Familiar. Asesoramiento legal especializado en Barcelona y online para extranjeros.",
   keywords: [
     "abogada extranjería",
-    "abogada migración",
-    "visados España",
-    "permiso de residencia",
-    "permiso de trabajo",
+    "arraigo social",
     "nacionalidad española",
     "reagrupación familiar",
-    "arraigo social",
+    "arraigo para la formación",
+    "arraigo laboral",
+    "visados España",
+    "permiso de residencia",
     "trámites de inmigración"
   ],
   authors: [{ name: "Carolina Morales López" }],
@@ -53,8 +53,8 @@ export const metadata: Metadata = {
   publisher: "Carolina Morales Abogada",
   category: "Legal Services",
   openGraph: {
-    title: "Carolina Morales Abogada | Expertos en Extranjería",
-    description: "Despacho de abogados especializado en trámites de extranjería, nacionalidad española y permisos de residencia.",
+    title: "Carolina Morales Abogada | Experta en Arraigos y Nacionalidad",
+    description: "Especialista en trámites de extranjería: Arraigos, Nacionalidad Española y Reagrupación Familiar. Consultoría legal rápida y eficiente.",
     url: 'https://www.abogadosmigracionyextranjeria.es',
     siteName: 'Carolina Morales Abogada',
     locale: 'es_ES',
@@ -63,15 +63,15 @@ export const metadata: Metadata = {
       url: '/carolina.jpeg',
       width: 800,
       height: 600,
-      alt: 'Carolina Morales - Abogada de Extranjería',
+      alt: 'Carolina Morales - Abogada experta en Arraigos, Nacionalidad y Reagrupación Familiar',
     }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Carolina Morales Abogada | Extranjería y Nacionalidad Española',
-    description: "Abogada experta en extranjería, nacionalidad española y migración. Asesoramiento legal en Barcelona y online.",
+    title: 'Carolina Morales Abogada | Experta en Arraigos y Nacionalidad',
+    description: "Especialista en extranjería: Arraigos, Nacionalidad Española y Reagrupación Familiar. Tu residencia en buenas manos.",
     images: ['/carolina.jpeg'],
-    creator: '@carolinamorales', // Optional, can remain generic or be removed if not needed
+    creator: '@carolinamorales',
   },
   robots: {
     index: true,
