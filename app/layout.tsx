@@ -31,8 +31,12 @@ const greatVibes = Great_Vibes({
 })
 
 export const metadata: Metadata = {
-  title: "Carolina Morales Abogada",
-  description: "Abogada de migración y extranjería",
+  metadataBase: new URL('https://www.abogadosmigracionyextranjeria.es'),
+  title: {
+    default: "Carolina Morales Abogada | Extranjería y Nacionalidad Española",
+    template: "%s | Carolina Morales Abogada"
+  },
+  description: "Abogada experta en extranjería, nacionalidad española y migración. Asesoramiento legal en Barcelona y online para reagrupación familiar, arraigos y visados.",
   keywords: [
     "abogada extranjería",
     "abogada migración",
@@ -47,18 +51,26 @@ export const metadata: Metadata = {
   authors: [{ name: "Carolina Morales López" }],
   creator: "Carolina Morales López",
   publisher: "Carolina Morales Abogada",
-  category: "Legal Services"
-  // robots: {
-  //   index: true,
-  //   follow: true,
-  //   googleBot: {
-  //     index: true,
-  //     follow: true,
-  //     "max-video-preview": -1,
-  //     "max-image-preview": "large",
-  //     "max-snippet": -1,
-  //   },
-  // },
+  category: "Legal Services",
+  openGraph: {
+    title: "Carolina Morales Abogada | Expertos en Extranjería",
+    description: "Despacho de abogados especializado en trámites de extranjería, nacionalidad española y permisos de residencia.",
+    url: 'https://www.abogadosmigracionyextranjeria.es',
+    siteName: 'Carolina Morales Abogada',
+    locale: 'es_ES',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 }
 
 export default async function RootLayout({
@@ -87,6 +99,49 @@ export default async function RootLayout({
         <CookieConsent />
         <Analytics />
         <Toaster />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LegalService",
+              "name": "Carolina Morales Abogada",
+              "image": "https://www.abogadosmigracionyextranjeria.es/og-image.jpg",
+              "@id": "https://www.abogadosmigracionyextranjeria.es",
+              "url": "https://www.abogadosmigracionyextranjeria.es",
+              "telephone": "+34666333222",
+              "priceRange": "$$",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Carrer del Consell de Cent, 123",
+                "addressLocality": "Barcelona",
+                "postalCode": "08015",
+                "addressCountry": "ES"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 41.3851,
+                "longitude": 2.1734
+              },
+              "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday"
+                ],
+                "opens": "09:00",
+                "closes": "18:00"
+              },
+              "sameAs": [
+                "https://www.instagram.com/carolinamoralesabogada",
+                "https://www.linkedin.com/in/carolinamorales"
+              ]
+            })
+          }}
+        />
       </body>
     </html>
   )

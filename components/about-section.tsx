@@ -64,7 +64,7 @@ export function AboutSection() {
               <div className="relative w-full h-full bg-gradient-to-br from-primary/20 to-accent/15 rounded-[calc(3rem-4px)] overflow-hidden shadow-xl shadow-primary/20 hover:shadow-primary/40 transition-all duration-500">
                 <Image
                   src="/carolina.jpeg"
-                  alt="Carolina Morales"
+                  alt="Carolina Morales - Abogada de Extranjería y Nacionalidad"
                   width={500}
                   height={625}
                   className="object-cover w-full h-full"

@@ -104,7 +104,7 @@ export function IntroHero() {
             {/* Banner Image */}
             <Image
               src="/images/Nueva.jpg"
-              alt="Carolina Morales - Abogada"
+              alt="Carolina Morales - Expertos en Extranjería Abogados"
               fill
               className="object-cover object-center"
               quality={100}
