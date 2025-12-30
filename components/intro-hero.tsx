@@ -103,11 +103,19 @@ export function IntroHero() {
           >
             {/* Banner Image */}
             <Image
-              src="/images/banner.jpg"
+              src="/images/Nueva.jpg"
               alt="Carolina Morales - Abogada"
               fill
               className="object-cover object-center"
+              quality={100}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
               priority
+              style={{
+                imageRendering: 'auto',
+                WebkitBackfaceVisibility: 'hidden',
+                backfaceVisibility: 'hidden',
+                filter: 'contrast(1.02) brightness(1.02) saturate(1.02)',
+              }}
             />
             {/* Golden border frame */}
             <div className="absolute inset-0 rounded-2xl md:rounded-3xl ring-2 ring-primary/50 ring-inset" />
