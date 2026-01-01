@@ -1,0 +1,174 @@
+"use client"
+
+import { useEffect, useMemo, useState, useRef } from "react"
+
+import { cn } from "@/lib/utils"
+
+type Grid = {
+    rows: number
+    cols: number
+}
+
+const DEFAULT_GRIDS: Record<string, Grid> = {
+    "6x4": { rows: 4, cols: 6 },
+    "8x8": { rows: 8, cols: 8 },
+    "8x3": { rows: 3, cols: 8 },
+    "4x6": { rows: 6, cols: 4 },
+    "3x8": { rows: 8, cols: 3 },
+}
+
+type PredefinedGridKey = keyof typeof DEFAULT_GRIDS
+
+interface PixelImageProps {
+    src: string
+    grid?: PredefinedGridKey
+    customGrid?: Grid
+    grayscaleAnimation?: boolean
+    pixelFadeInDuration?: number // in ms
+    maxAnimationDelay?: number // in ms
+    colorRevealDelay?: number // in ms
+}
+
+export const PixelImage = ({
+    src,
+    grid = "6x4",
+    grayscaleAnimation = true,
+    pixelFadeInDuration = 1000,
+    maxAnimationDelay = 1200,
+    colorRevealDelay = 1300,
+    customGrid,
+    className,
+}: PixelImageProps & { className?: string }) => {
+    const containerRef = useRef<HTMLDivElement>(null)
+    const [isFinished, setIsFinished] = useState(false)
+    const [isVisible, setIsVisible] = useState(false)
+    const [showColor, setShowColor] = useState(false)
+
+    const MIN_GRID = 1
+    const MAX_GRID = 16
+
+    const { rows, cols } = useMemo(() => {
+        const isValidGrid = (grid?: Grid) => {
+            if (!grid) return false
+            const { rows, cols } = grid
+            return (
+                Number.isInteger(rows) &&
+                Number.isInteger(cols) &&
+                rows >= MIN_GRID &&
+                cols >= MIN_GRID &&
+                rows <= MAX_GRID &&
+                cols <= MAX_GRID
+            )
+        }
+
+        return isValidGrid(customGrid) ? customGrid! : DEFAULT_GRIDS[grid]
+    }, [customGrid, grid])
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true)
+                    observer.disconnect()
+                }
+            },
+            { threshold: 0.1 } // Trigger when 10% visible
+        )
+
+        if (containerRef.current) {
+            observer.observe(containerRef.current)
+        }
+
+        return () => observer.disconnect()
+    }, [])
+
+    useEffect(() => {
+        if (!isVisible) return
+
+        const colorTimeout = setTimeout(() => {
+            setShowColor(true)
+        }, colorRevealDelay)
+
+        const finishTimeout = setTimeout(() => {
+            setIsFinished(true)
+        }, maxAnimationDelay + pixelFadeInDuration + 200) // Extra buffer
+
+        return () => {
+            clearTimeout(colorTimeout)
+            clearTimeout(finishTimeout)
+        }
+    }, [isVisible, colorRevealDelay, maxAnimationDelay, pixelFadeInDuration])
+
+    const pieces = useMemo(() => {
+        const total = rows * cols
+        return Array.from({ length: total }, (_, index) => {
+            const row = Math.floor(index / cols)
+            const col = index % cols
+
+            const clipPath = `polygon(
+        ${col * (100 / cols)}% ${row * (100 / rows)}%,
+        ${(col + 1) * (100 / cols)}% ${row * (100 / rows)}%,
+        ${(col + 1) * (100 / cols)}% ${(row + 1) * (100 / rows)}%,
+        ${col * (100 / cols)}% ${(row + 1) * (100 / rows)}%
+      )`
+
+            const delay = Math.random() * maxAnimationDelay
+            return {
+                clipPath,
+                delay,
+            }
+        })
+    }, [rows, cols, maxAnimationDelay])
+
+    return (
+        <div ref={containerRef} className={cn("relative h-full w-full select-none", className)}>
+            {/* Show clean image when finished to remove grid lines */}
+            <div
+                className={cn(
+                    "absolute inset-0 transition-opacity duration-1000",
+                    isFinished ? "opacity-100 z-10" : "opacity-0 z-0"
+                )}
+            >
+                <img
+                    src={src}
+                    alt="Full image"
+                    className="h-full w-full rounded-[2.5rem] object-cover"
+                    draggable={false}
+                />
+            </div>
+
+            {/* Grid pieces */}
+            <div className={cn("absolute inset-0 size-full transition-opacity duration-1000", isFinished ? "opacity-0" : "opacity-100")}>
+                {pieces.map((piece, index) => (
+                    <div
+                        key={index}
+                        className={cn(
+                            "absolute inset-0 transition-all ease-out",
+                            isVisible ? "opacity-100" : "opacity-0"
+                        )}
+                        style={{
+                            clipPath: piece.clipPath,
+                            transitionDelay: `${piece.delay}ms`,
+                            transitionDuration: `${pixelFadeInDuration}ms`,
+                        }}
+                    >
+                        <img
+                            src={src}
+                            alt={`Pixel image piece ${index + 1}`}
+                            className={cn(
+                                "h-full w-full rounded-[2.5rem] object-cover",
+                                grayscaleAnimation && (showColor ? "grayscale-0" : "grayscale")
+                            )}
+                            style={{
+                                transition: grayscaleAnimation
+                                    ? `filter ${pixelFadeInDuration}ms cubic-bezier(0.4, 0, 0.2, 1)`
+                                    : "none",
+                            }}
+                            draggable={false}
+                        />
+                    </div>
+                ))}
+            </div>
+        </div>
+    )
+}

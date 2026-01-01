@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import { useTranslation } from "@/lib/i18n"
+import { PixelImage } from "@/components/ui/pixel-image"
 
 export function AboutSection() {
   const { t } = useTranslation()
@@ -62,13 +63,11 @@ export function AboutSection() {
             <div className="photo-laser-border relative aspect-[4/5] rounded-[3rem] p-[4px]">
               {/* Inner container for the image */}
               <div className="relative w-full h-full bg-gradient-to-br from-primary/20 to-accent/15 rounded-[calc(3rem-4px)] overflow-hidden shadow-xl shadow-primary/20 hover:shadow-primary/40 transition-all duration-500">
-                <Image
+                <PixelImage
                   src="/carolina.jpeg"
-                  alt="Carolina Morales - Abogada experta en Arraigos, Nacionalidad y Reagrupación Familiar"
-                  width={500}
-                  height={625}
-                  className="object-cover w-full h-full"
-                  priority
+                  customGrid={{ rows: 4, cols: 6 }}
+                  grayscaleAnimation
+                  className="size-full"
                 />
               </div>
             </div>
