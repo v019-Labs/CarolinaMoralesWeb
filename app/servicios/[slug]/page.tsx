@@ -41,6 +41,42 @@ export async function generateMetadata(
 
 export default async function ServicePage({ params }: Props) {
     const { slug } = await params
+    const service = getServiceContent('es', slug)
 
-    return <ServicePageClient slug={slug} />
+    return (
+        <>
+            <ServicePageClient slug={slug} />
+            {service && (
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "BreadcrumbList",
+                            "itemListElement": [
+                                {
+                                    "@type": "ListItem",
+                                    "position": 1,
+                                    "name": "Inicio",
+                                    "item": "https://www.abogadosmigracionyextranjeria.es"
+                                },
+                                {
+                                    "@type": "ListItem",
+                                    "position": 2,
+                                    "name": "Servicios",
+                                    "item": "https://www.abogadosmigracionyextranjeria.es/#servicios"
+                                },
+                                {
+                                    "@type": "ListItem",
+                                    "position": 3,
+                                    "name": service.title,
+                                    "item": `https://www.abogadosmigracionyextranjeria.es/servicios/${slug}`
+                                }
+                            ]
+                        })
+                    }}
+                />
+            )}
+        </>
+    )
 }

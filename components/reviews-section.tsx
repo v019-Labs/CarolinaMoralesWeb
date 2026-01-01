@@ -1,35 +1,56 @@
 "use client"
 
 import { Star, Quote } from "lucide-react"
-import { useEffect, useRef } from "react"
 import { useTranslation } from "@/lib/i18n"
+import { Marquee } from "@/components/ui/marquee"
+
+const ReviewCard = ({
+  name,
+  rating,
+  text,
+  case: caseType,
+  initial,
+}: {
+  name: string
+  rating: number
+  text: string
+  case: string
+  initial: string
+}) => {
+  return (
+    <div className="w-[450px] mx-6 group relative p-8 bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-md border border-primary/15 rounded-3xl hover:shadow-xl hover:shadow-primary/20 hover:border-primary/40 transition-all duration-500 ease-out flex flex-col justify-between h-full">
+      <div className="absolute top-6 right-6 opacity-10 group-hover:opacity-20 transition-opacity">
+        <Quote className="w-20 h-20 text-primary" />
+      </div>
+
+      <div className="relative space-y-6">
+        <div className="flex items-center gap-1">
+          {[...Array(rating)].map((_, i) => (
+            <Star
+              key={i}
+              className="w-6 h-6 fill-primary text-primary drop-shadow-[0_0_8px_rgba(164,144,107,0.4)]"
+            />
+          ))}
+        </div>
+
+        <p className="text-lg text-foreground leading-relaxed relative z-10 line-clamp-6">{text}</p>
+      </div>
+
+      <div className="flex items-center gap-4 pt-6 border-t-2 border-primary/20 mt-6 text-left">
+        <div className="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-primary to-accent rounded-full text-primary-foreground text-xl font-bold group-hover:scale-105 transition-transform duration-300 shadow-lg shadow-primary/20 shrink-0">
+          {initial}
+        </div>
+        <div>
+          <div className="font-bold text-foreground text-lg">{name}</div>
+          <div className="text-sm text-primary font-medium">{caseType}</div>
+        </div>
+      </div>
+    </div>
+  )
+}
 
 export function ReviewsSection() {
   const { t } = useTranslation()
-  const sectionRef = useRef<HTMLElement>(null)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!sectionRef.current) return
-      const scrollY = window.scrollY
-      const elements = sectionRef.current.querySelectorAll("[data-parallax]")
-
-      elements.forEach((el) => {
-        const speed = Number.parseFloat(el.getAttribute("data-parallax") || "0")
-        const rect = el.getBoundingClientRect()
-        const elementTop = rect.top + scrollY
-        const elementVisible = rect.top < window.innerHeight && rect.bottom > 0
-
-        if (elementVisible) {
-          const yPos = (scrollY - elementTop / 2) * speed * 1.5
-            ; (el as HTMLElement).style.transform = `translateY(${yPos}px) translateZ(0)`
-        }
-      })
-    }
-
-    window.addEventListener("scroll", handleScroll, { passive: true })
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
 
   const reviews = [
     {
@@ -63,19 +84,17 @@ export function ReviewsSection() {
   ]
 
   return (
-    <section ref={sectionRef} id="resenas" className="py-32 px-6 relative overflow-hidden">
+    <section id="resenas" className="py-32 relative overflow-hidden">
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <div
-          data-parallax="0.6"
           className="absolute bottom-10 right-1/4 w-[500px] h-[500px] bg-accent/15 rounded-full blur-[120px] animate-glow"
         />
         <div
-          data-parallax="0.4"
           className="absolute top-20 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[100px] animate-pulse"
         />
       </div>
 
-      <div className="container mx-auto max-w-7xl">
+      <div className="mx-auto max-w-[1920px]">
         <div className="text-center space-y-6 mb-20 animate-slide-in-up">
           <h2 className="text-6xl md:text-7xl font-bold text-balance leading-tight">
             {t.reviews.title}{" "}
@@ -87,43 +106,14 @@ export function ReviewsSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {reviews.map((review, index) => (
-            <div
-              key={index}
-              className="group relative p-8 bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-md border border-primary/15 rounded-3xl hover:shadow-xl hover:shadow-primary/20 hover:border-primary/40 transition-all duration-500 ease-out hover:-translate-y-1 animate-slide-in-up"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-
-              <div className="absolute top-6 right-6 opacity-10 group-hover:opacity-20 transition-opacity">
-                <Quote className="w-20 h-20 text-primary" />
-              </div>
-
-              <div className="relative space-y-6">
-                <div className="flex items-center gap-1">
-                  {[...Array(review.rating)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-6 h-6 fill-primary text-primary animate-fade-in-scale drop-shadow-[0_0_8px_rgba(164,144,107,0.4)]"
-                      style={{ animationDelay: `${index * 150 + i * 80}ms` }}
-                    />
-                  ))}
-                </div>
-
-                <p className="text-lg text-foreground leading-relaxed relative z-10">"{review.text}"</p>
-
-                <div className="flex items-center gap-4 pt-6 border-t-2 border-primary/20">
-                  <div className="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-primary to-accent rounded-full text-primary-foreground text-xl font-bold group-hover:scale-105 transition-transform duration-300 shadow-lg shadow-primary/20">
-                    {review.initial}
-                  </div>
-                  <div>
-                    <div className="font-bold text-foreground text-lg">{review.name}</div>
-                    <div className="text-sm text-primary font-medium">{review.case}</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
+        <div className="relative">
+          <Marquee pauseOnHover className="[--duration:40s]">
+            {reviews.map((review, index) => (
+              <ReviewCard key={review.name} {...review} />
+            ))}
+          </Marquee>
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-background"></div>
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-background"></div>
         </div>
       </div>
     </section>

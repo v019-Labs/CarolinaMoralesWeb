@@ -126,15 +126,15 @@ export default async function RootLayout({
               "priceRange": "$$",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Carrer del Consell de Cent, 123",
+                "streetAddress": "Pg. de la Bonanova, 10, Bj 2ª",
                 "addressLocality": "Barcelona",
-                "postalCode": "08015",
+                "postalCode": "08022",
                 "addressCountry": "ES"
               },
               "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": 41.3851,
-                "longitude": 2.1734
+                "latitude": 41.3995831,
+                "longitude": 2.1298463
               },
               "openingHoursSpecification": {
                 "@type": "OpeningHoursSpecification",
@@ -149,8 +149,28 @@ export default async function RootLayout({
                 "closes": "18:00"
               },
               "sameAs": [
-                "https://www.instagram.com/carolinamoralesabogada",
-                "https://www.linkedin.com/in/carolinamorales"
+                "https://www.instagram.com/abogada_carolina_morales/",
+                "https://www.google.com/maps/place/Carolina+Morales+Abogada/@41.3995831,2.1298463,17z"
+              ],
+              "knowsAbout": ["Arraigos", "Nacionalidad Española", "Reagrupación Familiar", "Derecho de Extranjería"],
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5",
+                "reviewCount": "4"
+              },
+              "review": [
+                {
+                  "@type": "Review",
+                  "author": { "@type": "Person", "name": "Ramiro Barreto Gutiérrez" },
+                  "reviewBody": "Excelente profesional, una abogada de extranjería que realizó un trabajo impecable, logrando mi nacionalidad en muy poco tiempo.",
+                  "reviewRating": { "@type": "Rating", "ratingValue": "5" }
+                },
+                {
+                  "@type": "Review",
+                  "author": { "@type": "Person", "name": "Carolyn Handley" },
+                  "reviewBody": "10/10, would highly recommend to anyone going through a visa process!",
+                  "reviewRating": { "@type": "Rating", "ratingValue": "5" }
+                }
               ]
             })
           }}

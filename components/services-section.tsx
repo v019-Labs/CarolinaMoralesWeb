@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react"
 import Image from "next/image"
 import { useTranslation } from "@/lib/i18n"
-import { AnimatedLink } from "@/components/animated-link"
+import { BentoGrid, BentoCard } from "@/components/ui/bento-grid"
 
 export function ServicesSection() {
   const { t } = useTranslation()
@@ -37,19 +37,22 @@ export function ServicesSection() {
       title: t.services.nacionalidad.title,
       slug: "nacionalidad",
       description: t.services.nacionalidad.description,
-      image: "/images/nacionalidad.png"
+      image: "/images/nacionalidad.png",
+      className: "md:col-span-2",
     },
     {
       title: t.services.arraigo.title,
       slug: "arraigo",
       description: t.services.arraigo.description,
       image: "/images/arraigo.png",
+      className: "md:col-span-1",
     },
     {
       title: t.services.reagrupacion.title,
       slug: "reagrupacion-familiar",
       description: t.services.reagrupacion.description,
-      image: "/images/reagrupacion.jpg"
+      image: "/images/reagrupacion.jpg",
+      className: "md:col-span-3",
     },
   ]
 
@@ -59,18 +62,21 @@ export function ServicesSection() {
       slug: "derecho-penal",
       description: t.services.penal.description,
       image: "/images/penal.jpg",
+      className: "md:col-span-1",
     },
     {
       title: t.services.civil.title,
       slug: "derecho-civil",
       description: t.services.civil.description,
       image: "/images/matrimonial.jpg",
+      className: "md:col-span-1",
     },
     {
       title: t.services.accidentes.title,
       slug: "reclamacion-accidentes",
       description: t.services.accidentes.description,
       image: "/images/accidente.jpg",
+      className: "md:col-span-1",
     },
   ]
 
@@ -101,11 +107,29 @@ export function ServicesSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
+        <BentoGrid className="mb-24">
           {mainServices.map((service, index) => (
-            <ServiceCard key={index} service={service} index={index} learnMore={t.services.learnMore} />
+            <BentoCard
+              key={index}
+              name={service.title}
+              className={service.className}
+              background={
+                <div className="absolute inset-0 opacity-40 group-hover:opacity-20 transition-opacity duration-500">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className={`${service.slug === 'arraigo' ? 'object-contain p-4' : 'object-cover'} transition-transform duration-700`}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+                </div>
+              }
+              description={service.description}
+              href={`/servicios/${service.slug}`}
+              cta={t.services.learnMore}
+            />
           ))}
-        </div>
+        </BentoGrid>
 
         <div className="space-y-12 animate-slide-in-up animation-delay-400">
           <div className="text-center space-y-4">
@@ -115,59 +139,31 @@ export function ServicesSection() {
             <div className="w-24 h-0.5 bg-primary/30 mx-auto" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <BentoGrid>
             {otherServices.map((service, index) => (
-              <ServiceCard key={index} service={service} index={index + 4} learnMore={t.services.learnMore} />
+              <BentoCard
+                key={index}
+                name={service.title}
+                className={service.className}
+                background={
+                  <div className="absolute inset-0 opacity-40 group-hover:opacity-20 transition-opacity duration-500">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      className="object-cover transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+                  </div>
+                }
+                description={service.description}
+                href={`/servicios/${service.slug}`}
+                cta={t.services.learnMore}
+              />
             ))}
-          </div>
+          </BentoGrid>
         </div>
       </div>
     </section>
-  )
-}
-
-function ServiceCard({ service, index, learnMore }: { service: any; index: number; learnMore: string }) {
-  return (
-    <AnimatedLink href={`/servicios/${service.slug}`} className="block h-full">
-      <div
-        className="group relative p-8 bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-md border border-primary/15 rounded-3xl hover:shadow-xl hover:shadow-primary/20 hover:border-primary/40 transition-all duration-500 ease-out hover:-translate-y-1 animate-slide-in-up h-full cursor-pointer flex flex-col"
-        style={{ animationDelay: `${index * 80}ms` }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-        <div className="relative space-y-6 flex-grow">
-          {service.image && (
-            <div className="relative w-full aspect-video rounded-2xl overflow-hidden mb-2 bg-primary/5">
-              <Image
-                src={service.image}
-                alt={service.title}
-                fill
-                className={`${service.slug === 'arraigo' ? 'object-contain p-0 scale-[1.1]' : 'object-cover'} group-hover:scale-[1.15] transition-transform duration-700`}
-              />
-            </div>
-          )}
-
-          <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300 font-dancing text-3xl">
-            {service.title}
-          </h3>
-
-          <p className="text-muted-foreground leading-relaxed text-sm">{service.description}</p>
-        </div>
-
-        <div className="relative pt-6 opacity-0 group-hover:opacity-100 transition-all duration-400 ease-out transform translate-y-2 group-hover:translate-y-0 text-sm">
-          <span className="text-primary font-medium inline-flex items-center gap-2">
-            {learnMore}
-            <svg
-              className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </span>
-        </div>
-      </div>
-    </AnimatedLink>
   )
 }

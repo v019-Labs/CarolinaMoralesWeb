@@ -42,6 +42,42 @@ export async function generateMetadata(
 
 export default async function NovedadPage({ params }: Props) {
     const { slug } = await params
+    const newsItem = getNewsItem('es', slug)
 
-    return <NewsPageClient slug={slug} />
+    return (
+        <>
+            <NewsPageClient slug={slug} />
+            {newsItem && (
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "BreadcrumbList",
+                            "itemListElement": [
+                                {
+                                    "@type": "ListItem",
+                                    "position": 1,
+                                    "name": "Inicio",
+                                    "item": "https://www.abogadosmigracionyextranjeria.es"
+                                },
+                                {
+                                    "@type": "ListItem",
+                                    "position": 2,
+                                    "name": "Novedades",
+                                    "item": "https://www.abogadosmigracionyextranjeria.es/novedades"
+                                },
+                                {
+                                    "@type": "ListItem",
+                                    "position": 3,
+                                    "name": newsItem.title,
+                                    "item": `https://www.abogadosmigracionyextranjeria.es/novedades/${slug}`
+                                }
+                            ]
+                        })
+                    }}
+                />
+            )}
+        </>
+    )
 }
