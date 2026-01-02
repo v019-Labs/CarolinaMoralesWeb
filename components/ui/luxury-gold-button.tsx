@@ -89,7 +89,35 @@ export function LuxuryGoldButton() {
           width: 220px;
           height: 80px;
           transform: rotate(353deg) skewX(4deg);
+          transition: all 0.3s ease;
         }
+
+        @media (max-width: 768px) {
+          .luxury-button-wrapper .button {
+            width: 190px;
+            height: 65px;
+            font-size: 18px;
+            transform: rotate(0deg) skewX(0deg);
+            margin: 0 auto;
+          }
+          .luxury-button-wrapper .char.state-2 {
+            left: 65px;
+          }
+          .luxury-button-wrapper .wrap {
+            transform: translate(4px, -4px);
+          }
+          .luxury-button-wrapper .splash {
+            transform: translate(-20%, -35%) scale(0.8);
+          }
+          .luxury-button-wrapper .bg::before {
+            box-shadow:
+              -4px 4px 0 0 rgba(139, 101, 8, 0.4),
+              -8px 8px 0 0 rgba(139, 101, 8, 0.3),
+              -12px 12px 4px 0 rgba(139, 101, 8, 0.25);
+          }
+        }
+
+
 
         .luxury-button-wrapper .bg {
           position: absolute;

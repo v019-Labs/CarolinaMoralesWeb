@@ -31,7 +31,6 @@ export function WebIntro({ onComplete }: { onComplete: () => void }) {
     }
   }, [handleComplete])
 
-  if (!mounted) return null
 
   return (
     <AnimatePresence mode="wait">

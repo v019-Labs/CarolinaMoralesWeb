@@ -13,9 +13,11 @@ import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
 
 function HomeContent() {
-  const [introComplete, setIntroComplete] = useState<boolean | null>(null)
+  const [introComplete, setIntroComplete] = useState<boolean>(true) // Default to true to avoid blank screen
+  const [isReady, setIsReady] = useState(false)
   const searchParams = useSearchParams()
   const router = useRouter()
+
 
   useEffect(() => {
     // Check if intro was already shown in this session
@@ -25,6 +27,7 @@ function HomeContent() {
     } else {
       setIntroComplete(false)
     }
+    setIsReady(true)
   }, [])
 
   useEffect(() => {
@@ -61,9 +64,13 @@ function HomeContent() {
     setIntroComplete(true)
   }
 
-  // Don't render anything until we know if we should show the intro
-  if (introComplete === null) {
-    return null
+  // Don't hide content during initial hydration if possible
+  if (!isReady) {
+    // On server and first hydration render, we can either show the intro or the hero.
+    // Showing a background is better for FCP than null.
+    return (
+      <main className="min-h-screen bg-[#FFFEFB]" />
+    )
   }
 
   return (

@@ -13,22 +13,26 @@ import "./globals.css"
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
+  display: 'swap',
 })
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: 'swap',
 })
 
 const dancingScript = Dancing_Script({
   subsets: ["latin"],
   variable: "--font-dancing",
+  display: 'swap',
 })
 
 const greatVibes = Great_Vibes({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-vibes",
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
