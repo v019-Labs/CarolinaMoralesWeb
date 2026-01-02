@@ -18,13 +18,14 @@ export function WebIntro({ onComplete }: { onComplete: () => void }) {
 
   useEffect(() => {
     // Refined timing for elegant reveal
-    const timer1 = setTimeout(() => setStep(1), 400)   // Soft light appears
-    const timer2 = setTimeout(() => setStep(2), 1400)  // Logo fades in
-    const timer3 = setTimeout(() => setStep(3), 2600)  // Golden accents
-    const timer4 = setTimeout(() => setStep(4), 3800)  // Text reveals
-    const timer5 = setTimeout(() => setStep(5), 5200)  // Final flourish
-    const timer6 = setTimeout(() => setStep(6), 6800)  // Graceful exit
-    const timer7 = setTimeout(() => handleComplete(), 8000)
+    const timer1 = setTimeout(() => setStep(1), 100)   // Quicker start
+    const timer2 = setTimeout(() => setStep(2), 500)   // Logo fades in fast
+    const timer3 = setTimeout(() => setStep(3), 1500)  // Golden accents
+    const timer4 = setTimeout(() => setStep(4), 2500)  // Text reveals
+    const timer5 = setTimeout(() => setStep(5), 3800)  // Final flourish
+    const timer6 = setTimeout(() => setStep(6), 5000)  // Graceful exit
+    const timer7 = setTimeout(() => handleComplete(), 6000) // Reduced total duration
+
 
     return () => {
       [timer1, timer2, timer3, timer4, timer5, timer6, timer7].forEach(clearTimeout)
@@ -79,8 +80,8 @@ export function WebIntro({ onComplete }: { onComplete: () => void }) {
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               animate={{
-                opacity: step >= 2 ? 1 : 0,
-                y: step >= 2 ? 0 : 40
+                opacity: step >= 0 ? 1 : 0, // Show logo immediately
+                y: step >= 1 ? 0 : 40      // Animate position later
               }}
               transition={{
                 duration: 1.8,

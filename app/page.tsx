@@ -13,22 +13,20 @@ import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
 
 function HomeContent() {
-  const [introComplete, setIntroComplete] = useState<boolean>(true) // Default to true to avoid blank screen
-  const [isReady, setIsReady] = useState(false)
+  const [introComplete, setIntroComplete] = useState<boolean>(false)
+  const [hasCheckedSession, setHasCheckedSession] = useState(false)
   const searchParams = useSearchParams()
   const router = useRouter()
-
 
   useEffect(() => {
     // Check if intro was already shown in this session
     const introSeen = sessionStorage.getItem("introSeen")
     if (introSeen === "true") {
       setIntroComplete(true)
-    } else {
-      setIntroComplete(false)
     }
-    setIsReady(true)
+    setHasCheckedSession(true)
   }, [])
+
 
   useEffect(() => {
     if (introComplete && searchParams.has('scrollTo')) {
@@ -64,18 +62,11 @@ function HomeContent() {
     setIntroComplete(true)
   }
 
-  // Don't hide content during initial hydration if possible
-  if (!isReady) {
-    // On server and first hydration render, we can either show the intro or the hero.
-    // Showing a background is better for FCP than null.
-    return (
-      <main className="min-h-screen bg-[#FFFEFB]" />
-    )
-  }
-
   return (
     <>
-      {!introComplete ? (
+      {!introComplete && !hasCheckedSession ? (
+        <WebIntro onComplete={handleIntroComplete} />
+      ) : !introComplete ? (
         <WebIntro onComplete={handleIntroComplete} />
       ) : (
         <main className="min-h-screen relative overflow-hidden bg-background">
