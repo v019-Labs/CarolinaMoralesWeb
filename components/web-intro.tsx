@@ -78,16 +78,14 @@ export function WebIntro({ onComplete }: { onComplete: () => void }) {
 
             {/* Logo Container */}
             <motion.div
-              initial={{ opacity: 0, y: 40 }}
               animate={{
-                opacity: step >= 0 ? 1 : 0, // Show logo immediately
-                y: step >= 1 ? 0 : 40      // Animate position later
+                y: step >= 1 ? 0 : 40      // Only animate Y, let opacity be 1 by default
               }}
               transition={{
                 duration: 1.8,
                 ease: [0.25, 0.1, 0.25, 1]
               }}
-              className="relative mb-8 md:mb-12"
+              className="relative mb-8 md:mb-12 opacity-100" // Force opacity 1 via CSS
             >
               {/* Elegant outer ring */}
               <motion.div
@@ -146,6 +144,8 @@ export function WebIntro({ onComplete }: { onComplete: () => void }) {
                   filter: "drop-shadow(0 10px 40px rgba(164, 144, 107, 0.15))"
                 }}
                 priority
+                loading="eager"
+                fetchPriority="high"
               />
             </motion.div>
 

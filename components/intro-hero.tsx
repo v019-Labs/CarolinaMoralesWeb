@@ -158,6 +158,8 @@ export function IntroHero() {
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 500px"
                 priority
+                loading="eager"
+                fetchPriority="high"
                 style={{
                   filter: 'contrast(1.02) brightness(1.02)',
                 }}
