@@ -23,7 +23,7 @@ export const legalTranslations: Record<Locale, LegalTranslations> = {
     es: {
         backToHome: "Volver al inicio",
         lastUpdated: "Última actualización",
-        lastUpdatedDate: "28 de Diciembre de 2025",
+        lastUpdatedDate: "2 de enero de 2026",
         avisoLegal: {
             title: "Aviso Legal",
             subtitle: "Aviso Legal y Condiciones Generales de Uso",
@@ -88,7 +88,11 @@ export const legalTranslations: Record<Locale, LegalTranslations> = {
                     content: "Las imágenes y contenidos visuales utilizados en este Sitio Web son de dominio público o cuentan con las licencias correspondientes para su uso. Asimismo, se informa al Usuario que algunas de las imágenes mostradas han sido generadas mediante herramientas de Inteligencia Artificial (IA) con fines ilustrativos y decorativos."
                 },
                 {
-                    title: "VII. ACCIONES LEGALES, LEGISLACIÓN APLICABLE Y JURISDICCIÓN",
+                    title: "VII. USO DE COMPONENTES DE TERCEROS",
+                    content: "Este sitio web utiliza componentes y recursos de diseño de terceros para mejorar la funcionalidad y la experiencia del usuario. Se reconoce explícitamente el uso de bibliotecas y recursos de Magic UI y Uiverse.io. Los derechos de propiedad intelectual y autoría de estos componentes pertenecen a sus respectivos creadores. En particular, se agradece y reconoce la autoría de Marcelo Dolza por el diseño del botón interactivo utilizado en este sitio. El uso de estos recursos se realiza conforme a las licencias y términos de uso establecidos por sus autores."
+                },
+                {
+                    title: "VIII. ACCIONES LEGALES, LEGISLACIÓN APLICABLE Y JURISDICCIÓN",
                     content: "Carolina Morales Abogada se reserva la facultad de presentar las acciones civiles o penales que considere necesarias por la utilización indebida del Sitio Web y Contenidos, o por el incumplimiento de las presentes Condiciones. La relación entre el Usuario y Carolina Morales Abogada se regirá por la normativa vigente y de aplicación en el territorio español. De surgir cualquier controversia en relación con la interpretación y/o a la aplicación de estas Condiciones las partes someterán sus conflictos a la jurisdicción ordinaria sometiéndose a los jueces y tribunales que correspondan conforme a derecho."
                 }
             ]
@@ -154,7 +158,7 @@ export const legalTranslations: Record<Locale, LegalTranslations> = {
     en: {
         backToHome: "Back to home",
         lastUpdated: "Last updated",
-        lastUpdatedDate: "December 28, 2025",
+        lastUpdatedDate: "January 2, 2026",
         avisoLegal: {
             title: "Legal Notice",
             subtitle: "Legal Information and General Terms of Use",
@@ -285,7 +289,7 @@ export const legalTranslations: Record<Locale, LegalTranslations> = {
     fr: {
         backToHome: "Retour à l'accueil",
         lastUpdated: "Dernière mise à jour",
-        lastUpdatedDate: "28 Décembre 2025",
+        lastUpdatedDate: "2 Janvier 2026",
         avisoLegal: {
             title: "Mentions Légales",
             subtitle: "Informations légales et conditions générales d'utilisation",
@@ -416,7 +420,7 @@ export const legalTranslations: Record<Locale, LegalTranslations> = {
     ar: {
         backToHome: "العودة إلى الرئيسية",
         lastUpdated: "آخر تحديث",
-        lastUpdatedDate: "28 ديسمبر 2025",
+        lastUpdatedDate: "2 يناير 2026",
         avisoLegal: {
             title: "إشعار قانوني",
             subtitle: "معلومات قانونية وشروط عامة للاستخدام",
@@ -547,7 +551,7 @@ export const legalTranslations: Record<Locale, LegalTranslations> = {
     pt: {
         backToHome: "Voltar ao início",
         lastUpdated: "Última atualização",
-        lastUpdatedDate: "28 de Dezembro de 2025",
+        lastUpdatedDate: "2 de Janeiro de 2026",
         avisoLegal: {
             title: "Aviso Legal",
             subtitle: "Informação Legal e Condições Gerais de Uso",
@@ -678,7 +682,7 @@ export const legalTranslations: Record<Locale, LegalTranslations> = {
     zh: {
         backToHome: "返回首页",
         lastUpdated: "最后更新",
-        lastUpdatedDate: "2025年12月28日",
+        lastUpdatedDate: "2026年1月2日",
         avisoLegal: {
             title: "法律声明",
             subtitle: "法律信息和一般使用条款",

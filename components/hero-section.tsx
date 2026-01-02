@@ -3,6 +3,7 @@
 import { ChevronDown } from "lucide-react"
 import Image from "next/image"
 import { useEffect, useState, useCallback } from "react"
+import { WordRotate } from "@/components/ui/word-rotate"
 
 export function HeroSection() {
   const [mounted, setMounted] = useState(false)
@@ -130,18 +131,12 @@ export function HeroSection() {
               willChange: 'transform, opacity'
             }}
           >
-            <p className="text-2xl text-muted-foreground">Abogada especializada en</p>
-            <div className="flex flex-wrap justify-center gap-4">
-              {["Extranjería", "Nacionalidad", "Arraigo", "Reagrupación Familiar"].map((item, index) => (
-                <div
-                  key={item}
-                  className={`px-8 py-3 bg-gradient-to-r from-primary/20 to-accent/10 backdrop-blur-sm border-2 border-primary/40 rounded-full text-lg text-primary font-medium hover:bg-primary/30 hover:border-primary/60 hover:scale-110 transition-all duration-500 cursor-default shadow-lg shadow-primary/20 ${mounted ? "animate-fade-in-scale" : "opacity-0"
-                    }`}
-                  style={{ animationDelay: `${1200 + index * 150}ms` }}
-                >
-                  {item}
-                </div>
-              ))}
+            <div className="flex flex-col items-center justify-center gap-1">
+              <p className="text-xl md:text-2xl text-muted-foreground font-light tracking-wide uppercase">Abogada especializada en</p>
+              <WordRotate
+                words={["Nacionalidad", "Arraigo", "Reagrupación Familiar"]}
+                className="text-4xl md:text-6xl font-black text-primary tracking-tight drop-shadow-sm"
+              />
             </div>
           </div>
 

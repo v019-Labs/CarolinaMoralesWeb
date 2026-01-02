@@ -171,7 +171,6 @@
     }
   }
 
-
   * {
     @apply border-border outline-ring/50;
   }
@@ -373,5 +372,11 @@
 
   .animation-delay-2000 {
     animation-delay: 2s;
+  }
+  .maplibregl-popup-content {
+    @apply bg-transparent! shadow-none! p-0! rounded-none!;
+  }
+  .maplibregl-popup-tip {
+    @apply hidden!;
   }
 }
