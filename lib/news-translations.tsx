@@ -13,6 +13,14 @@ export type NewsItem = {
 export const newsTranslations: Record<Locale, NewsItem[]> = {
     es: [
         {
+            slug: "proceso-renovacion-dana",
+            title: "Proceso Renovación Autorizaciones DANA",
+            description: "Información detallada sobre el proceso de renovación de autorizaciones para las personas afectadas por la DANA.",
+            date: "2026-01-02",
+            type: 'pdf',
+            url: "/files/proceso%20de%20renovacion%20autorizaciones%20DANA-1.pdf"
+        },
+        {
             slug: "ley-eficiencia-justicia-2025",
             title: "Ley Orgánica 1/2025, de 2 de enero, de medidas en materia de eficiencia del Servicio Público de Justicia.",
             description: "Publicación de la nueva Ley Orgánica con medidas para la eficiencia del servicio público de justicia y acciones colectivas.",
@@ -30,6 +38,14 @@ export const newsTranslations: Record<Locale, NewsItem[]> = {
         }
     ],
     en: [
+        {
+            slug: "proceso-renovacion-dana",
+            title: "DANA Authorization Renewal Process",
+            description: "Detailed information on the authorization renewal process for those affected by DANA.",
+            date: "2026-01-02",
+            type: 'pdf',
+            url: "/files/proceso%20de%20renovacion%20autorizaciones%20DANA-1.pdf"
+        },
         {
             slug: "ley-eficiencia-justicia-2025",
             title: "Organic Law 1/2025, of January 2, on measures for the efficiency of the Public Justice Service.",
@@ -49,6 +65,14 @@ export const newsTranslations: Record<Locale, NewsItem[]> = {
     ],
     fr: [
         {
+            slug: "proceso-renovacion-dana",
+            title: "Processus de renouvellement des autorisations DANA",
+            description: "Informations détaillées sur le processus de renouvellement des autorisations pour les personnes touchées par la DANA.",
+            date: "2026-01-02",
+            type: 'pdf',
+            url: "/files/proceso%20de%20renovacion%20autorizaciones%20DANA-1.pdf"
+        },
+        {
             slug: "ley-eficiencia-justicia-2025",
             title: "Loi organique 1/2025, du 2 janvier, relative aux mesures d'efficacité du Service Public de la Justice.",
             description: "Publication de la nouvelle loi organique avec des mesures pour l'efficacité du service public de la justice et des actions collectives.",
@@ -66,6 +90,14 @@ export const newsTranslations: Record<Locale, NewsItem[]> = {
         }
     ],
     pt: [
+        {
+            slug: "proceso-renovacion-dana",
+            title: "Processo de Renovação de Autorizações DANA",
+            description: "Informações detalhadas sobre o processo de renovação de autorizações para as pessoas afetadas pela DANA.",
+            date: "2026-01-02",
+            type: 'pdf',
+            url: "/files/proceso%20de%20renovacion%20autorizaciones%20DANA-1.pdf"
+        },
         {
             slug: "ley-eficiencia-justicia-2025",
             title: "Lei Orgânica 1/2025, de 2 de janeiro, de medidas em matéria de eficiência do Serviço Público de Justiça.",
@@ -85,6 +117,14 @@ export const newsTranslations: Record<Locale, NewsItem[]> = {
     ],
     ar: [
         {
+            slug: "proceso-renovacion-dana",
+            title: "عملية تجديد تصاريح DANA",
+            description: "معلومات مفصلة حول عملية تجديد التصاريح للمتضررين من DANA.",
+            date: "2026-01-02",
+            type: 'pdf',
+            url: "/files/proceso%20de%20renovacion%20autorizaciones%20DANA-1.pdf"
+        },
+        {
             slug: "ley-eficiencia-justicia-2025",
             title: "القانون العضوي رقم 1/2025 المؤرخ في 2 يناير، بشأن تدابير كفاءة خدمة العدالة العامة.",
             description: "نشر القانون العضوي الجديد الذي يتضمن تدابير لكفاءة خدمة العدالة العامة والإجراءات الجماعية.",
@@ -103,6 +143,14 @@ export const newsTranslations: Record<Locale, NewsItem[]> = {
     ],
     zh: [
         {
+            slug: "proceso-renovacion-dana",
+            title: "DANA 授权续期流程",
+            description: "关于受 DANA 影响人员授权续期流程的详细信息。",
+            date: "2026-01-02",
+            type: 'pdf',
+            url: "/files/proceso%20de%20renovacion%20autorizaciones%20DANA-1.pdf"
+        },
+        {
             slug: "ley-eficiencia-justicia-2025",
             title: "1月2日关于公共司法服务效率措施的第1/2025号组织法。",
             description: "发布包含公共司法服务效率措施和集体诉讼措施的新组织法。",
@@ -120,6 +168,14 @@ export const newsTranslations: Record<Locale, NewsItem[]> = {
         }
     ],
     ro: [
+        {
+            slug: "proceso-renovacion-dana",
+            title: "Procesul de reînnoire a autorizațiilor DANA",
+            description: "Informații detaliate despre procesul de reînnoire a autorizațiilor pentru persoanele afectate de DANA.",
+            date: "2026-01-02",
+            type: 'pdf',
+            url: "/files/proceso%20de%20renovacion%20autorizaciones%20DANA-1.pdf"
+        },
         {
             slug: "ley-eficiencia-justicia-2025",
             title: "Legea organică 1/2025, din 2 ianuarie, privind măsurile de eficiență a Serviciului Public de Justiție.",
