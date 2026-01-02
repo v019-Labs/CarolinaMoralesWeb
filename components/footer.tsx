@@ -4,6 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
 import { useTranslation } from "@/lib/i18n"
+import { Instagram, Facebook, Linkedin } from "lucide-react"
 
 export function Footer() {
   const { t } = useTranslation()
@@ -58,6 +59,35 @@ export function Footer() {
             <p className="text-sm text-secondary-foreground/80">
               {t.footer.logoSubtitle}
             </p>
+            <div className="flex justify-center md:justify-start gap-4 pt-2">
+              <Link
+                href="https://www.instagram.com/carolinamoralesabogada/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-secondary-foreground/60 hover:text-primary transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-5 h-5" />
+              </Link>
+              <Link
+                href="https://www.facebook.com/carolinamoraleslopezabogadaextranjeria/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-secondary-foreground/60 hover:text-primary transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-5 h-5" />
+              </Link>
+              <Link
+                href="https://es.linkedin.com/in/carolina-morales-l%C3%B3pez-3332b2129"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-secondary-foreground/60 hover:text-primary transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-5 h-5" />
+              </Link>
+            </div>
           </div>
 
           <div className="text-center md:text-left">

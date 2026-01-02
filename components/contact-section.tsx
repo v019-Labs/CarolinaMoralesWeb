@@ -1,7 +1,7 @@
 "use client"
 
 import { useTranslation } from "@/lib/i18n"
-import { Mail, Phone, MapPin } from "lucide-react"
+import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin } from "lucide-react"
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
 
@@ -78,6 +78,36 @@ export function ContactSection() {
                     >
                         {t.contactSection.whatsappButton}
                     </Link>
+
+                    <div className="flex justify-center gap-6 mt-8">
+                        <Link
+                            href="https://www.instagram.com/carolinamoralesabogada/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-12 h-12 rounded-full border border-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300"
+                            aria-label="Instagram"
+                        >
+                            <Instagram className="w-6 h-6" />
+                        </Link>
+                        <Link
+                            href="https://www.facebook.com/carolinamoraleslopezabogadaextranjeria/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-12 h-12 rounded-full border border-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300"
+                            aria-label="Facebook"
+                        >
+                            <Facebook className="w-6 h-6" />
+                        </Link>
+                        <Link
+                            href="https://es.linkedin.com/in/carolina-morales-l%C3%B3pez-3332b2129"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-12 h-12 rounded-full border border-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300"
+                            aria-label="LinkedIn"
+                        >
+                            <Linkedin className="w-6 h-6" />
+                        </Link>
+                    </div>
                 </div>
             </div>
         </section>
