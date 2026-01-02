@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Playfair_Display, Inter, Dancing_Script, Great_Vibes } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Toaster } from "@/components/ui/sonner"
 import { TranslationProvider } from "@/lib/i18n"
 import { CookieConsent } from "@/components/cookie-consent"
@@ -111,6 +112,7 @@ export default async function RootLayout({
         </TranslationProvider>
         <CookieConsent />
         <Analytics />
+        <SpeedInsights />
         <Toaster />
         <script
           type="application/ld+json"
@@ -149,7 +151,9 @@ export default async function RootLayout({
                 "closes": "18:00"
               },
               "sameAs": [
-                "https://www.instagram.com/abogada_carolina_morales/",
+                "https://www.instagram.com/carolinamoralesabogada/",
+                "https://www.facebook.com/carolinamoraleslopezabogadaextranjeria/",
+                "https://es.linkedin.com/in/carolina-morales-l%C3%B3pez-3332b2129",
                 "https://www.google.com/maps/place/Carolina+Morales+Abogada/@41.3995831,2.1298463,17z"
               ],
               "knowsAbout": ["Arraigos", "Nacionalidad Española", "Reagrupación Familiar", "Derecho de Extranjería"],
