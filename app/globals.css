@@ -373,10 +373,30 @@
   .animation-delay-2000 {
     animation-delay: 2s;
   }
+
   .maplibregl-popup-content {
-    @apply bg-transparent! shadow-none! p-0! rounded-none!;
+    @apply !bg-transparent !shadow-none !p-0 !rounded-none;
   }
+
   .maplibregl-popup-tip {
-    @apply hidden!;
+    @apply !hidden;
+  }
+}
+
+/* Accessibility: Disable animations if user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+  .agent-scanning,
+  .agent-focus-box,
+  .animate-marquee,
+  .animate-float,
+  .animate-glow,
+  .animate-shimmer,
+  .animate-pulse-glow {
+    animation: none !important;
+    transition: none !important;
+    box-shadow: none !important;
+    border: 2px solid #A4906B;
+    /* Simple solid border instead of glow */
   }
 }

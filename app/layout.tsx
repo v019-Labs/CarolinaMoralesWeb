@@ -9,6 +9,7 @@ import { CookieConsent } from "@/components/cookie-consent"
 import { cookies } from "next/headers"
 import { Locale, defaultLocale, locales } from "@/lib/translations"
 import "./globals.css"
+import { ChatWidget } from "@/components/chat-widget"
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -115,6 +116,7 @@ export default async function RootLayout({
           {children}
         </TranslationProvider>
         <CookieConsent />
+        <ChatWidget />
         <Analytics />
         <SpeedInsights />
         <Toaster />

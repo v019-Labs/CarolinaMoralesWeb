@@ -1,0 +1,195 @@
+/* Agent Mode Styles - Unified & Premium */
+
+:root {
+  --agent-primary: oklch(0.55 0.12 75);
+  /* Match site's primary bronze/gold */
+  --agent-primary-glow: oklch(0.55 0.12 75 / 0.3);
+  --agent-primary-muted: oklch(0.55 0.12 75 / 0.1);
+}
+
+/* Antigravity-style Golden Diffused Border */
+.agent-scanning {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  /* More intense edge-focused glow */
+  box-shadow:
+    inset 0 0 40px 2px oklch(0.7 0.2 80 / 0.4),
+    inset 0 0 15px 1px oklch(0.8 0.25 90 / 0.3);
+  border: 1px solid oklch(0.7 0.2 80 / 0.2);
+  background: transparent !important;
+  transition: all 0.6s ease;
+}
+
+/* Success Blink - Vibrant and noticeable edge flash */
+.agent-scanning-success {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  pointer-events: none;
+  box-shadow:
+    inset 0 0 60px 5px oklch(0.75 0.25 80 / 0.8),
+    inset 0 0 25px 2px oklch(0.85 0.3 90 / 0.6);
+  border: 2px solid oklch(0.75 0.25 80 / 0.4);
+  animation: ultraSmoothGlow 1.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes ultraSmoothGlow {
+  0% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Premium Focus Box - Clean & Transparent */
+.agent-focus-box {
+  position: absolute;
+  border: 1.5px solid var(--agent-primary);
+  background-color: transparent;
+  border-radius: 12px;
+  box-shadow: 0 0 20px 0px var(--agent-primary-glow);
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 10001;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Reading Progress Bar */
+.reading-progress-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.reading-progress-bar {
+  height: 100%;
+  background: var(--agent-primary);
+  box-shadow: 0 0 10px var(--agent-primary-glow);
+  width: 0%;
+  transition: width 0.3s ease-out;
+}
+
+/* Clean Fosforito Highlight */
+.fosforito-highlight {
+  position: relative;
+  background: linear-gradient(90deg,
+      oklch(0.55 0.12 75 / 0.05) 0%,
+      oklch(0.55 0.12 75 / 0.12) 50%,
+      oklch(0.55 0.12 75 / 0.05) 100%);
+  border-radius: 4px;
+  padding: 1px 4px;
+  margin: -1px -4px;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid var(--agent-primary);
+}
+
+/* Highlighted Content (base class) */
+.highlighted-content {
+  outline: 2px solid var(--agent-primary);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* Premium Control Buttons Container */
+.agent-controls-container {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  top: -52px;
+  right: 0;
+  z-index: 10002;
+  pointer-events: auto;
+}
+
+/* Glassmorphism Control Buttons - Enhanced */
+.agent-control-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px) saturate(150%);
+  -webkit-backdrop-filter: blur(8px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.agent-control-button:hover {
+  background: rgba(0, 0, 0, 0.6);
+  border-color: var(--agent-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px var(--agent-primary-glow);
+}
+
+.agent-control-button:active {
+  transform: translateY(0);
+}
+
+.agent-control-button.primary {
+  background: rgba(164, 144, 107, 0.8);
+  color: #000;
+  border: 1px solid var(--agent-primary);
+}
+
+.agent-control-button.primary:hover {
+  background: var(--agent-primary);
+  box-shadow: 0 0 20px var(--agent-primary-glow);
+}
+
+.agent-control-button.speaking {
+  background: rgba(239, 68, 68, 0.8);
+  border-color: #ef4444;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  .agent-scanning {
+    box-shadow:
+      inset 0 0 25px 0px oklch(0.7 0.2 80 / 0.3),
+      inset 0 0 10px 0px oklch(0.8 0.25 90 / 0.2);
+  }
+
+  .agent-scanning-success {
+    box-shadow:
+      inset 0 0 40px 2px oklch(0.75 0.25 80 / 0.6),
+      inset 0 0 15px 1px oklch(0.85 0.3 90 / 0.4);
+  }
+
+  .agent-controls-container {
+    top: auto;
+    bottom: -52px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+/* SR Only - Improved Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
