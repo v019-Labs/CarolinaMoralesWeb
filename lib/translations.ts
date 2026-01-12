@@ -134,6 +134,12 @@ type TranslationKeys = {
         viewerTitle: string
         viewerSubtitle: string
         downloadPdf: string
+        searchPlaceholder: string
+        filterAll: string
+        filterPdf: string
+        filterArticle: string
+        noResults: string
+        latestNews: string
     }
     // Locations Section
     locationsSection: {
@@ -266,7 +272,13 @@ export const translations: Record<Locale, TranslationKeys> = {
             article: 'Artículo',
             viewerTitle: 'Visualizador de Documento',
             viewerSubtitle: 'Si no puedes ver el documento, descárgalo directamente.',
-            downloadPdf: 'Descargar PDF'
+            downloadPdf: 'Descargar PDF',
+            searchPlaceholder: 'Buscar novedades...',
+            filterAll: 'Todas',
+            filterPdf: 'PDFs',
+            filterArticle: 'Artículos',
+            noResults: 'No se encontraron resultados',
+            latestNews: 'Última novedad'
         },
         locationsSection: {
             title: 'Nuestras',
@@ -395,7 +407,13 @@ export const translations: Record<Locale, TranslationKeys> = {
             article: 'Article',
             viewerTitle: 'Document Viewer',
             viewerSubtitle: 'If you cannot view the document, download it directly.',
-            downloadPdf: 'Download PDF'
+            downloadPdf: 'Download PDF',
+            searchPlaceholder: 'Search news...',
+            filterAll: 'All',
+            filterPdf: 'PDFs',
+            filterArticle: 'Articles',
+            noResults: 'No results found',
+            latestNews: 'Latest news'
         },
         locationsSection: {
             title: 'Our',
@@ -524,7 +542,13 @@ export const translations: Record<Locale, TranslationKeys> = {
             article: 'Article',
             viewerTitle: 'Visualiseur de document',
             viewerSubtitle: 'Si vous ne pouvez pas voir le document, téléchargez-le directement.',
-            downloadPdf: 'Télécharger le PDF'
+            downloadPdf: 'Télécharger le PDF',
+            searchPlaceholder: 'Rechercher des actualités...',
+            filterAll: 'Toutes',
+            filterPdf: 'PDFs',
+            filterArticle: 'Articles',
+            noResults: 'Aucun résultat trouvé',
+            latestNews: 'Dernière actualité'
         },
         locationsSection: {
             title: 'Nos',
@@ -653,7 +677,13 @@ export const translations: Record<Locale, TranslationKeys> = {
             article: 'مقالة',
             viewerTitle: 'عارض المستندات',
             viewerSubtitle: 'إذا لم تتمكن من عرض المستند، قم بتنزيله مباشرة.',
-            downloadPdf: 'تحميل PDF'
+            downloadPdf: 'تحميل PDF',
+            searchPlaceholder: 'البحث في الأخبار...',
+            filterAll: 'الكل',
+            filterPdf: 'ملفات PDF',
+            filterArticle: 'مقالات',
+            noResults: 'لم يتم العثور على نتائج',
+            latestNews: 'آخر الأخبار'
         },
         locationsSection: {
             title: 'مكاتبنا',
@@ -782,7 +812,13 @@ export const translations: Record<Locale, TranslationKeys> = {
             article: 'Artigo',
             viewerTitle: 'Visualizador de Documentos',
             viewerSubtitle: 'Se não conseguir visualizar o documento, baixe-o diretamente.',
-            downloadPdf: 'Baixar PDF'
+            downloadPdf: 'Baixar PDF',
+            searchPlaceholder: 'Pesquisar novidades...',
+            filterAll: 'Todas',
+            filterPdf: 'PDFs',
+            filterArticle: 'Artigos',
+            noResults: 'Nenhum resultado encontrado',
+            latestNews: 'Última novidade'
         },
         locationsSection: {
             title: 'Nossos',
@@ -911,7 +947,13 @@ export const translations: Record<Locale, TranslationKeys> = {
             article: '文章',
             viewerTitle: '文档查看器',
             viewerSubtitle: '如果您无法查看文档，请直接下载。',
-            downloadPdf: '下载PDF'
+            downloadPdf: '下载PDF',
+            searchPlaceholder: '搜索新闻...',
+            filterAll: '全部',
+            filterPdf: 'PDF文件',
+            filterArticle: '文章',
+            noResults: '未找到结果',
+            latestNews: '最新消息'
         },
         locationsSection: {
             title: '我们的',
@@ -1040,7 +1082,13 @@ export const translations: Record<Locale, TranslationKeys> = {
             article: 'Articol',
             viewerTitle: 'Vizualizator documente',
             viewerSubtitle: 'Dacă nu puteți vizualiza documentul, descărcați-l direct.',
-            downloadPdf: 'Descarcă PDF'
+            downloadPdf: 'Descarcă PDF',
+            searchPlaceholder: 'Căutare noutăți...',
+            filterAll: 'Toate',
+            filterPdf: 'PDF-uri',
+            filterArticle: 'Articole',
+            noResults: 'Nu s-au găsit rezultate',
+            latestNews: 'Ultima noutate'
         },
         locationsSection: {
             title: 'Ale Noastre',
