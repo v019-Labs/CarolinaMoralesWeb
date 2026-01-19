@@ -86,7 +86,7 @@ export function LocationsSection() {
                       <h4 className="font-bold text-primary">{t.locationsSection.reus}</h4>
                       <p className="text-xs text-muted-foreground">{t.locationsSection.addressReus}</p>
                       <a
-                        href="https://www.google.com/maps/dir/?api=1&destination=Carrer+d'Antoni+Gaudí,+74,+43203+Reus"
+                        href="https://www.google.com/maps/place/CAROLINA+MORALES+L%C3%93PEZ+-+ABOGADA+EXTRANJER%C3%8DA/@41.1626864,1.109349,19z/data=!4m20!1m13!4m12!1m4!2m2!1d1.2288!2d41.1959296!4e1!1m6!1m2!1s0x12a1511a345a81d1:0x34cc9bd29e6cea09!2sCarrer+d'Antoni+Gaud%C3%AD,+74,+43203+Reus,+Tarragona!2m2!1d1.1101093!2d41.1627572!3m5!1s0x12a3fd04756719af:0xe786eca0751278ae!8m2!3d41.1626864!4d1.110191!16s%2Fg%2F11trrv6wzk"
                         target="_blank"
                         className="flex items-center gap-2 text-xs text-primary hover:underline"
                       >
@@ -98,6 +98,21 @@ export function LocationsSection() {
                 </MapMarker>
                 <MapControls showZoom showFullscreen position="top-right" />
               </Map>
+              {/* Botón Google Maps */}
+              <a
+                href="https://www.google.com/maps/place/CAROLINA+MORALES+L%C3%93PEZ+-+ABOGADA+EXTRANJER%C3%8DA/@41.1626864,1.109349,19z/data=!4m20!1m13!4m12!1m4!2m2!1d1.2288!2d41.1959296!4e1!1m6!1m2!1s0x12a1511a345a81d1:0x34cc9bd29e6cea09!2sCarrer+d'Antoni+Gaud%C3%AD,+74,+43203+Reus,+Tarragona!2m2!1d1.1101093!2d41.1627572!3m5!1s0x12a3fd04756719af:0xe786eca0751278ae!8m2!3d41.1626864!4d1.110191!16s%2Fg%2F11trrv6wzk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute bottom-3 left-3 z-10 flex items-center gap-2 px-3 py-2 bg-background/95 backdrop-blur-sm border border-border rounded-lg shadow-lg hover:bg-accent hover:border-primary/40 transition-all duration-200 group"
+              >
+                <svg className="size-4 text-primary" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                </svg>
+                <span className="text-xs font-medium text-foreground group-hover:text-primary transition-colors">
+                  Google Maps
+                </span>
+                <ExternalLink className="size-3 text-muted-foreground group-hover:text-primary transition-colors" />
+              </a>
             </div>
           </div>
 
@@ -150,6 +165,21 @@ export function LocationsSection() {
                 </MapMarker>
                 <MapControls showZoom showFullscreen position="top-right" />
               </Map>
+              {/* Botón Google Maps */}
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=Pg.+de+la+Bonanova,+10,+08022+Barcelona"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute bottom-3 left-3 z-10 flex items-center gap-2 px-3 py-2 bg-background/95 backdrop-blur-sm border border-border rounded-lg shadow-lg hover:bg-accent hover:border-primary/40 transition-all duration-200 group"
+              >
+                <svg className="size-4 text-primary" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                </svg>
+                <span className="text-xs font-medium text-foreground group-hover:text-primary transition-colors">
+                  Google Maps
+                </span>
+                <ExternalLink className="size-3 text-muted-foreground group-hover:text-primary transition-colors" />
+              </a>
             </div>
           </div>
         </div>
