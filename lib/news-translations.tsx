@@ -13,6 +13,14 @@ export type NewsItem = {
 export const newsTranslations: Record<Locale, NewsItem[]> = {
     es: [
         {
+            slug: "borrador-rd-reglamento-extranjeria-2025",
+            title: "Borrador de Real Decreto XX/2025 - Modificación del Reglamento de Extranjería",
+            description: "Borrador de Real Decreto por el que se modifica el Real Decreto 1155/2024, de 19 de noviembre, por el que se aprueba el Reglamento de la Ley Orgánica 4/2000, de 11 de enero, sobre derechos y libertades de los extranjeros en España y su integración social.",
+            date: "2026-02-18",
+            type: 'pdf',
+            url: "/files/DOC-20260223-WA0109..pdf"
+        },
+        {
             slug: "proceso-renovacion-dana",
             title: "Proceso Renovación Autorizaciones DANA",
             description: "Información detallada sobre el proceso de renovación de autorizaciones para las personas afectadas por la DANA.",
@@ -34,10 +42,18 @@ export const newsTranslations: Record<Locale, NewsItem[]> = {
             description: "Descarga y consulta el nuevo manual de preparación para la prueba de conocimientos constitucionales y socioculturales de España (CCSE) para el año 2026.",
             date: "2025-12-27",
             type: 'pdf',
-            url: "https://examenes.cervantes.es/sites/default/files/Manual%20CCSE%202026.pdf"
+            url: "https://examenes.cervantes.es/sites/default/files/manual-ccse-2026-def.pdf"
         }
     ],
     en: [
+        {
+            slug: "borrador-rd-reglamento-extranjeria-2025",
+            title: "Draft Royal Decree XX/2025 - Amendment to the Immigration Regulation",
+            description: "Draft Royal Decree amending Royal Decree 1155/2024, of November 19, approving the Regulation of Organic Law 4/2000, of January 11, on the rights and freedoms of foreigners in Spain and their social integration.",
+            date: "2026-02-18",
+            type: 'pdf',
+            url: "/files/DOC-20260223-WA0109..pdf"
+        },
         {
             slug: "proceso-renovacion-dana",
             title: "DANA Authorization Renewal Process",
@@ -60,10 +76,18 @@ export const newsTranslations: Record<Locale, NewsItem[]> = {
             description: "Download and consult the new preparation manual for the Spanish constitutional and sociocultural knowledge test (CCSE) for the year 2026.",
             date: "2025-12-27",
             type: 'pdf',
-            url: "https://examenes.cervantes.es/sites/default/files/Manual%20CCSE%202026.pdf"
+            url: "https://examenes.cervantes.es/sites/default/files/manual-ccse-2026-def.pdf"
         }
     ],
     fr: [
+        {
+            slug: "borrador-rd-reglamento-extranjeria-2025",
+            title: "Projet de Décret Royal XX/2025 - Modification du Règlement sur l'Immigration",
+            description: "Projet de Décret Royal modifiant le Décret Royal 1155/2024, du 19 novembre, portant approbation du Règlement de la Loi Organique 4/2000, du 11 janvier, sur les droits et libertés des étrangers en Espagne et leur intégration sociale.",
+            date: "2026-02-18",
+            type: 'pdf',
+            url: "/files/DOC-20260223-WA0109..pdf"
+        },
         {
             slug: "proceso-renovacion-dana",
             title: "Processus de renouvellement des autorisations DANA",
@@ -86,10 +110,18 @@ export const newsTranslations: Record<Locale, NewsItem[]> = {
             description: "Téléchargez et consultez le nouveau manuel de préparation au test de connaissances constitutionnelles et socioculturelles de l'Espagne (CCSE) pour l'année 2026.",
             date: "2025-12-27",
             type: 'pdf',
-            url: "https://examenes.cervantes.es/sites/default/files/Manual%20CCSE%202026.pdf"
+            url: "https://examenes.cervantes.es/sites/default/files/manual-ccse-2026-def.pdf"
         }
     ],
     pt: [
+        {
+            slug: "borrador-rd-reglamento-extranjeria-2025",
+            title: "Projeto de Decreto Real XX/2025 - Alteração do Regulamento de Imigração",
+            description: "Projeto de Decreto Real que altera o Decreto Real 1155/2024, de 19 de novembro, que aprova o Regulamento da Lei Orgânica 4/2000, de 11 de janeiro, sobre os direitos e liberdades dos estrangeiros em Espanha e a sua integração social.",
+            date: "2026-02-18",
+            type: 'pdf',
+            url: "/files/DOC-20260223-WA0109..pdf"
+        },
         {
             slug: "proceso-renovacion-dana",
             title: "Processo de Renovação de Autorizações DANA",
@@ -112,10 +144,18 @@ export const newsTranslations: Record<Locale, NewsItem[]> = {
             description: "Descarregue e consulte o novo manual de preparação para o teste de conhecimentos constitucionais e socioculturais de Espanha (CCSE) para o ano de 2026.",
             date: "2025-12-27",
             type: 'pdf',
-            url: "https://examenes.cervantes.es/sites/default/files/Manual%20CCSE%202026.pdf"
+            url: "https://examenes.cervantes.es/sites/default/files/manual-ccse-2026-def.pdf"
         }
     ],
     ar: [
+        {
+            slug: "borrador-rd-reglamento-extranjeria-2025",
+            title: "مسودة المرسوم الملكي XX/2025 - تعديل لائحة الهجرة",
+            description: "مسودة مرسوم ملكي يعدل المرسوم الملكي 1155/2024 الصادر في 19 نوفمبر، الذي يوافق على لائحة القانون الأساسي 4/2000 الصادر في 11 يناير، بشأن حقوق وحريات الأجانب في إسبانيا واندماجهم الاجتماعي.",
+            date: "2026-02-18",
+            type: 'pdf',
+            url: "/files/DOC-20260223-WA0109..pdf"
+        },
         {
             slug: "proceso-renovacion-dana",
             title: "عملية تجديد تصاريح DANA",
@@ -138,10 +178,18 @@ export const newsTranslations: Record<Locale, NewsItem[]> = {
             description: "تحميل ومراجعة دليل التحضير الجديد لاختبار المعرفة الدستورية والاجتماعية والثقافية لإسبانيا (CCSE) لعام 2026.",
             date: "2025-12-27",
             type: 'pdf',
-            url: "https://examenes.cervantes.es/sites/default/files/Manual%20CCSE%202026.pdf"
+            url: "https://examenes.cervantes.es/sites/default/files/manual-ccse-2026-def.pdf"
         }
     ],
     zh: [
+        {
+            slug: "borrador-rd-reglamento-extranjeria-2025",
+            title: "皇家法令草案 XX/2025 - 移民法规修正案",
+            description: "皇家法令草案，修改2024年11月19日第1155/2024号皇家法令，该法令批准了2000年1月11日关于外国人在西班牙的权利和自由及其社会融入的第4/2000号组织法的实施细则。",
+            date: "2026-02-18",
+            type: 'pdf',
+            url: "/files/DOC-20260223-WA0109..pdf"
+        },
         {
             slug: "proceso-renovacion-dana",
             title: "DANA 授权续期流程",
@@ -164,10 +212,18 @@ export const newsTranslations: Record<Locale, NewsItem[]> = {
             description: "下载并查询 2026 年西班牙宪法和社会文化知识测试 (CCSE) 的新准备手册。",
             date: "2025-12-27",
             type: 'pdf',
-            url: "https://examenes.cervantes.es/sites/default/files/Manual%20CCSE%202026.pdf"
+            url: "https://examenes.cervantes.es/sites/default/files/manual-ccse-2026-def.pdf"
         }
     ],
     ro: [
+        {
+            slug: "borrador-rd-reglamento-extranjeria-2025",
+            title: "Proiect de Decret Regal XX/2025 - Modificarea Regulamentului privind Imigrația",
+            description: "Proiect de Decret Regal care modifică Decretul Regal 1155/2024, din 19 noiembrie, prin care se aprobă Regulamentul Legii Organice 4/2000, din 11 ianuarie, privind drepturile și libertățile străinilor în Spania și integrarea lor socială.",
+            date: "2026-02-18",
+            type: 'pdf',
+            url: "/files/DOC-20260223-WA0109..pdf"
+        },
         {
             slug: "proceso-renovacion-dana",
             title: "Procesul de reînnoire a autorizațiilor DANA",
@@ -190,7 +246,7 @@ export const newsTranslations: Record<Locale, NewsItem[]> = {
             description: "Descărcați și consultați noul manual de pregătire pentru testul de cunoștințe constituționale și socioculturale ale Spaniei (CCSE) pentru anul 2026.",
             date: "2025-12-27",
             type: 'pdf',
-            url: "https://examenes.cervantes.es/sites/default/files/Manual%20CCSE%202026.pdf"
+            url: "https://examenes.cervantes.es/sites/default/files/manual-ccse-2026-def.pdf"
         }
     ]
 };
