@@ -162,7 +162,7 @@ export function LuxuryGoldButton() {
           height: 100%;
           transform: translate(6px, -6px);
           padding: 3px;
-          background: ${isChristmas ? "white" : "linear-gradient(to bottom, var(--gold-100) 0%, var(--gold-400) 100%)"};
+          background: linear-gradient(to bottom, var(--gold-100) 0%, var(--gold-400) 100%);
           position: relative;
           transition: all 0.3s ease;
         }
@@ -180,7 +180,7 @@ export function LuxuryGoldButton() {
           content: "";
           position: absolute;
           inset: 2px;
-          width: 120px;
+          with: 120px;
           height: 300px;
           margin: auto;
           background: linear-gradient(
@@ -205,10 +205,8 @@ export function LuxuryGoldButton() {
           border-radius: calc(var(--radius) * 0.85);
           font-weight: 600;
           transition: all 0.3s ease;
-          background: ${isChristmas ? "var(--christmas-burgundy)" : "linear-gradient(to bottom, var(--gold-300) 0%, var(--gold-400) 100%)"};
-          box-shadow: ${isChristmas 
-            ? "inset -2px 12px 11px -5px rgba(255,255,255,0.2), inset 1px -3px 11px 0px rgba(0,0,0,0.4)" 
-            : "inset -2px 12px 11px -5px var(--gold-200), inset 1px -3px 11px 0px rgb(0 0 0 / 35%)"};
+          background: linear-gradient(to bottom, var(--gold-300) 0%, var(--gold-400) 100%);
+          box-shadow: inset -2px 12px 11px -5px var(--gold-200), inset 1px -3px 11px 0px rgb(0 0 0 / 35%);
         }
         .luxury-button-wrapper .content::before {
           content: "";
@@ -456,6 +454,8 @@ export function LuxuryGoldButton() {
             filter: blur(3px);
           }
         }
+
+        {/* Christmas Decoration Overlay Removed */}
 
         @keyframes arrow {
           0% {

@@ -224,10 +224,7 @@ export function FloatingNavbar() {
                 href="https://wa.me/34651465005"
                 target="_blank"
                 className={cn(
-                  "relative cursor-pointer rounded-2xl px-3 py-2 font-bold backdrop-blur-3xl transition-all duration-500 ease-in-out hover:shadow-[0_10px_30px_-5px_rgba(128,0,32,0.3)] overflow-hidden border border-black/5 dark:border-white/10 text-[9px] font-black uppercase tracking-[0.1em] font-inter whitespace-nowrap inline-flex items-center justify-center",
-                  isChristmas 
-                    ? "bg-[#800020] text-white hover:bg-[#600018]" 
-                    : "bg-white/5 dark:bg-white/5 text-foreground/60 hover:text-foreground hover:border-primary/20"
+                  "relative cursor-pointer rounded-2xl px-3 py-2 font-bold backdrop-blur-3xl transition-all duration-500 ease-in-out hover:shadow-[0_10px_30px_-5px_rgba(128,0,32,0.3)] overflow-hidden border border-black/5 dark:border-white/10 text-[9px] font-black uppercase tracking-[0.1em] font-inter whitespace-nowrap inline-flex items-center justify-center bg-white/5 dark:bg-white/5 text-foreground/60 hover:text-foreground hover:border-primary/20"
                 )}
               >
                 {t.nav.bookAppointment}
@@ -316,7 +313,7 @@ export function FloatingNavbar() {
                     handleNavClick(e, "/#contacto")
                     setIsOpen(false)
                   }}
-                  className="w-full py-6 bg-white text-black font-black rounded-3xl shadow-xl active:scale-95 transition-all text-xs uppercase tracking-[0.2em]"
+                  className="w-full py-6 bg-black text-white font-black rounded-3xl shadow-xl active:scale-95 transition-all text-xs uppercase tracking-[0.2em] border border-primary/20 hover:border-primary/40"
                 >
                   {t.nav.bookAppointment}
                 </button>
