@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from "framer-motion"
 import { X, Sparkles } from "lucide-react"
 
 const HOLY_WEEK_DATES: Record<string, string> = {
-  "2026-03-28": "Sábado de Pasión",
   "2026-03-29": "Domingo de Ramos",
   "2026-03-30": "Lunes Santo",
   "2026-03-31": "Martes Santo",
@@ -72,12 +71,12 @@ export function HolyWeekToast() {
           <div className="relative overflow-hidden group">
             {/* Subtle glow background */}
             <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-primary/5 to-transparent blur-xl -z-10 group-hover:from-primary/25 transition-all duration-700" />
-            
+
             <div className="relative bg-[#FFFEFB]/95 dark:bg-black/95 backdrop-blur-xl border border-primary/20 rounded-2xl p-5 shadow-[0_20px_50px_rgba(164,144,107,0.15)] overflow-hidden border-b-primary/40">
-              
+
               {/* Premium Top Accent Line */}
               <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
-              
+
               <div className="flex items-start justify-between relative z-10">
                 <div className="flex items-center gap-2">
                   <div className="size-8 rounded-full bg-primary/10 flex items-center justify-center text-primary border border-primary/5">
@@ -102,7 +101,7 @@ export function HolyWeekToast() {
               </div>
 
               <div className="mt-4 relative z-10">
-                <motion.h3 
+                <motion.h3
                   initial={{ opacity: 0, y: 5 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
@@ -110,7 +109,7 @@ export function HolyWeekToast() {
                 >
                   {greeting}
                 </motion.h3>
-                <motion.p 
+                <motion.p
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 0.7 }}
                   transition={{ delay: 0.5 }}
