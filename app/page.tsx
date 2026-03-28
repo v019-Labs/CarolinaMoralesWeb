@@ -1,16 +1,18 @@
 "use client"
 
 import { useState, useEffect, Suspense } from "react"
+import dynamic from "next/dynamic"
 import { useSearchParams, useRouter } from "next/navigation"
 import { WebIntro } from "@/components/web-intro"
-import { FloatingNavbar } from "@/components/floating-navbar"
-import { IntroHero } from "@/components/intro-hero"
-import { AboutSection } from "@/components/about-section"
-import { ServicesSection } from "@/components/services-section"
-import { ReviewsSection } from "@/components/reviews-section"
-import { LocationsSection } from "@/components/locations-section"
-import { ContactSection } from "@/components/contact-section"
-import { Footer } from "@/components/footer"
+
+// Dynamic imports for sections below the fold
+const FloatingNavbar = dynamic(() => import("@/components/floating-navbar").then(mod => mod.FloatingNavbar), { ssr: false })
+const IntroHero = dynamic(() => import("@/components/intro-hero").then(mod => mod.IntroHero))
+const AboutSection = dynamic(() => import("@/components/about-section").then(mod => mod.AboutSection))
+const ServicesSection = dynamic(() => import("@/components/services-section").then(mod => mod.ServicesSection))
+const ReviewsSection = dynamic(() => import("@/components/reviews-section").then(mod => mod.ReviewsSection))
+const LocationsSection = dynamic(() => import("@/components/locations-section").then(mod => mod.LocationsSection), { ssr: false })
+const Footer = dynamic(() => import("@/components/footer").then(mod => mod.Footer))
 
 function HomeContent() {
   const [introComplete, setIntroComplete] = useState<boolean>(false)

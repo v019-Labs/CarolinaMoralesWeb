@@ -17,14 +17,14 @@ export function WebIntro({ onComplete }: { onComplete: () => void }) {
   }, [])
 
   useEffect(() => {
-    // Refined timing for elegant reveal
+    // Refined timing for elegant reveal - Optimized for better flow
     const timer1 = setTimeout(() => setStep(1), 100)   // Quicker start
-    const timer2 = setTimeout(() => setStep(2), 500)   // Logo fades in fast
-    const timer3 = setTimeout(() => setStep(3), 1500)  // Golden accents
-    const timer4 = setTimeout(() => setStep(4), 2500)  // Text reveals
-    const timer5 = setTimeout(() => setStep(5), 3800)  // Final flourish
-    const timer6 = setTimeout(() => setStep(6), 5000)  // Graceful exit
-    const timer7 = setTimeout(() => handleComplete(), 6000) // Reduced total duration
+    const timer2 = setTimeout(() => setStep(2), 400)   // Logo fades in fast
+    const timer3 = setTimeout(() => setStep(3), 1000)  // Golden accents
+    const timer4 = setTimeout(() => setStep(4), 1800)  // Text reveals
+    const timer5 = setTimeout(() => setStep(5), 2800)  // Final flourish
+    const timer6 = setTimeout(() => setStep(6), 3800)  // Graceful exit
+    const timer7 = setTimeout(() => handleComplete(), 4500) // Reduced total duration
 
 
     return () => {

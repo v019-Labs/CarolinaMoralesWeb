@@ -2,11 +2,13 @@
 
 import Link from "next/link"
 import { ArrowLeft, Calendar, FileText, Download } from "lucide-react"
-import { FloatingNavbar } from "@/components/floating-navbar"
-import { Footer } from "@/components/footer"
+import dynamic from "next/dynamic"
 import { AnimatedLink } from "@/components/animated-link"
 import { useTranslation } from "@/lib/i18n"
 import { getNewsItem } from "@/lib/news-translations"
+
+const FloatingNavbar = dynamic(() => import("@/components/floating-navbar").then(mod => mod.FloatingNavbar), { ssr: false })
+const Footer = dynamic(() => import("@/components/footer").then(mod => mod.Footer))
 
 interface NewsPageClientProps {
     slug: string

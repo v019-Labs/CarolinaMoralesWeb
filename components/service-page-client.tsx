@@ -3,12 +3,14 @@
 import Link from "next/link"
 import { ReactNode } from "react"
 import { ArrowLeft, FileText, Landmark, Home, Users, Gavel, Car } from "lucide-react"
-import { FloatingNavbar } from "@/components/floating-navbar"
-import { Footer } from "@/components/footer"
+import dynamic from "next/dynamic"
 import { AnimatedLink } from "@/components/animated-link"
-import { Globe } from "@/components/ui/globe"
 import { useTranslation } from "@/lib/i18n"
 import { getServiceContent } from "@/lib/service-translations"
+
+const FloatingNavbar = dynamic(() => import("@/components/floating-navbar").then(mod => mod.FloatingNavbar), { ssr: false })
+const Footer = dynamic(() => import("@/components/footer").then(mod => mod.Footer))
+const Globe = dynamic(() => import("@/components/ui/globe").then(mod => mod.Globe), { ssr: false })
 
 const serviceIcons: Record<string, any> = {
     "nacionalidad": Landmark,

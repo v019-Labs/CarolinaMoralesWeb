@@ -5,11 +5,13 @@ import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Toaster } from "@/components/ui/sonner"
 import { TranslationProvider } from "@/lib/i18n"
-import { CookieConsent } from "@/components/cookie-consent"
 import { cookies } from "next/headers"
 import { Locale, defaultLocale, locales } from "@/lib/translations"
 import "./globals.css"
-import { ChatWidget } from "@/components/chat-widget"
+import dynamic from "next/dynamic"
+
+const ChatWidget = dynamic(() => import("@/components/chat-widget").then(mod => mod.ChatWidget), { ssr: false })
+const CookieConsent = dynamic(() => import("@/components/cookie-consent").then(mod => mod.CookieConsent), { ssr: false })
 
 const playfair = Playfair_Display({
   subsets: ["latin"],

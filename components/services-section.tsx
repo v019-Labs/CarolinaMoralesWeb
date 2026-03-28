@@ -119,6 +119,13 @@ export function ServicesSection() {
                     src={service.image}
                     alt={service.title}
                     fill
+                    sizes={
+                      service.className === "md:col-span-2" 
+                        ? "(max-width: 768px) 100vw, 850px"
+                        : service.className === "md:col-span-1"
+                        ? "(max-width: 768px) 100vw, 420px"
+                        : "(max-width: 768px) 100vw, 1280px"
+                    }
                     className={`${service.slug === 'arraigo' ? 'object-contain p-4' : 'object-cover'} transition-transform duration-700`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
@@ -151,6 +158,7 @@ export function ServicesSection() {
                       src={service.image}
                       alt={service.title}
                       fill
+                      sizes="(max-width: 768px) 100vw, 420px"
                       className="object-cover transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
