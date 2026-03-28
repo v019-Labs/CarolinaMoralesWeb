@@ -9,6 +9,7 @@ import { cookies } from "next/headers";
 import { Locale, defaultLocale, locales } from "@/lib/translations";
 import "./globals.css";
 import { ChatWidget, CookieConsent } from "@/components/DynamicComponents"; // Importar los componentes dinámicos
+import { HolyWeekToast } from "@/components/holy-week-toast";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -123,6 +124,7 @@ export default async function RootLayout({
         <Analytics />
         <SpeedInsights />
         <Toaster />
+        <HolyWeekToast />
       </body>
     </html>
   );
