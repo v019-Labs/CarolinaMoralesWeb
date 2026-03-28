@@ -61,11 +61,11 @@ export function HolyWeekToast() {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0, x: 100, scale: 0.95 }}
-          animate={{ opacity: 1, x: 0, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.9, x: 50 }}
+          initial={{ opacity: 0, x: 20, y: 20, scale: 0.95 }}
+          animate={{ opacity: 1, x: 0, y: 0, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.9, y: 20 }}
           transition={{ type: "spring", damping: 25, stiffness: 120 }}
-          className="fixed bottom-8 right-6 z-[120] max-w-[280px]"
+          className="fixed bottom-4 right-4 sm:bottom-8 sm:right-6 z-[120] w-[calc(100%-2rem)] xs:w-auto sm:max-w-[280px]"
         >
           {/* Slim Premium Card */}
           <div className="relative overflow-hidden group">
