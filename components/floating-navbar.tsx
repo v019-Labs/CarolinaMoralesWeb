@@ -176,7 +176,7 @@ export function FloatingNavbar() {
           </div>
 
           {/* 2. Navigation Links (Center) */}
-          <div className="hidden lg:flex items-center justify-center flex-[1.8] z-10 px-4">
+          <div className="hidden xl:flex items-center justify-center flex-[1.8] z-10 px-4">
             <div className="flex items-center gap-0.5 p-1 rounded-full bg-black/[0.03] dark:bg-white/[0.05] border border-black/5 dark:border-white/10 backdrop-blur-3xl relative">
               {navLinks.map((link) => {
                 const isActive = activeSection === link.id || (pathname === link.href && !activeSection && link.id === "inicio")
@@ -185,7 +185,7 @@ export function FloatingNavbar() {
                     key={link.href}
                     href={link.href}
                     onClick={(e) => handleNavClick(e, link.href)}
-                    className="relative px-4 py-2 text-[10px] font-bold uppercase tracking-[0.25em] transition-all duration-300 rounded-full whitespace-nowrap font-inter group/link text-foreground/60 hover:text-foreground"
+                    className="relative px-3 py-2 text-[10px] font-bold uppercase tracking-[0.2em] transition-all duration-300 rounded-full whitespace-nowrap font-inter group/link text-foreground/60 hover:text-foreground"
                   >
                     {link.label}
                   </Link>
@@ -212,7 +212,7 @@ export function FloatingNavbar() {
 
             {/* Mobile Toggle */}
             <button
-              className="lg:hidden p-3.5 rounded-2xl bg-primary/10 text-primary hover:bg-primary/20 transition-all active:scale-95 group relative border border-primary/20"
+              className="xl:hidden p-3.5 rounded-2xl bg-primary/10 text-primary hover:bg-primary/20 transition-all active:scale-95 group relative border border-primary/20"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
             >
@@ -243,7 +243,7 @@ export function FloatingNavbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[110] lg:hidden"
+            className="fixed inset-0 z-[110] xl:hidden"
           >
             <motion.div
               className="absolute inset-0 bg-background/40 backdrop-blur-3xl"

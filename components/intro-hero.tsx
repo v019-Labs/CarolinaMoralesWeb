@@ -82,11 +82,11 @@ export function IntroHero() {
         <div className="absolute inset-0 bg-gradient-radial from-primary/5 via-transparent to-transparent opacity-80" />
       </motion.div>
 
-      <div className="container max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center relative z-10">
+      <div className="container max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center relative z-10">
 
         {/* Left Column: Text Content */}
         <motion.div
-          className="order-2 md:order-1 space-y-8 md:space-y-10 text-center md:text-left"
+          className="order-2 lg:order-1 space-y-8 lg:space-y-10 text-center lg:text-left"
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
@@ -98,8 +98,8 @@ export function IntroHero() {
               transition={{ delay: 0.4 }}
               className="inline-block"
             >
-              <div className="flex items-center gap-3 md:justify-start justify-center">
-                <div className="h-[1px] w-12 bg-primary/40 hidden md:block" />
+              <div className="flex items-center gap-3 lg:justify-start justify-center">
+                <div className="h-[1px] w-12 bg-primary/40 hidden lg:block" />
                 <span className="text-primary/80 text-xs md:text-sm font-bold uppercase tracking-[0.25em] font-sans">
                   Abogada de Extranjería
                 </span>
@@ -107,18 +107,18 @@ export function IntroHero() {
             </motion.div>
 
             <div className="space-y-2">
-              <h2 className="text-2xl md:text-4xl text-muted-foreground font-serif italic tracking-wide">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground font-serif italic tracking-wide">
                 Especializada en
               </h2>
-              <div className="h-[120px] md:h-[220px] flex md:block justify-center md:justify-start items-start">
+              <div className="h-[100px] sm:h-[120px] md:h-[160px] lg:h-[220px] flex lg:block justify-center lg:justify-start items-start">
                 <WordRotate
                   words={[t.hero.nationality, t.hero.arraigo, t.hero.familyReunification]}
-                  className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif font-medium text-primary tracking-tight drop-shadow-sm leading-[1.1] py-2"
+                  className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-medium text-primary tracking-tight drop-shadow-sm leading-[1.1] py-2"
                 />
               </div>
             </div>
 
-            <p className="text-muted-foreground/80 md:text-xl max-w-lg mx-auto md:mx-0 font-light leading-relaxed font-sans">
+            <p className="text-muted-foreground/80 md:text-lg lg:text-xl max-w-lg mx-auto lg:mx-0 font-light leading-relaxed font-sans">
               Experiencia y compromiso para resolver tus trámites de nacionalidad y residencia con éxito.
             </p>
           </div>
@@ -132,7 +132,7 @@ export function IntroHero() {
 
         {/* Right Column: Image */}
         <motion.div
-          className="order-1 md:order-2 relative perspective-1000"
+          className="order-1 lg:order-2 relative perspective-1000"
           style={{
             rotateX: isMobile ? 0 : rotateX_logo,
             rotateY: isMobile ? 0 : rotateY_logo,
@@ -144,7 +144,7 @@ export function IntroHero() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] rounded-[45%] border border-primary/10 -rotate-6 -z-10" />
 
           <motion.div
-            className="relative w-full max-w-[480px] mx-auto aspect-[3/4] md:aspect-[4/5] rounded-[2rem] shadow-2xl shadow-primary/15"
+            className="relative w-full max-w-[320px] sm:max-w-[400px] lg:max-w-[440px] xl:max-w-[480px] mx-auto aspect-[3/4] md:aspect-[4/5] rounded-[2rem] shadow-2xl shadow-primary/15"
             style={{ transform: isMobile ? "none" : "translateZ(20px)" }}
             whileHover={{ scale: 1.01 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
