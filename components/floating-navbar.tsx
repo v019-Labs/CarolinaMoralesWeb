@@ -193,16 +193,27 @@ export function FloatingNavbar() {
                 <AnimatePresence>
                   {isChristmas && (
                     <motion.div
-                      initial={{ scale: 0, opacity: 0, rotate: -30 }}
-                      animate={{ scale: 1, opacity: 1, rotate: -5 }}
-                      className="absolute -top-3 -right-6 size-10 md:size-14 z-20 pointer-events-none mix-blend-multiply brightness-110 contrast-110"
+                      initial={{ scale: 0, opacity: 0, rotate: -20 }}
+                      animate={{ scale: 1, opacity: 1, rotate: 0 }}
+                      className="absolute -top-4 -right-8 w-16 h-12 z-20 pointer-events-none drop-shadow-sm"
                     >
-                      <Image 
-                        src="/decorations/christmas-bow.png" 
-                        alt="Lazo"
-                        fill
-                        className="object-contain"
-                      />
+                      {/* Holly Sprig */}
+                      <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full text-green-800">
+                         <path d="M50 50 Q30 20 10 30 Q0 50 20 70 Z" fill="currentColor" />
+                         <path d="M50 50 Q70 20 90 30 Q100 50 80 70 Z" fill="currentColor" />
+                         <circle cx="45" cy="55" r="4" fill="#800020" />
+                         <circle cx="55" cy="55" r="4" fill="#800020" />
+                         <circle cx="50" cy="62" r="4" fill="#800020" />
+                      </svg>
+                      {/* Bow */}
+                      <div className="absolute inset-0 scale-[0.7] translate-y-2">
+                        <Image 
+                          src="/decorations/christmas-bow.png" 
+                          alt="Lazo"
+                          fill
+                          className="object-contain"
+                        />
+                      </div>
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -239,7 +250,12 @@ export function FloatingNavbar() {
               <Link
                 href="https://wa.me/34651465005"
                 target="_blank"
-                className="relative cursor-pointer rounded-2xl px-3 py-2 font-bold backdrop-blur-3xl transition-all duration-500 ease-in-out hover:shadow-[0_10px_30px_-5px_color-mix(in_srgb,var(--primary),transparent_80%)] bg-white/5 dark:bg-white/5 overflow-hidden border border-black/5 dark:border-white/10 hover:border-primary/20 text-[9px] font-black uppercase tracking-[0.1em] font-inter text-foreground/60 hover:text-foreground whitespace-nowrap inline-flex items-center justify-center"
+                className={cn(
+                  "relative cursor-pointer rounded-2xl px-3 py-2 font-bold backdrop-blur-3xl transition-all duration-500 ease-in-out hover:shadow-[0_10px_30px_-5px_rgba(128,0,32,0.3)] overflow-hidden border border-black/5 dark:border-white/10 text-[9px] font-black uppercase tracking-[0.1em] font-inter whitespace-nowrap inline-flex items-center justify-center",
+                  isChristmas 
+                    ? "bg-[#800020] text-white hover:bg-[#600018]" 
+                    : "bg-white/5 dark:bg-white/5 text-foreground/60 hover:text-foreground hover:border-primary/20"
+                )}
               >
                 {t.nav.bookAppointment}
               </Link>

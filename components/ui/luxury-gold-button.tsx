@@ -80,8 +80,8 @@ export function LuxuryGoldButton() {
         {isChristmas && (
           <motion.div
             initial={{ scale: 0, opacity: 0, rotate: -20 }}
-            animate={{ scale: 1, opacity: 1, rotate: -15 }}
-            className="absolute -top-6 -right-6 size-16 z-[20] pointer-events-none mix-blend-multiply brightness-110"
+            animate={{ scale: 1, opacity: 1, rotate: -10 }}
+            className="absolute -top-3 -right-3 size-12 z-[50] pointer-events-none drop-shadow-md"
           >
             <Image 
               src="/decorations/christmas-bow.png" 
@@ -178,11 +178,7 @@ export function LuxuryGoldButton() {
           height: 100%;
           transform: translate(6px, -6px);
           padding: 3px;
-          background: linear-gradient(
-            to bottom,
-            var(--gold-100) 0%,
-            var(--gold-400) 100%
-          );
+          background: ${isChristmas ? "white" : "linear-gradient(to bottom, var(--gold-100) 0%, var(--gold-400) 100%)"};
           position: relative;
           transition: all 0.3s ease;
         }
@@ -225,14 +221,10 @@ export function LuxuryGoldButton() {
           border-radius: calc(var(--radius) * 0.85);
           font-weight: 600;
           transition: all 0.3s ease;
-          background: linear-gradient(
-            to bottom,
-            var(--gold-300) 0%,
-            var(--gold-400) 100%
-          );
-          box-shadow:
-            inset -2px 12px 11px -5px var(--gold-200),
-            inset 1px -3px 11px 0px rgb(0 0 0 / 35%);
+          background: ${isChristmas ? "var(--christmas-burgundy)" : "linear-gradient(to bottom, var(--gold-300) 0%, var(--gold-400) 100%)"};
+          box-shadow: ${isChristmas 
+            ? "inset -2px 12px 11px -5px rgba(255,255,255,0.2), inset 1px -3px 11px 0px rgba(0,0,0,0.4)" 
+            : "inset -2px 12px 11px -5px var(--gold-200), inset 1px -3px 11px 0px rgb(0 0 0 / 35%)"};
         }
         .luxury-button-wrapper .content::before {
           content: "";

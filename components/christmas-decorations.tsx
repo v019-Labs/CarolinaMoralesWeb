@@ -27,10 +27,10 @@ export function ChristmasDecorations() {
         transition={{ duration: 1.5, ease: [0.23, 1, 0.32, 1] }}
         className="fixed top-0 left-0 right-0 z-[130] pointer-events-none w-full select-none"
       >
-        <div className="relative w-full h-[15vh] md:h-[20vh] mix-blend-multiply brightness-110 contrast-110">
+        <div className="relative w-full h-[15vh] md:h-[22vh] mix-blend-multiply transition-all duration-700">
           <Image 
-            src="/decorations/christmas-garland-top.png"
-            alt="Corona de Navidad"
+            src="/decorations/guinarla.png"
+            alt="Guirnalda de Navidad"
             fill
             className="object-contain object-top"
             priority
@@ -116,9 +116,10 @@ export function ChristmasDecorations() {
         ))}
       </div>
 
-      {/* 4. Ambient Warmth */}
-      <div className="fixed inset-0 z-[2] pointer-events-none overflow-hidden opacity-[0.03] select-none scale-110">
-        <div className="absolute inset-0 bg-gradient-radial from-primary/30 to-transparent" />
+      {/* 4. Ambient Warmth (Parchment/Gold Glow) */}
+      <div className="fixed inset-0 z-[1] pointer-events-none overflow-hidden opacity-[0.08] select-none">
+        <div className="absolute inset-0 bg-[#f9f3e5] mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-radial from-[#d4af37]/20 via-transparent to-transparent" />
       </div>
     </>
   )

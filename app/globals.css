@@ -52,6 +52,9 @@
   --sidebar-ring: oklch(0.55 0.12 75);
 
   --radius: 0.75rem;
+
+  /* Christmas theme colors */
+  --christmas-burgundy: #800020;
 }
 
 .dark {
