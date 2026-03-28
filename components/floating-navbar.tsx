@@ -23,10 +23,18 @@ function Magnetic({ children }: { children: React.ReactNode }) {
   const springX = useSpring(x, springConfig)
   const springY = useSpring(y, springConfig)
 
+  const rect = useRef<DOMRect | null>(null)
+
+  const handleMouseEnter = () => {
+    if (ref.current) {
+      rect.current = ref.current.getBoundingClientRect()
+    }
+  }
+
   const handleMouseMove = (e: React.MouseEvent) => {
-    if (!ref.current) return
+    if (!rect.current) return
     const { clientX, clientY } = e
-    const { left, top, width, height } = ref.current.getBoundingClientRect()
+    const { left, top, width, height } = rect.current
     const centerX = left + width / 2
     const centerY = top + height / 2
     const distanceX = clientX - centerX
@@ -38,14 +46,17 @@ function Magnetic({ children }: { children: React.ReactNode }) {
   const handleMouseLeave = () => {
     x.set(0)
     y.set(0)
+    rect.current = null
   }
 
   return (
     <motion.div
       ref={ref}
+      onMouseEnter={handleMouseEnter}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{ x: springX, y: springY }}
+      className="will-change-transform"
     >
       {children}
     </motion.div>

@@ -29,12 +29,35 @@ export function IntroHero() {
   const smoothX = useSpring(x, { stiffness: 150, damping: 25, mass: 0.8 })
   const smoothY = useSpring(y, { stiffness: 150, damping: 25, mass: 0.8 })
 
+  const containerRect = useRef<DOMRect | null>(null)
+
+  // Cache rect on mount and resize instead of every mouse move
+  useEffect(() => {
+    if (isMobile) return
+    const updateRect = () => {
+      if (containerRef.current) {
+        containerRect.current = containerRef.current.getBoundingClientRect()
+      }
+    }
+    updateRect()
+    window.addEventListener("resize", updateRect)
+    // Also update on scroll as the relative position to viewport changes
+    window.addEventListener("scroll", updateRect, { passive: true })
+    return () => {
+      window.removeEventListener("resize", updateRect)
+      window.removeEventListener("scroll", updateRect)
+    }
+  }, [isMobile])
+
   const handleMouseMove = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    if (!containerRef.current || isMobile) return
+    if (!containerRect.current || isMobile) return
     const { clientX, clientY } = event
-    const { left, top, width, height } = containerRef.current.getBoundingClientRect()
+    const { left, top, width, height } = containerRect.current
+    
+    // Use the cached values
     const xPct = (clientX - (left + width / 2)) / (width / 2)
     const yPct = (clientY - (top + height / 2)) / (height / 2)
+    
     x.set(xPct)
     y.set(yPct)
   }
@@ -73,7 +96,7 @@ export function IntroHero() {
 
       {/* Background Elements */}
       <motion.div
-        className="absolute inset-0 -z-20"
+        className="absolute inset-0 -z-20 will-change-transform"
         style={{
           rotateX: isMobile ? 0 : rotateX_bg,
           rotateY: isMobile ? 0 : rotateY_bg,
@@ -131,7 +154,7 @@ export function IntroHero() {
 
         {/* Right Column: Image */}
         <motion.div
-          className="order-1 lg:order-2 relative perspective-1000"
+          className="order-1 lg:order-2 relative perspective-1000 will-change-transform"
           style={{
             rotateX: isMobile ? 0 : rotateX_logo,
             rotateY: isMobile ? 0 : rotateY_logo,

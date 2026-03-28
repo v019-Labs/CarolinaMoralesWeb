@@ -4,33 +4,33 @@ import { useEffect, useRef } from "react"
 import Image from "next/image"
 import { useTranslation } from "@/lib/i18n"
 import { BentoGrid, BentoCard } from "@/components/ui/bento-grid"
+import { motion, useScroll, useTransform } from "framer-motion"
+import { cn } from "@/lib/utils"
+
+function ParallaxBlob({ speed, className }: { speed: number; className?: string }) {
+  const ref = useRef(null)
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  })
+
+  // Calculate parallax movement based on scroll progress
+  const y = useTransform(scrollYProgress, [0, 1], [speed * 100, speed * -100])
+
+  return (
+    <motion.div
+      ref={ref}
+      style={{ y }}
+      className={cn("absolute will-change-transform", className)}
+    />
+  )
+}
 
 export function ServicesSection() {
   const { t } = useTranslation()
   const sectionRef = useRef<HTMLElement>(null)
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!sectionRef.current) return
-      const scrollY = window.scrollY
-      const elements = sectionRef.current.querySelectorAll("[data-parallax]")
-
-      elements.forEach((el) => {
-        const speed = Number.parseFloat(el.getAttribute("data-parallax") || "0")
-        const rect = el.getBoundingClientRect()
-        const elementTop = rect.top + scrollY
-        const elementVisible = rect.top < window.innerHeight && rect.bottom > 0
-
-        if (elementVisible) {
-          const yPos = (scrollY - elementTop / 2) * speed * 1.5
-            ; (el as HTMLElement).style.transform = `translateY(${yPos}px) translateZ(0)`
-        }
-      })
-    }
-
-    window.addEventListener("scroll", handleScroll, { passive: true })
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+  // Parallax is now handled by the ParallaxBlob component using framer-motion
 
   const mainServices = [
     {
@@ -83,13 +83,13 @@ export function ServicesSection() {
   return (
     <section ref={sectionRef} id="servicios" className="py-32 px-6 relative overflow-hidden">
       <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div
-          data-parallax="0.7"
-          className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/15 rounded-full blur-[130px] animate-glow"
+        <ParallaxBlob
+          speed={0.7}
+          className="top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/15 rounded-full blur-[130px] animate-glow"
         />
-        <div
-          data-parallax="0.5"
-          className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-[100px] animate-pulse animation-delay-1000"
+        <ParallaxBlob
+          speed={0.5}
+          className="bottom-1/3 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-[100px] animate-pulse animation-delay-1000"
         />
       </div>
 
