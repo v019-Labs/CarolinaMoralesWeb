@@ -41,7 +41,7 @@ export function ChristmasDecorations() {
           initial={{ y: -80, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
-          className="fixed -top-2 left-0 right-0 z-[1000] pointer-events-none w-full select-none flex justify-center overflow-hidden h-[90px] md:h-[110px] items-start"
+          className="fixed top-0 left-0 right-0 z-[1000] pointer-events-none w-full select-none flex justify-center overflow-visible h-[120px] md:h-[140px] items-start"
         >
           {[...Array(10)].map((_, i) => (
             <motion.div 
@@ -53,7 +53,7 @@ export function ChristmasDecorations() {
                 delay: i * 0.04, 
                 ease: [0.23, 1, 0.32, 1] 
               }}
-              className="relative flex-shrink-0 w-[18%] min-w-[320px] h-full -mx-24 mix-blend-multiply"
+              className="relative flex-shrink-0 w-[20%] min-w-[350px] h-full -mx-28 mix-blend-multiply"
             >
               <Image 
                 src="/decorations/guinarla.png"
