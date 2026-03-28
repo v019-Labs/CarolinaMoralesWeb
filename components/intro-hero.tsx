@@ -146,33 +146,7 @@ export function IntroHero() {
                   words={[t.hero.nationality, t.hero.arraigo, t.hero.familyReunification]}
                   className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-serif font-medium text-primary tracking-tight drop-shadow-sm leading-[1.1] py-2"
                 />
-                
-                {/* Christmas Snowflake Accents */}
-                <AnimatePresence>
-                  {isChristmas && (
-                    <>
-                      <motion.div 
-                        initial={{ opacity: 0, scale: 0 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        className="absolute -top-6 -right-12 text-primary/40 pointer-events-none"
-                      >
-                         <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                           <path d="M12 2v20M2 12h20M7 7l10 10M17 7L7 17" />
-                         </svg>
-                      </motion.div>
-                      <motion.div 
-                        initial={{ opacity: 0, scale: 0 }}
-                        animate={{ opacity: 1, scale: 0.7 }}
-                        transition={{ delay: 0.2 }}
-                        className="absolute -bottom-4 -left-8 text-primary/30 pointer-events-none"
-                      >
-                         <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                           <path d="M12 2v20M2 12h20M7 7l10 10M17 7L7 17" />
-                         </svg>
-                      </motion.div>
-                    </>
-                  )}
-                </AnimatePresence>
+                {/* Christmas Snowflake Accents Removed */}
               </div>
             </div>
 
@@ -209,10 +183,7 @@ export function IntroHero() {
             <div className="absolute -inset-3 border border-primary/10 rounded-[2rem] z-0" />
             <div className="absolute -inset-1 border border-white/50 rounded-[1.8rem] z-10" />
 
-            <div className={cn(
-              "relative h-full w-full rounded-[1.5rem] overflow-hidden bg-white z-20 transition-all duration-700",
-              isChristmas && "border-2 border-[#D4AF37] shadow-[0_0_30px_rgba(212,175,55,0.4)]"
-            )}>
+            <div className="relative h-full w-full rounded-[1.5rem] overflow-hidden bg-white z-20">
               <Image
                 src="/images/Nueva.jpg"
                 alt="Carolina Morales Abogada"
@@ -231,56 +202,7 @@ export function IntroHero() {
               <div className="absolute inset-0 shadow-[inset_0_0_40px_rgba(0,0,0,0.1)] pointer-events-none" />
               <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-black/40 to-transparent opacity-60" />
 
-              {/* Christmas Decorations */}
-              <AnimatePresence>
-                {isChristmas && (
-                  <>
-                    {/* Starburst Sparkles */}
-                    <motion.div
-                      animate={{ 
-                        opacity: [0.4, 1, 0.4],
-                        scale: [1, 1.2, 1],
-                        rotate: [0, 90, 0]
-                      }}
-                      transition={{ duration: 3, repeat: Infinity }}
-                      className="absolute top-2 right-2 size-8 z-40 text-yellow-200 pointer-events-none drop-shadow-glow"
-                    >
-                      <svg viewBox="0 0 100 100" className="w-full h-full fill-current">
-                        <path d="M50 0 L55 45 L100 50 L55 55 L50 100 L45 55 L0 50 L45 45 Z" />
-                      </svg>
-                    </motion.div>
-                    
-                    <motion.div
-                      animate={{ 
-                        opacity: [0.3, 0.8, 0.3],
-                        scale: [0.8, 1, 0.8],
-                        rotate: [0, -45, 0]
-                      }}
-                      transition={{ duration: 4, repeat: Infinity, delay: 1 }}
-                      className="absolute bottom-1/4 left-2 size-6 z-40 text-yellow-100/60 pointer-events-none"
-                    >
-                      <svg viewBox="0 0 100 100" className="w-full h-full fill-current">
-                        <path d="M50 0 L55 45 L100 50 L55 55 L50 100 L45 55 L0 50 L45 45 Z" />
-                      </svg>
-                    </motion.div>
-
-                    {/* Pine Branch CornerDecoration */}
-                    <motion.div
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 1 }}
-                      className="absolute -bottom-6 -right-6 size-40 z-30 pointer-events-none"
-                    >
-                      <Image 
-                        src="/decorations/christmas-corner.png" 
-                        alt="Decoración"
-                        fill
-                        className="object-contain"
-                      />
-                    </motion.div>
-                  </>
-                )}
-              </AnimatePresence>
+              {/* Christmas Decorations Removed */}
             </div>
           </motion.div>
 

@@ -75,23 +75,7 @@ export function LuxuryGoldButton() {
         </div>
       </button>
 
-      {/* Christmas Decoration Overlay */}
-      <AnimatePresence>
-        {isChristmas && (
-          <motion.div
-            initial={{ scale: 0, opacity: 0, rotate: -20 }}
-            animate={{ scale: 1, opacity: 1, rotate: -10 }}
-            className="absolute -top-3 -right-3 size-12 z-[50] pointer-events-none drop-shadow-md"
-          >
-            <Image 
-              src="/decorations/christmas-bow.png" 
-              alt="Lazo"
-              fill
-              className="object-contain"
-            />
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {/* Christmas Decoration Overlay Removed */}
 
       <style jsx global>{`
         .luxury-button-wrapper .button {

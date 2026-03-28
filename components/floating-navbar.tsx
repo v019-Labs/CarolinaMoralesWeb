@@ -189,34 +189,7 @@ export function FloatingNavbar() {
                   priority
                 />
                 
-                {/* Christmas Decoration Overlay */}
-                <AnimatePresence>
-                  {isChristmas && (
-                    <motion.div
-                      initial={{ scale: 0, opacity: 0, rotate: -20 }}
-                      animate={{ scale: 1, opacity: 1, rotate: 0 }}
-                      className="absolute -top-4 -right-8 w-16 h-12 z-20 pointer-events-none drop-shadow-sm"
-                    >
-                      {/* Holly Sprig */}
-                      <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full text-green-800">
-                         <path d="M50 50 Q30 20 10 30 Q0 50 20 70 Z" fill="currentColor" />
-                         <path d="M50 50 Q70 20 90 30 Q100 50 80 70 Z" fill="currentColor" />
-                         <circle cx="45" cy="55" r="4" fill="#800020" />
-                         <circle cx="55" cy="55" r="4" fill="#800020" />
-                         <circle cx="50" cy="62" r="4" fill="#800020" />
-                      </svg>
-                      {/* Bow */}
-                      <div className="absolute inset-0 scale-[0.7] translate-y-2">
-                        <Image 
-                          src="/decorations/christmas-bow.png" 
-                          alt="Lazo"
-                          fill
-                          className="object-contain"
-                        />
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                {/* Christmas Decoration Overlay Removed */}
               </Link>
             </Magnetic>
           </div>
