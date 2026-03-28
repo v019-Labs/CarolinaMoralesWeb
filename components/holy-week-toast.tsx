@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { X, Sparkles } from "lucide-react"
 
 const HOLY_WEEK_DATES: Record<string, string> = {
+  "2026-03-28": "Sábado de Pasión",
   "2026-03-29": "Domingo de Ramos",
   "2026-03-30": "Lunes Santo",
   "2026-03-31": "Martes Santo",

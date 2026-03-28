@@ -19,9 +19,6 @@ const ReviewCard = ({
 }) => {
   return (
     <div className="w-[360px] sm:w-[380px] mx-4 sm:mx-6 group relative p-6 sm:p-8 bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-md border border-primary/15 rounded-3xl hover:shadow-xl hover:shadow-primary/20 hover:border-primary/40 transition-all duration-500 ease-out flex flex-col justify-between h-full">
-      <div className="absolute top-6 right-6 opacity-10 group-hover:opacity-20 transition-opacity">
-        <Quote className="w-20 h-20 text-primary" />
-      </div>
 
       <div className="relative space-y-6">
         <div className="flex items-center gap-1">
