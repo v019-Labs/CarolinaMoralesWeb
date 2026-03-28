@@ -210,13 +210,13 @@ export function IntroHero() {
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.8 }}
-                      className="absolute -top-4 -right-4 size-32 z-30 pointer-events-none rotate-90"
+                      className="absolute -top-10 -right-10 size-48 z-30 pointer-events-none mix-blend-multiply brightness-110"
                     >
                       <Image 
                         src="/decorations/christmas-corner.png" 
                         alt="Decoración"
                         fill
-                        className="object-contain"
+                        className="object-contain rotate-180"
                       />
                     </motion.div>
                     
@@ -225,7 +225,7 @@ export function IntroHero() {
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 1 }}
-                      className="absolute -bottom-6 -left-6 size-40 z-30 pointer-events-none rotate-[-90deg] scale-x-[-1]"
+                      className="absolute -bottom-10 -left-10 size-48 z-30 pointer-events-none mix-blend-multiply brightness-110"
                     >
                       <Image 
                         src="/decorations/christmas-corner.png" 

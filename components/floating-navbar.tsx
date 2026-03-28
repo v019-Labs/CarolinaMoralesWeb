@@ -193,13 +193,13 @@ export function FloatingNavbar() {
                 <AnimatePresence>
                   {isChristmas && (
                     <motion.div
-                      initial={{ scale: 0, opacity: 0, rotate: -20 }}
-                      animate={{ scale: 1, opacity: 1, rotate: 0 }}
-                      className="absolute -top-1 -right-3 size-8 md:size-10 z-20 pointer-events-none"
+                      initial={{ scale: 0, opacity: 0, rotate: -30 }}
+                      animate={{ scale: 1, opacity: 1, rotate: -5 }}
+                      className="absolute -top-3 -right-6 size-10 md:size-14 z-20 pointer-events-none mix-blend-multiply brightness-110 contrast-110"
                     >
                       <Image 
                         src="/decorations/christmas-bow.png" 
-                        alt="Christmas Bow"
+                        alt="Lazo"
                         fill
                         className="object-contain"
                       />
@@ -247,7 +247,7 @@ export function FloatingNavbar() {
 
             {/* Mobile Toggle */}
             <button
-              className="xl:hidden p-3 rounded-2xl bg-primary/10 text-primary hover:bg-primary/20 transition-all active:scale-95 group relative border border-primary/20"
+              className="xl:hidden p-3 rounded-2xl bg-black text-white hover:bg-black/90 transition-all active:scale-95 group relative shadow-lg shadow-black/10 border border-white/10"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
             >
@@ -281,7 +281,7 @@ export function FloatingNavbar() {
             className="fixed inset-0 z-[110] xl:hidden"
           >
             <motion.div
-              className="absolute inset-0 bg-background/40 backdrop-blur-3xl"
+              className="absolute inset-0 bg-black/40 backdrop-blur-3xl"
               onClick={() => setIsOpen(false)}
             />
 
@@ -290,7 +290,7 @@ export function FloatingNavbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 30, stiffness: 200 }}
-              className="absolute right-0 top-0 bottom-0 w-[85%] max-w-sm bg-card/95 border-l border-white/10 shadow-2xl p-10 pt-32 flex flex-col"
+              className="absolute right-0 top-0 bottom-0 w-[85%] max-w-sm bg-black/98 border-l border-white/10 shadow-2xl p-10 pt-32 flex flex-col"
             >
               <div className="flex flex-col gap-2 overflow-y-auto flex-1">
                 {navLinks.map((link, i) => (
@@ -306,7 +306,7 @@ export function FloatingNavbar() {
                         handleNavClick(e, link.href)
                         setIsOpen(false)
                       }}
-                      className="text-3xl font-black text-foreground/90 hover:text-primary transition-all flex items-center gap-4 py-4 group"
+                      className="text-3xl font-black text-white px-2 hover:text-primary transition-all flex items-center gap-4 py-4 group"
                     >
                       <span className="text-[10px] font-mono text-primary/40 pt-1">0{i + 1}</span>
                       {link.label}
@@ -316,16 +316,18 @@ export function FloatingNavbar() {
               </div>
 
               <div className="mt-10 pt-10 border-t border-white/10 space-y-10">
-                <div className="flex items-center justify-between px-2">
+                <div className="flex items-center justify-between px-2 text-white">
                   <span className="text-[10px] font-black text-muted-foreground uppercase tracking-[0.2em]">Idioma</span>
-                  <LanguageSelector dir="up" />
+                  <div className="scale-90 origin-right">
+                    <LanguageSelector dir="up" />
+                  </div>
                 </div>
                 <button
                   onClick={(e) => {
                     handleNavClick(e, "/#contacto")
                     setIsOpen(false)
                   }}
-                  className="w-full py-6 bg-primary text-primary-foreground font-black rounded-3xl shadow-xl shadow-primary/20 active:scale-95 transition-all text-xs uppercase tracking-[0.2em]"
+                  className="w-full py-6 bg-white text-black font-black rounded-3xl shadow-xl active:scale-95 transition-all text-xs uppercase tracking-[0.2em]"
                 >
                   {t.nav.bookAppointment}
                 </button>

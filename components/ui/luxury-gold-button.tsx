@@ -81,11 +81,11 @@ export function LuxuryGoldButton() {
           <motion.div
             initial={{ scale: 0, opacity: 0, rotate: -20 }}
             animate={{ scale: 1, opacity: 1, rotate: -15 }}
-            className="absolute -top-4 -right-4 size-14 z-[20] pointer-events-none drop-shadow-lg"
+            className="absolute -top-6 -right-6 size-16 z-[20] pointer-events-none mix-blend-multiply brightness-110"
           >
             <Image 
               src="/decorations/christmas-bow.png" 
-              alt="Christmas Bow"
+              alt="Lazo"
               fill
               className="object-contain"
             />
