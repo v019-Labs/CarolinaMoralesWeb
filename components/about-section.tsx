@@ -34,7 +34,7 @@ export function AboutSection() {
               <div className="w-24 h-1 bg-gradient-to-r from-primary via-accent to-transparent" />
             </div>
 
-            <div className="space-y-8 bg-card/40 p-10 rounded-[2.5rem] border-2 border-primary/10 backdrop-blur-sm relative overflow-hidden group hover:border-primary/30 transition-all duration-500">
+            <div className="space-y-8 bg-card/40 p-6 sm:p-10 rounded-[2.5rem] border-2 border-primary/10 backdrop-blur-sm relative overflow-hidden group hover:border-primary/30 transition-all duration-500">
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl -mr-10 -mt-10 group-hover:bg-primary/10 transition-colors" />
               <div className="space-y-6 text-lg leading-relaxed text-foreground/90">
                 <p className="animate-fade-in">

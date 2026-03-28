@@ -1,13 +1,15 @@
 "use client"
 
-import { useRef, useEffect } from "react"
+import { useRef, useEffect, useState } from "react"
 import Image from "next/image"
 import { useTranslation } from "@/lib/i18n"
+import { useInView } from "framer-motion"
 import { Map, MapMarker, MarkerContent, MapControls, MarkerPopup } from "@/components/ui/map"
 import { Phone, MapPin, ExternalLink } from "lucide-react"
 
 export function LocationsSection() {
   const sectionRef = useRef<HTMLElement>(null)
+  const isInView = useInView(sectionRef, { once: true, margin: "600px 0px" })
   const { t } = useTranslation()
 
   useEffect(() => {
@@ -66,38 +68,44 @@ export function LocationsSection() {
               </div>
             </div>
             <div className="aspect-video bg-muted rounded-2xl overflow-hidden border border-primary/30 shadow-lg hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 relative">
-              <Map
-                center={[1.107479, 41.160855]}
-                zoom={15}
-                scrollZoom={false}
-                styles={mapStyle}
-              >
-                <MapMarker longitude={1.107479} latitude={41.160855}>
-                  <MarkerContent className="group">
-                    <div className="relative size-10 flex items-center justify-center transition-transform hover:scale-110">
-                      <div className="absolute inset-0 bg-primary/20 animate-ping rounded-full" />
-                      <div className="relative size-8 rounded-full border-2 border-primary bg-background shadow-xl overflow-hidden">
-                        <Image src="/carolina.jpeg" alt="Carolina Morales" fill className="object-cover" />
+              {isInView ? (
+                <Map
+                  center={[1.107479, 41.160855]}
+                  zoom={15}
+                  scrollZoom={false}
+                  styles={mapStyle}
+                >
+                  <MapMarker longitude={1.107479} latitude={41.160855}>
+                    <MarkerContent className="group">
+                      <div className="relative size-10 flex items-center justify-center transition-transform hover:scale-110">
+                        <div className="absolute inset-0 bg-primary/20 animate-ping rounded-full" />
+                        <div className="relative size-8 rounded-full border-2 border-primary bg-background shadow-xl overflow-hidden">
+                          <Image src="/carolina.jpeg" alt="Carolina Morales" fill className="object-cover" />
+                        </div>
                       </div>
-                    </div>
-                  </MarkerContent>
-                  <MarkerPopup className="w-64">
-                    <div className="space-y-3">
-                      <h4 className="font-bold text-primary">{t.locationsSection.reus}</h4>
-                      <p className="text-xs text-muted-foreground">{t.locationsSection.addressReus}</p>
-                      <a
-                        href="https://www.google.com/maps/place/CAROLINA+MORALES+L%C3%93PEZ+-+ABOGADA+EXTRANJER%C3%8DA/@41.1626864,1.109349,19z/data=!4m20!1m13!4m12!1m4!2m2!1d1.2288!2d41.1959296!4e1!1m6!1m2!1s0x12a1511a345a81d1:0x34cc9bd29e6cea09!2sCarrer+d'Antoni+Gaud%C3%AD,+74,+43203+Reus,+Tarragona!2m2!1d1.1101093!2d41.1627572!3m5!1s0x12a3fd04756719af:0xe786eca0751278ae!8m2!3d41.1626864!4d1.110191!16s%2Fg%2F11trrv6wzk"
-                        target="_blank"
-                        className="flex items-center gap-2 text-xs text-primary hover:underline"
-                      >
-                        <ExternalLink size={12} />
-                        Cómo llegar
-                      </a>
-                    </div>
-                  </MarkerPopup>
-                </MapMarker>
-                <MapControls showZoom showFullscreen position="top-right" />
-              </Map>
+                    </MarkerContent>
+                    <MarkerPopup className="w-64">
+                      <div className="space-y-3">
+                        <h4 className="font-bold text-primary">{t.locationsSection.reus}</h4>
+                        <p className="text-xs text-muted-foreground">{t.locationsSection.addressReus}</p>
+                        <a
+                          href="https://www.google.com/maps/place/CAROLINA+MORALES+L%C3%93PEZ+-+ABOGADA+EXTRANJER%C3%8DA/@41.1626864,1.109349,19z/data=!4m20!1m13!4m12!1m4!2m2!1d1.2288!2d41.1959296!4e1!1m6!1m2!1s0x12a1511a345a81d1:0x34cc9bd29e6cea09!2sCarrer+d'Antoni+Gaud%C3%AD,+74,+43203+Reus,+Tarragona!2m2!1d1.1101093!2d41.1627572!3m5!1s0x12a3fd04756719af:0xe786eca0751278ae!8m2!3d41.1626864!4d1.110191!16s%2Fg%2F11trrv6wzk"
+                          target="_blank"
+                          className="flex items-center gap-2 text-xs text-primary hover:underline"
+                        >
+                          <ExternalLink size={12} />
+                          Cómo llegar
+                        </a>
+                      </div>
+                    </MarkerPopup>
+                  </MapMarker>
+                  <MapControls showZoom showFullscreen position="top-right" />
+                </Map>
+              ) : (
+                <div className="absolute inset-0 flex items-center justify-center bg-muted/50">
+                  <div className="animate-pulse size-8 rounded-full bg-primary/20" />
+                </div>
+              )}
               {/* Botón Google Maps */}
               <a
                 href="https://www.google.com/maps/place/CAROLINA+MORALES+L%C3%93PEZ+-+ABOGADA+EXTRANJER%C3%8DA/@41.1626864,1.109349,19z/data=!4m20!1m13!4m12!1m4!2m2!1d1.2288!2d41.1959296!4e1!1m6!1m2!1s0x12a1511a345a81d1:0x34cc9bd29e6cea09!2sCarrer+d'Antoni+Gaud%C3%AD,+74,+43203+Reus,+Tarragona!2m2!1d1.1101093!2d41.1627572!3m5!1s0x12a3fd04756719af:0xe786eca0751278ae!8m2!3d41.1626864!4d1.110191!16s%2Fg%2F11trrv6wzk"
@@ -133,38 +141,44 @@ export function LocationsSection() {
               </div>
             </div>
             <div className="aspect-video bg-muted rounded-2xl overflow-hidden border border-primary/30 shadow-lg hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 relative">
-              <Map
-                center={[2.1298463, 41.3995831]}
-                zoom={15}
-                scrollZoom={false}
-                styles={mapStyle}
-              >
-                <MapMarker longitude={2.1298463} latitude={41.3995831}>
-                  <MarkerContent className="group">
-                    <div className="relative size-10 flex items-center justify-center transition-transform hover:scale-110">
-                      <div className="absolute inset-0 bg-primary/20 animate-ping rounded-full" />
-                      <div className="relative size-8 rounded-full border-2 border-primary bg-background shadow-xl overflow-hidden">
-                        <Image src="/carolina.jpeg" alt="Carolina Morales" fill className="object-cover" />
+              {isInView ? (
+                <Map
+                  center={[2.1298463, 41.3995831]}
+                  zoom={15}
+                  scrollZoom={false}
+                  styles={mapStyle}
+                >
+                  <MapMarker longitude={2.1298463} latitude={41.3995831}>
+                    <MarkerContent className="group">
+                      <div className="relative size-10 flex items-center justify-center transition-transform hover:scale-110">
+                        <div className="absolute inset-0 bg-primary/20 animate-ping rounded-full" />
+                        <div className="relative size-8 rounded-full border-2 border-primary bg-background shadow-xl overflow-hidden">
+                          <Image src="/carolina.jpeg" alt="Carolina Morales" fill className="object-cover" />
+                        </div>
                       </div>
-                    </div>
-                  </MarkerContent>
-                  <MarkerPopup className="w-64">
-                    <div className="space-y-3">
-                      <h4 className="font-bold text-primary">{t.locationsSection.barcelona}</h4>
-                      <p className="text-xs text-muted-foreground">{t.locationsSection.addressBarcelona}</p>
-                      <a
-                        href="https://www.google.com/maps/dir/?api=1&destination=Pg.+de+la+Bonanova,+10,+08022+Barcelona"
-                        target="_blank"
-                        className="flex items-center gap-2 text-xs text-primary hover:underline"
-                      >
-                        <ExternalLink size={12} />
-                        Cómo llegar
-                      </a>
-                    </div>
-                  </MarkerPopup>
-                </MapMarker>
-                <MapControls showZoom showFullscreen position="top-right" />
-              </Map>
+                    </MarkerContent>
+                    <MarkerPopup className="w-64">
+                      <div className="space-y-3">
+                        <h4 className="font-bold text-primary">{t.locationsSection.barcelona}</h4>
+                        <p className="text-xs text-muted-foreground">{t.locationsSection.addressBarcelona}</p>
+                        <a
+                          href="https://www.google.com/maps/dir/?api=1&destination=Pg.+de+la+Bonanova,+10,+08022+Barcelona"
+                          target="_blank"
+                          className="flex items-center gap-2 text-xs text-primary hover:underline"
+                        >
+                          <ExternalLink size={12} />
+                          Cómo llegar
+                        </a>
+                      </div>
+                    </MarkerPopup>
+                  </MapMarker>
+                  <MapControls showZoom showFullscreen position="top-right" />
+                </Map>
+              ) : (
+                <div className="absolute inset-0 flex items-center justify-center bg-muted/50">
+                  <div className="animate-pulse size-8 rounded-full bg-primary/20" />
+                </div>
+              )}
               {/* Botón Google Maps */}
               <a
                 href="https://www.google.com/maps/dir/?api=1&destination=Pg.+de+la+Bonanova,+10,+08022+Barcelona"

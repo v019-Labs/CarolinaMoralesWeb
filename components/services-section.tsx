@@ -95,7 +95,7 @@ export function ServicesSection() {
 
       <div className="container mx-auto max-w-7xl">
         <div className="text-center space-y-6 mb-16 animate-slide-in-up">
-          <h2 className="text-6xl md:text-7xl font-bold text-balance leading-tight">
+          <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold text-balance leading-tight">
             {t.services.title}{" "}
             <span className="font-vibes text-primary drop-shadow-[0_0_25px_rgba(164,144,107,0.5)]">
               {t.services.specialization}

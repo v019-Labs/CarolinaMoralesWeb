@@ -136,6 +136,7 @@
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
+    overflow-x: hidden;
   }
 
   /* View Transitions for smooth page navigation */
@@ -177,6 +178,7 @@
 
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
   }
 
   /* Refined animations - smoother and more elegant */

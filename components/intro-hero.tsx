@@ -64,8 +64,11 @@ export function IntroHero() {
       className="min-h-screen flex items-center justify-center relative overflow-hidden px-4 md:px-8 pt-24 md:pt-0 bg-[#fcfbf9]"
       style={{ perspective: isMobile ? "none" : "1000px" }}
     >
-      {/* Texture Overlay */}
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-multiply z-0" />
+      {/* Texture Overlay - Inline noise for better performance */}
+      <div 
+        className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-multiply z-0" 
+        style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }}
+      />
 
       {/* Background Elements */}
       <motion.div
@@ -107,10 +110,10 @@ export function IntroHero() {
               <h2 className="text-2xl md:text-4xl text-muted-foreground font-serif italic tracking-wide">
                 Especializada en
               </h2>
-              <div className="h-[140px] md:h-[220px] flex md:block justify-center md:justify-start items-start">
+              <div className="h-[120px] md:h-[220px] flex md:block justify-center md:justify-start items-start">
                 <WordRotate
                   words={[t.hero.nationality, t.hero.arraigo, t.hero.familyReunification]}
-                  className="text-5xl md:text-7xl lg:text-8xl font-serif font-medium text-primary tracking-tight drop-shadow-sm leading-[1.1] py-2"
+                  className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif font-medium text-primary tracking-tight drop-shadow-sm leading-[1.1] py-2"
                 />
               </div>
             </div>
