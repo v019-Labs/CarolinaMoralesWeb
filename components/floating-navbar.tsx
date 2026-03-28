@@ -10,6 +10,7 @@ import { useTranslation } from "@/lib/i18n"
 import { LanguageSelector } from "./language-selector"
 import { ShinyButton } from "./ui/shiny-button"
 import { AnimatePresence, motion, useScroll, useMotionValueEvent, useSpring, useMotionValue } from "motion/react"
+import { isChristmasTime } from "@/lib/utils-theme"
 
 /** 
  * Magnetic component for premium hover interaction
@@ -69,6 +70,11 @@ export function FloatingNavbar() {
   const router = useRouter()
   const [isOpen, setIsOpen] = useState(false)
   const [activeSection, setActiveSection] = useState("")
+  const [isChristmas, setIsChristmas] = useState(false)
+
+  useEffect(() => {
+    setIsChristmas(isChristmasTime())
+  }, [])
 
 
   // Scroll state
@@ -177,11 +183,29 @@ export function FloatingNavbar() {
                   width={140}
                   height={40}
                   className={cn(
-                    "transition-all duration-700 w-auto object-contain brightness-100 group-hover/logo:scale-105 active:scale-95",
+                    "transition-all duration-700 w-auto object-contain brightness-100 group-hover/logo:scale-105 active:scale-95 relative z-10",
                     isScrolled ? "h-5 md:h-6" : "h-7 md:h-9"
                   )}
                   priority
                 />
+                
+                {/* Christmas Decoration Overlay */}
+                <AnimatePresence>
+                  {isChristmas && (
+                    <motion.div
+                      initial={{ scale: 0, opacity: 0, rotate: -20 }}
+                      animate={{ scale: 1, opacity: 1, rotate: 0 }}
+                      className="absolute -top-1 -right-3 size-8 md:size-10 z-20 pointer-events-none"
+                    >
+                      <Image 
+                        src="/decorations/christmas-bow.png" 
+                        alt="Christmas Bow"
+                        fill
+                        className="object-contain"
+                      />
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </Link>
             </Magnetic>
           </div>

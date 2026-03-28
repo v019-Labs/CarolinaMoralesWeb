@@ -2,10 +2,18 @@
 
 "use client"
 
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import { isChristmasTime } from "@/lib/utils-theme"
+import Image from "next/image"
 
 export function LuxuryGoldButton() {
   const [isClicked, setIsClicked] = useState(false)
+  const [isChristmas, setIsChristmas] = useState(false)
+
+  useEffect(() => {
+    setIsChristmas(isChristmasTime())
+  }, [])
 
   const handleClick = () => {
     if (isClicked) return
@@ -66,6 +74,24 @@ export function LuxuryGoldButton() {
           </div>
         </div>
       </button>
+
+      {/* Christmas Decoration Overlay */}
+      <AnimatePresence>
+        {isChristmas && (
+          <motion.div
+            initial={{ scale: 0, opacity: 0, rotate: -20 }}
+            animate={{ scale: 1, opacity: 1, rotate: -15 }}
+            className="absolute -top-4 -right-4 size-14 z-[20] pointer-events-none drop-shadow-lg"
+          >
+            <Image 
+              src="/decorations/christmas-bow.png" 
+              alt="Christmas Bow"
+              fill
+              className="object-contain"
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <style jsx global>{`
         .luxury-button-wrapper .button {

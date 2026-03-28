@@ -8,11 +8,18 @@ import { useTranslation } from "@/lib/i18n"
 import { WordRotate } from "@/components/ui/word-rotate"
 import { ShinyButton } from "@/components/ui/shiny-button"
 import { LuxuryGoldButton } from "@/components/ui/luxury-gold-button"
+import { isChristmasTime } from "@/lib/utils-theme"
+import { AnimatePresence } from "framer-motion"
 
 export function IntroHero() {
   const { t } = useTranslation()
   const containerRef = useRef<HTMLDivElement>(null)
   const [isMobile, setIsMobile] = useState(false)
+  const [isChristmas, setIsChristmas] = useState(false)
+
+  useEffect(() => {
+    setIsChristmas(isChristmasTime())
+  }, [])
 
   // Check for mobile on mount and resize
   useEffect(() => {
@@ -193,6 +200,43 @@ export function IntroHero() {
               {/* Subtle inner shadow and gradient */}
               <div className="absolute inset-0 shadow-[inset_0_0_40px_rgba(0,0,0,0.1)] pointer-events-none" />
               <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-black/40 to-transparent opacity-60" />
+
+              {/* Christmas Decorations */}
+              <AnimatePresence>
+                {isChristmas && (
+                  <>
+                    {/* Top-Right Corner */}
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: 0.8 }}
+                      className="absolute -top-4 -right-4 size-32 z-30 pointer-events-none rotate-90"
+                    >
+                      <Image 
+                        src="/decorations/christmas-corner.png" 
+                        alt="Decoración"
+                        fill
+                        className="object-contain"
+                      />
+                    </motion.div>
+                    
+                    {/* Bottom-Left Corner */}
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: 1 }}
+                      className="absolute -bottom-6 -left-6 size-40 z-30 pointer-events-none rotate-[-90deg] scale-x-[-1]"
+                    >
+                      <Image 
+                        src="/decorations/christmas-corner.png" 
+                        alt="Decoración"
+                        fill
+                        className="object-contain"
+                      />
+                    </motion.div>
+                  </>
+                )}
+              </AnimatePresence>
             </div>
           </motion.div>
 

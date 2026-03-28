@@ -10,6 +10,7 @@ import { Locale, defaultLocale, locales } from "@/lib/translations";
 import "./globals.css";
 import { ChatWidget, CookieConsent } from "@/components/DynamicComponents"; // Importar los componentes dinámicos
 import { HolyWeekToast } from "@/components/holy-week-toast";
+import { ChristmasDecorations } from "@/components/christmas-decorations";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -118,7 +119,10 @@ export default async function RootLayout({
       <body
         className={`${playfair.variable} ${inter.variable} ${dancingScript.variable} ${greatVibes.variable} font-sans antialiased`}
       >
-        <TranslationProvider initialLocale={locale}>{children}</TranslationProvider>
+        <TranslationProvider initialLocale={locale}>
+          <ChristmasDecorations />
+          {children}
+        </TranslationProvider>
         <CookieConsent />
         <ChatWidget />
         <Analytics />
