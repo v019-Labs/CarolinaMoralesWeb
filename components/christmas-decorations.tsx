@@ -22,7 +22,7 @@ export function ChristmasDecorations() {
   return (
     <>
       {/* Repeating Top Garlands (Above everything) */}
-      <div className="fixed top-0 left-0 right-0 z-[1000] pointer-events-none w-full select-none flex justify-center overflow-hidden h-[12vh] md:h-[18vh] items-start">
+      <div className="fixed top-0 left-0 right-0 z-[1000] pointer-events-none w-full select-none flex justify-center overflow-hidden h-[50px] md:h-[65px] items-start">
         {[...Array(8)].map((_, i) => (
           <motion.div 
             key={i}
