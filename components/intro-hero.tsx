@@ -3,6 +3,7 @@
 import { useRef, useState, useEffect } from "react"
 import Image from "next/image"
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion"
+import { cn } from "@/lib/utils"
 import { useTranslation } from "@/lib/i18n"
 import { WordRotate } from "@/components/ui/word-rotate"
 import { ShinyButton } from "@/components/ui/shiny-button"
@@ -15,7 +16,7 @@ export function IntroHero() {
 
   // Check for mobile on mount and resize
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768)
+    const checkMobile = () => setIsMobile(window.innerWidth < 1024)
     checkMobile()
     window.addEventListener("resize", checkMobile)
     return () => window.removeEventListener("resize", checkMobile)
@@ -61,7 +62,7 @@ export function IntroHero() {
       ref={containerRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="min-h-screen flex items-center justify-center relative overflow-hidden px-4 md:px-8 pt-24 md:pt-0 bg-[#fcfbf9]"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden px-4 md:px-8 pt-24 lg:pt-0 bg-[#fcfbf9]"
       style={{ perspective: isMobile ? "none" : "1000px" }}
     >
       {/* Texture Overlay - Inline noise for better performance */}
@@ -100,33 +101,31 @@ export function IntroHero() {
             >
               <div className="flex items-center gap-3 lg:justify-start justify-center">
                 <div className="h-[1px] w-12 bg-primary/40 hidden lg:block" />
-                <span className="text-primary/80 text-xs md:text-sm font-bold uppercase tracking-[0.25em] font-sans">
+                <span className="text-primary/80 text-[10px] md:text-xs font-bold uppercase tracking-[0.25em] font-sans">
                   Abogada de Extranjería
                 </span>
               </div>
             </motion.div>
 
-            <div className="space-y-2">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground font-serif italic tracking-wide">
+            <div className="space-y-1">
+              <h2 className="text-base md:text-lg lg:text-xl text-muted-foreground font-serif italic tracking-wide">
                 Especializada en
               </h2>
-              <div className="h-[100px] sm:h-[120px] md:h-[160px] lg:h-[220px] flex lg:block justify-center lg:justify-start items-start">
+              <div className="h-[50px] sm:h-[70px] md:h-[80px] lg:h-[120px] flex lg:block justify-center lg:justify-start items-start">
                 <WordRotate
                   words={[t.hero.nationality, t.hero.arraigo, t.hero.familyReunification]}
-                  className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-medium text-primary tracking-tight drop-shadow-sm leading-[1.1] py-2"
+                  className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-serif font-medium text-primary tracking-tight drop-shadow-sm leading-[1.1] py-2"
                 />
               </div>
             </div>
 
-            <p className="text-muted-foreground/80 md:text-lg lg:text-xl max-w-lg mx-auto lg:mx-0 font-light leading-relaxed font-sans">
+            <p className="text-muted-foreground/80 text-xs md:text-sm lg:text-base max-w-lg mx-auto lg:mx-0 font-light leading-relaxed font-sans">
               Experiencia y compromiso para resolver tus trámites de nacionalidad y residencia con éxito.
             </p>
           </div>
 
-          <div className="pt-4 flex flex-col sm:flex-row gap-5 justify-center items-center">
+          <div className="pt-2 flex flex-col sm:flex-row gap-4 justify-center items-center">
             <LuxuryGoldButton />
-
-
           </div>
         </motion.div>
 
@@ -144,22 +143,22 @@ export function IntroHero() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] rounded-[45%] border border-primary/10 -rotate-6 -z-10" />
 
           <motion.div
-            className="relative w-full max-w-[320px] sm:max-w-[400px] lg:max-w-[440px] xl:max-w-[480px] mx-auto aspect-[3/4] md:aspect-[4/5] rounded-[2rem] shadow-2xl shadow-primary/15"
+            className="relative w-full max-w-[220px] sm:max-w-[280px] lg:max-w-[320px] xl:max-w-[340px] mx-auto aspect-[3/4] md:aspect-[4/5] rounded-[1.5rem] shadow-2xl shadow-primary/15"
             style={{ transform: isMobile ? "none" : "translateZ(20px)" }}
             whileHover={{ scale: 1.01 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
           >
             {/* Double Border Frame Effect */}
-            <div className="absolute -inset-3 border border-primary/10 rounded-[2.5rem] z-0" />
-            <div className="absolute -inset-1 border border-white/50 rounded-[2.2rem] z-10" />
+            <div className="absolute -inset-3 border border-primary/10 rounded-[2rem] z-0" />
+            <div className="absolute -inset-1 border border-white/50 rounded-[1.8rem] z-10" />
 
-            <div className="relative h-full w-full rounded-[2rem] overflow-hidden bg-white z-20">
+            <div className="relative h-full w-full rounded-[1.5rem] overflow-hidden bg-white z-20">
               <Image
                 src="/images/Nueva.jpg"
                 alt="Carolina Morales Abogada"
                 fill
                 className="object-cover"
-                sizes="(max-width: 768px) 100vw, 500px"
+                sizes="(max-width: 1024px) 100vw, 400px"
                 priority
                 loading="eager"
                 fetchPriority="high"

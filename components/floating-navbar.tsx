@@ -138,10 +138,10 @@ export function FloatingNavbar() {
       <div className="fixed top-0 left-0 right-0 z-[100] flex justify-center py-4 px-4 pointer-events-none">
         <motion.nav
           className={cn(
-            "pointer-events-auto flex items-center justify-between transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] relative group/nav",
+            "pointer-events-auto flex items-center transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] relative group/nav",
             isScrolled
-              ? "w-full max-w-6xl bg-white/90 dark:bg-black/90 backdrop-blur-2xl border border-black/10 dark:border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.05)] rounded-full py-2.5 px-8"
-              : "w-full max-w-7xl bg-transparent border-transparent py-4 px-2"
+              ? "w-full max-w-5xl bg-white/90 dark:bg-black/90 backdrop-blur-2xl border border-black/10 dark:border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.05)] rounded-full py-2 px-6"
+              : "w-full max-w-6xl bg-transparent border-transparent py-4 px-2"
           )}
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -153,7 +153,7 @@ export function FloatingNavbar() {
           />
 
           {/* 1. Logo Section */}
-          <div className="flex-1 flex items-center">
+          <div className="flex-none flex items-center">
             <Magnetic>
               <Link
                 href="/"
@@ -163,11 +163,11 @@ export function FloatingNavbar() {
                 <Image
                   src="/logo.png"
                   alt="Carolina Morales Abogada"
-                  width={160}
-                  height={50}
+                  width={140}
+                  height={40}
                   className={cn(
                     "transition-all duration-700 w-auto object-contain brightness-100 group-hover/logo:scale-105 active:scale-95",
-                    isScrolled ? "h-6 md:h-7" : "h-11 md:h-13"
+                    isScrolled ? "h-5 md:h-6" : "h-7 md:h-9"
                   )}
                   priority
                 />
@@ -176,7 +176,7 @@ export function FloatingNavbar() {
           </div>
 
           {/* 2. Navigation Links (Center) */}
-          <div className="hidden xl:flex items-center justify-center flex-[1.8] z-10 px-4">
+          <div className="hidden xl:flex items-center justify-center flex-1 z-10 px-2 lg:px-4">
             <div className="flex items-center gap-0.5 p-1 rounded-full bg-black/[0.03] dark:bg-white/[0.05] border border-black/5 dark:border-white/10 backdrop-blur-3xl relative">
               {navLinks.map((link) => {
                 const isActive = activeSection === link.id || (pathname === link.href && !activeSection && link.id === "inicio")
@@ -185,7 +185,7 @@ export function FloatingNavbar() {
                     key={link.href}
                     href={link.href}
                     onClick={(e) => handleNavClick(e, link.href)}
-                    className="relative px-3 py-2 text-[10px] font-bold uppercase tracking-[0.2em] transition-all duration-300 rounded-full whitespace-nowrap font-inter group/link text-foreground/60 hover:text-foreground"
+                    className="relative px-2 py-2 text-[9px] font-bold uppercase tracking-[0.1em] transition-all duration-300 rounded-full whitespace-nowrap font-inter group/link text-foreground/60 hover:text-foreground"
                   >
                     {link.label}
                   </Link>
@@ -195,8 +195,8 @@ export function FloatingNavbar() {
           </div>
 
           {/* 3. CTA & Language Section */}
-          <div className="flex-1 flex items-center justify-end gap-3 translate-z-0 z-10">
-            <div className="hidden xl:flex items-center gap-2">
+          <div className="flex-none flex items-center justify-end gap-2 sm:gap-4 translate-z-0 z-10">
+            <div className="hidden xl:flex items-center gap-2 scale-90 origin-right">
               <LanguageSelector />
             </div>
 
@@ -204,7 +204,7 @@ export function FloatingNavbar() {
               <Link
                 href="https://wa.me/34651465005"
                 target="_blank"
-                className="relative cursor-pointer rounded-2xl px-5 py-2.5 font-bold backdrop-blur-3xl transition-all duration-500 ease-in-out hover:shadow-[0_10px_30px_-5px_color-mix(in_srgb,var(--primary),transparent_80%)] bg-white/5 dark:bg-white/5 overflow-hidden border border-black/5 dark:border-white/10 hover:border-primary/20 text-[10px] font-black uppercase tracking-[0.3em] font-inter text-foreground/60 hover:text-foreground whitespace-nowrap inline-flex items-center justify-center"
+                className="relative cursor-pointer rounded-2xl px-3 py-2 font-bold backdrop-blur-3xl transition-all duration-500 ease-in-out hover:shadow-[0_10px_30px_-5px_color-mix(in_srgb,var(--primary),transparent_80%)] bg-white/5 dark:bg-white/5 overflow-hidden border border-black/5 dark:border-white/10 hover:border-primary/20 text-[9px] font-black uppercase tracking-[0.1em] font-inter text-foreground/60 hover:text-foreground whitespace-nowrap inline-flex items-center justify-center"
               >
                 {t.nav.bookAppointment}
               </Link>
@@ -212,7 +212,7 @@ export function FloatingNavbar() {
 
             {/* Mobile Toggle */}
             <button
-              className="xl:hidden p-3.5 rounded-2xl bg-primary/10 text-primary hover:bg-primary/20 transition-all active:scale-95 group relative border border-primary/20"
+              className="xl:hidden p-3 rounded-2xl bg-primary/10 text-primary hover:bg-primary/20 transition-all active:scale-95 group relative border border-primary/20"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
             >
@@ -221,14 +221,14 @@ export function FloatingNavbar() {
                   animate={{ rotate: isOpen ? 90 : 0, opacity: isOpen ? 0 : 1 }}
                   className="absolute inset-0 flex items-center justify-center"
                 >
-                  <Menu size={22} />
+                  <Menu size={20} />
                 </motion.div>
                 <motion.div
                   initial={{ rotate: -90, opacity: 0 }}
                   animate={{ rotate: isOpen ? 0 : -90, opacity: isOpen ? 1 : 0 }}
                   className="absolute inset-0 flex items-center justify-center"
                 >
-                  <X size={22} />
+                  <X size={20} />
                 </motion.div>
               </div>
             </button>

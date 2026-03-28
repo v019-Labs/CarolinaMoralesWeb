@@ -18,7 +18,7 @@ const ReviewCard = ({
   initial: string
 }) => {
   return (
-    <div className="w-[450px] mx-6 group relative p-8 bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-md border border-primary/15 rounded-3xl hover:shadow-xl hover:shadow-primary/20 hover:border-primary/40 transition-all duration-500 ease-out flex flex-col justify-between h-full">
+    <div className="w-[360px] sm:w-[380px] mx-4 sm:mx-6 group relative p-6 sm:p-8 bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-md border border-primary/15 rounded-3xl hover:shadow-xl hover:shadow-primary/20 hover:border-primary/40 transition-all duration-500 ease-out flex flex-col justify-between h-full">
       <div className="absolute top-6 right-6 opacity-10 group-hover:opacity-20 transition-opacity">
         <Quote className="w-20 h-20 text-primary" />
       </div>
@@ -33,16 +33,16 @@ const ReviewCard = ({
           ))}
         </div>
 
-        <p className="text-lg text-foreground leading-relaxed relative z-10 line-clamp-6">{text}</p>
+        <p className="text-base text-foreground leading-relaxed relative z-10 line-clamp-6">{text}</p>
       </div>
 
       <div className="flex items-center gap-4 pt-6 border-t-2 border-primary/20 mt-6 text-left">
-        <div className="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-primary to-accent rounded-full text-primary-foreground text-xl font-bold group-hover:scale-105 transition-transform duration-300 shadow-lg shadow-primary/20 shrink-0">
+        <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-full text-primary-foreground text-lg font-bold group-hover:scale-105 transition-transform duration-300 shadow-lg shadow-primary/20 shrink-0">
           {initial}
         </div>
         <div>
-          <div className="font-bold text-foreground text-lg">{name}</div>
-          <div className="text-sm text-primary font-medium">{caseType}</div>
+          <div className="font-bold text-foreground text-base">{name}</div>
+          <div className="text-xs text-primary font-medium">{caseType}</div>
         </div>
       </div>
     </div>
@@ -84,24 +84,24 @@ export function ReviewsSection() {
   ]
 
   return (
-    <section id="resenas" className="py-32 relative overflow-hidden">
+    <section id="resenas" className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <div
-          className="absolute bottom-10 right-1/4 w-[500px] h-[500px] bg-accent/15 rounded-full blur-[120px] animate-glow"
+          className="absolute bottom-10 right-1/4 w-[400px] h-[400px] bg-accent/10 rounded-full blur-[120px] animate-glow"
         />
         <div
-          className="absolute top-20 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[100px] animate-pulse"
+          className="absolute top-20 left-1/4 w-80 h-80 bg-primary/5 rounded-full blur-[100px] animate-pulse"
         />
       </div>
 
-      <div className="mx-auto max-w-[1920px]">
-        <div className="text-center space-y-6 mb-20 animate-slide-in-up">
-          <h2 className="text-6xl md:text-7xl font-bold text-balance leading-tight">
+      <div className="mx-auto max-w-[1600px]">
+        <div className="text-center space-y-4 mb-16 animate-slide-in-up">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-balance leading-tight">
             {t.reviews.title}{" "}
-            <span className="font-vibes text-primary drop-shadow-[0_0_25px_rgba(164,144,107,0.5)]">{t.reviews.clients}</span>
+            <span className="font-vibes text-primary drop-shadow-[0_0_20px_rgba(164,144,107,0.4)]">{t.reviews.clients}</span>
           </h2>
-          <div className="w-40 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto" />
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
+          <div className="w-32 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto" />
+          <p className="text-base text-muted-foreground max-w-xl mx-auto text-pretty leading-relaxed">
             {t.reviews.subtitle}
           </p>
         </div>
