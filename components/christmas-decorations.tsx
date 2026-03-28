@@ -53,7 +53,7 @@ export function ChristmasDecorations() {
                 delay: i * 0.04, 
                 ease: [0.23, 1, 0.32, 1] 
               }}
-              className="relative flex-shrink-0 w-[14%] min-w-[240px] h-full -mx-16 mix-blend-multiply"
+              className="relative flex-shrink-0 w-[14%] min-w-[240px] h-full -mx-10 mix-blend-multiply"
             >
               <Image 
                 src="/decorations/guinarla.png"

@@ -152,7 +152,7 @@ export function FloatingNavbar() {
 
   return (
     <>
-      <div className={cn("fixed left-0 right-0 z-[100] flex justify-center py-4 px-4 pointer-events-none", isChristmas ? "top-[65px] md:top-[80px]" : "top-0")}>
+      <div className={cn("fixed left-0 right-0 z-[100] flex justify-center py-4 px-4 pointer-events-none", isChristmas ? "top-[55px] md:top-[68px]" : "top-0")}>
         <motion.nav
           className={cn(
             "pointer-events-auto flex items-center transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] relative group/nav",
