@@ -22,14 +22,29 @@ export function ChristmasDecorations() {
     const checkIntro = () => {
       const sessionSeen = sessionStorage.getItem("introSeen") === "true"
       const cookieSeen = document.cookie.includes("intro_seen=true")
-      setIntroComplete(sessionSeen || cookieSeen)
+      return sessionSeen || cookieSeen
     }
 
-    checkIntro()
+    // If already seen (returning visitor), show immediately
+    if (checkIntro()) {
+      setIntroComplete(true)
+      return
+    }
 
-    // Poll briefly to catch when intro completes (it sets sessionStorage)
-    const interval = setInterval(checkIntro, 500)
-    return () => clearInterval(interval)
+    // Otherwise poll to catch when intro completes — but with a delay
+    // so garlands never flash during the WebIntro animation
+    const startDelay = setTimeout(() => {
+      const interval = setInterval(() => {
+        if (checkIntro()) {
+          setIntroComplete(true)
+          clearInterval(interval)
+        }
+      }, 500)
+      // Cleanup interval on unmount
+      return () => clearInterval(interval)
+    }, 3000) // Wait 3s before even starting to poll (intro takes ~2.6s)
+
+    return () => clearTimeout(startDelay)
   }, [])
 
   if (!isActive) return null
@@ -41,7 +56,7 @@ export function ChristmasDecorations() {
           initial={{ y: -80, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
-          className="fixed -top-3 left-0 right-0 z-[90] pointer-events-none w-full select-none flex justify-center overflow-hidden h-[110px] md:h-[130px] items-start"
+          className="fixed -top-8 left-0 right-0 z-[90] pointer-events-none w-full select-none flex justify-center overflow-hidden h-[110px] md:h-[130px] items-start"
         >
           {[...Array(14)].map((_, i) => (
             <motion.div 
@@ -69,3 +84,4 @@ export function ChristmasDecorations() {
     </AnimatePresence>
   )
 }
+
