@@ -5,7 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
 import { cn } from "@/lib/utils"
-import { Menu, X } from "lucide-react"
+import { Menu, X, Sparkles } from "lucide-react"
 import { useTranslation } from "@/lib/i18n"
 import { LanguageSelector } from "./language-selector"
 import { ShinyButton } from "./ui/shiny-button"
@@ -194,14 +194,12 @@ export function FloatingNavbar() {
                 />
               </Link>
             </Magnetic>
-            {/* Christmas bow next to logo */}
+            {/* Christmas subtle sparkles next to logo */}
             {isChristmas && (
-              <div className="relative -ml-1 w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 flex-shrink-0 -mt-1">
-                <Image
-                  src="/decorations/christmas-bow.png"
-                  alt=""
-                  fill
-                  className="object-contain drop-shadow-sm"
+              <div className="relative ml-1 w-5 h-5 md:w-6 md:h-6 flex-shrink-0 text-[#8B6508] dark:text-[#D4AF37] animate-pulse">
+                <Sparkles
+                  className="w-full h-full stroke-[1.5]"
+                  style={{ filter: "drop-shadow(0 2px 4px rgba(139,101,8,0.3))" }}
                 />
               </div>
             )}

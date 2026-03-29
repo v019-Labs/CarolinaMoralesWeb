@@ -215,6 +215,43 @@ export function IntroHero() {
               <div className="absolute inset-0 shadow-[inset_0_0_40px_rgba(0,0,0,0.1)] pointer-events-none" />
               <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-black/40 to-transparent opacity-60" />
             </div>
+
+            {/* Christmas Baubles hanging from the frame corners */}
+            {isChristmas && (
+              <>
+                {/* Left Bauble */}
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  className="absolute -top-4 -left-6 sm:-left-8 z-30 pointer-events-none origin-top"
+                  style={{ animation: 'swing 4s ease-in-out infinite alternate' }}
+                >
+                  <div className="w-[1px] h-8 sm:h-12 bg-gradient-to-b from-[#D4AF37]/80 to-yellow-600/50 mx-auto" />
+                  <div className="w-8 h-8 md:w-10 md:h-10 rounded-full relative shadow-[0_5px_15px_rgba(184,134,11,0.5)]"
+                       style={{ background: 'radial-gradient(circle at 30% 30%, #FFF9C4, #D4AF37 40%, #8B6508)' }}>
+                    <div className="absolute top-1 left-2 w-2 h-2 bg-white/70 rounded-full blur-[1px]" />
+                    <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-2 bg-gradient-to-r from-yellow-300 to-yellow-600 rounded-sm" />
+                  </div>
+                </motion.div>
+
+                {/* Right Bauble (Red) */}
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                  className="absolute -top-2 -right-4 sm:-right-6 z-30 pointer-events-none origin-top"
+                  style={{ animation: 'swing 3.5s ease-in-out infinite alternate-reverse' }}
+                >
+                  <div className="w-[1px] h-6 sm:h-10 bg-gradient-to-b from-[#C62828]/80 to-red-600/50 mx-auto" />
+                  <div className="w-6 h-6 md:w-8 md:h-8 rounded-full relative shadow-[0_5px_15px_rgba(139,0,0,0.5)]"
+                       style={{ background: 'radial-gradient(circle at 30% 30%, #FFCDD2, #C62828 40%, #5C0000)' }}>
+                    <div className="absolute top-1 left-1.5 w-1.5 h-1.5 bg-white/70 rounded-full blur-[1px]" />
+                    <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-2 h-1.5 bg-gradient-to-r from-yellow-300 to-yellow-600 rounded-sm" />
+                  </div>
+                </motion.div>
+              </>
+            )}
           </motion.div>
 
           {/* Organic blur shapes */}
