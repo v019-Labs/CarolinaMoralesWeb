@@ -8,7 +8,7 @@ import { useTranslation } from "@/lib/i18n"
 import { WordRotate } from "@/components/ui/word-rotate"
 import { ShinyButton } from "@/components/ui/shiny-button"
 import { LuxuryGoldButton } from "@/components/ui/luxury-gold-button"
-import { DotLottieReact } from "@lottiefiles/dotlottie-react"
+import Script from "next/script"
 import { AnimatePresence } from "framer-motion"
 import { isChristmasTime } from "@/lib/utils-theme"
 
@@ -252,21 +252,19 @@ export function IntroHero() {
             )}
           </motion.div>
 
-          {/* Animated Christmas Wreath (Lottie) */}
+          {/* Animated Christmas Wreath (Lottie via CDN Web Component) */}
           {isChristmas && (
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.8 }} 
-              animate={{ opacity: 1, scale: 1 }} 
-              transition={{ duration: 1, delay: 0.6 }} 
-              className="absolute -top-12 -right-12 md:-top-16 md:-right-16 z-30 w-32 h-32 md:w-40 md:h-40 pointer-events-none"
-              style={{ filter: "drop-shadow(0 10px 15px rgba(0,0,0,0.2))" }}
-            >
-              <DotLottieReact
-                src="/decorations/Christmas wreath.lottie"
-                loop
-                autoplay
+            <>
+              <Script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" strategy="lazyOnload" type="module" />
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.8 }} 
+                animate={{ opacity: 1, scale: 1 }} 
+                transition={{ duration: 1, delay: 0.6 }} 
+                className="absolute -top-12 -right-12 md:-top-16 md:-right-16 z-30 w-32 h-32 md:w-40 md:h-40 pointer-events-none"
+                style={{ filter: "drop-shadow(0 10px 15px rgba(0,0,0,0.2))" }}
+                dangerouslySetInnerHTML={{ __html: '<dotlottie-player src="/decorations/Christmas wreath.lottie" background="transparent" speed="1" style="width: 100%; height: 100%;" loop autoplay></dotlottie-player>' }}
               />
-            </motion.div>
+            </>
           )}
 
           {/* Organic blur shapes */}
