@@ -188,10 +188,19 @@ export function FloatingNavbar() {
                   )}
                   priority
                 />
-
-                {/* Christmas Decoration Overlay Removed */}
               </Link>
             </Magnetic>
+            {/* Christmas bow next to logo */}
+            {isChristmas && (
+              <div className="relative -ml-1 w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 flex-shrink-0 -mt-1">
+                <Image
+                  src="/decorations/christmas-bow.png"
+                  alt=""
+                  fill
+                  className="object-contain drop-shadow-sm"
+                />
+              </div>
+            )}
           </div>
 
           {/* 2. Navigation Links (Center) */}

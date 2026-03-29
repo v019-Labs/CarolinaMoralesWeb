@@ -9,11 +9,17 @@ import { WordRotate } from "@/components/ui/word-rotate"
 import { ShinyButton } from "@/components/ui/shiny-button"
 import { LuxuryGoldButton } from "@/components/ui/luxury-gold-button"
 import { AnimatePresence } from "framer-motion"
+import { isChristmasTime } from "@/lib/utils-theme"
 
 export function IntroHero() {
   const { t } = useTranslation()
   const containerRef = useRef<HTMLDivElement>(null)
   const [isMobile, setIsMobile] = useState(false)
+  const [isChristmas, setIsChristmas] = useState(false)
+
+  useEffect(() => {
+    setIsChristmas(isChristmasTime())
+  }, [])
 
   // Check for mobile on mount and resize
   useEffect(() => {
@@ -168,14 +174,27 @@ export function IntroHero() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] rounded-[45%] border border-primary/10 -rotate-6 -z-10" />
 
           <motion.div
-            className="relative w-full max-w-[220px] sm:max-w-[280px] lg:max-w-[320px] xl:max-w-[340px] mx-auto aspect-[3/4] md:aspect-[4/5] rounded-[1.5rem] shadow-2xl shadow-primary/15"
+            className={cn(
+              "relative w-full max-w-[220px] sm:max-w-[280px] lg:max-w-[320px] xl:max-w-[340px] mx-auto aspect-[3/4] md:aspect-[4/5] rounded-[1.5rem] shadow-2xl shadow-primary/15",
+              isChristmas && "christmas-golden-frame"
+            )}
             style={{ transform: isMobile ? "none" : "translateZ(20px)" }}
             whileHover={{ scale: 1.01 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
           >
             {/* Double Border Frame Effect */}
-            <div className="absolute -inset-3 border border-primary/10 rounded-[2rem] z-0" />
-            <div className="absolute -inset-1 border border-white/50 rounded-[1.8rem] z-10" />
+            <div className={cn(
+              "absolute -inset-3 rounded-[2rem] z-0",
+              isChristmas
+                ? "border-2 border-[#D4AF37]/40 bg-gradient-to-br from-[#D4AF37]/5 to-transparent"
+                : "border border-primary/10"
+            )} />
+            <div className={cn(
+              "absolute -inset-1 rounded-[1.8rem] z-10",
+              isChristmas
+                ? "border-2 border-[#D4AF37]/30"
+                : "border border-white/50"
+            )} />
 
             <div className="relative h-full w-full rounded-[1.5rem] overflow-hidden bg-white z-20">
               <Image
@@ -196,11 +215,50 @@ export function IntroHero() {
               <div className="absolute inset-0 shadow-[inset_0_0_40px_rgba(0,0,0,0.1)] pointer-events-none" />
               <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-black/40 to-transparent opacity-60" />
             </div>
+
+            {/* Christmas corner decorations on the hero image */}
+            {isChristmas && (
+              <>
+                {/* Top-right corner */}
+                <div className="absolute -top-10 -right-10 sm:-top-14 sm:-right-14 md:-top-16 md:-right-16 w-[120px] h-[120px] sm:w-[160px] sm:h-[160px] md:w-[200px] md:h-[200px] z-30 pointer-events-none -scale-x-100">
+                  <Image
+                    src="/decorations/christmas-corner.png"
+                    alt=""
+                    fill
+                    className="object-contain mix-blend-multiply"
+                  />
+                </div>
+                {/* Bottom-right corner (rotated) */}
+                <div className="absolute -bottom-10 -right-10 sm:-bottom-14 sm:-right-14 md:-bottom-16 md:-right-16 w-[120px] h-[120px] sm:w-[160px] sm:h-[160px] md:w-[200px] md:h-[200px] z-30 pointer-events-none rotate-90 -scale-x-100">
+                  <Image
+                    src="/decorations/christmas-corner.png"
+                    alt=""
+                    fill
+                    className="object-contain mix-blend-multiply"
+                  />
+                </div>
+                {/* Bottom-left corner (rotated) */}
+                <div className="absolute -bottom-8 -left-8 sm:-bottom-12 sm:-left-12 md:-bottom-14 md:-left-14 w-[100px] h-[100px] sm:w-[140px] sm:h-[140px] md:w-[170px] md:h-[170px] z-30 pointer-events-none rotate-90">
+                  <Image
+                    src="/decorations/christmas-corner.png"
+                    alt=""
+                    fill
+                    className="object-contain mix-blend-multiply opacity-80"
+                  />
+                </div>
+              </>
+            )}
           </motion.div>
 
           {/* Organic blur shapes */}
-          <div className="absolute -top-12 -right-12 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-20 mix-blend-multiply" />
-          <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-[#d4c5a6]/20 rounded-full blur-3xl -z-20 mix-blend-multiply" />
+          <div className={cn(
+            "absolute -top-12 -right-12 w-64 h-64 rounded-full blur-3xl -z-20 mix-blend-multiply",
+            isChristmas ? "bg-[#D4AF37]/10" : "bg-primary/5"
+          )} />
+          <div className={cn(
+            "absolute -bottom-12 -left-12 w-64 h-64 rounded-full blur-3xl -z-20 mix-blend-multiply",
+            isChristmas ? "bg-[#D4AF37]/8" : "bg-[#d4c5a6]/20"
+          )} />
         </motion.div>
       </div>
     </motion.section>

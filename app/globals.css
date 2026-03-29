@@ -366,6 +366,101 @@
   }
 }
 
+/* Christmas Snow Animation */
+@keyframes snowfall {
+  0% {
+    transform: translateY(-10vh) translateX(0px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(105vh) translateX(30px);
+    opacity: 0;
+  }
+}
+
+@keyframes snowfall-drift {
+  0% {
+    transform: translateY(-10vh) translateX(0px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(50vh) translateX(-20px);
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(105vh) translateX(15px);
+    opacity: 0;
+  }
+}
+
+@keyframes golden-float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-10px) rotate(180deg);
+    opacity: 0.7;
+  }
+}
+
+.snow-particle {
+  position: absolute;
+  top: -10px;
+  background: white;
+  border-radius: 50%;
+  animation: snowfall linear infinite;
+  will-change: transform;
+  pointer-events: none;
+}
+
+.snow-particle-drift {
+  position: absolute;
+  top: -10px;
+  background: white;
+  border-radius: 50%;
+  animation: snowfall-drift linear infinite;
+  will-change: transform;
+  pointer-events: none;
+}
+
+.golden-snowflake {
+  animation: golden-float ease-in-out infinite;
+  will-change: transform, opacity;
+  pointer-events: none;
+}
+
+/* Christmas hero golden frame glow */
+@keyframes golden-glow-pulse {
+  0%, 100% {
+    box-shadow:
+      0 0 20px rgba(212, 175, 55, 0.3),
+      0 0 40px rgba(212, 175, 55, 0.15),
+      inset 0 0 20px rgba(212, 175, 55, 0.1);
+  }
+  50% {
+    box-shadow:
+      0 0 30px rgba(212, 175, 55, 0.5),
+      0 0 60px rgba(212, 175, 55, 0.25),
+      inset 0 0 30px rgba(212, 175, 55, 0.15);
+  }
+}
+
+.christmas-golden-frame {
+  animation: golden-glow-pulse 3s ease-in-out infinite;
+}
+
 /* Accessibility: Disable animations if user prefers reduced motion */
 @media (prefers-reduced-motion: reduce) {
 
