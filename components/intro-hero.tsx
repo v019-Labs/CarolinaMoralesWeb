@@ -215,39 +215,6 @@ export function IntroHero() {
               <div className="absolute inset-0 shadow-[inset_0_0_40px_rgba(0,0,0,0.1)] pointer-events-none" />
               <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-black/40 to-transparent opacity-60" />
             </div>
-
-            {/* Christmas corner decorations on the hero image */}
-            {isChristmas && (
-              <>
-                {/* Top-right corner */}
-                <div className="absolute -top-10 -right-10 sm:-top-14 sm:-right-14 md:-top-16 md:-right-16 w-[120px] h-[120px] sm:w-[160px] sm:h-[160px] md:w-[200px] md:h-[200px] z-30 pointer-events-none -scale-x-100">
-                  <Image
-                    src="/decorations/christmas-corner.png"
-                    alt=""
-                    fill
-                    className="object-contain mix-blend-multiply"
-                  />
-                </div>
-                {/* Bottom-right corner (rotated) */}
-                <div className="absolute -bottom-10 -right-10 sm:-bottom-14 sm:-right-14 md:-bottom-16 md:-right-16 w-[120px] h-[120px] sm:w-[160px] sm:h-[160px] md:w-[200px] md:h-[200px] z-30 pointer-events-none rotate-90 -scale-x-100">
-                  <Image
-                    src="/decorations/christmas-corner.png"
-                    alt=""
-                    fill
-                    className="object-contain mix-blend-multiply"
-                  />
-                </div>
-                {/* Bottom-left corner (rotated) */}
-                <div className="absolute -bottom-8 -left-8 sm:-bottom-12 sm:-left-12 md:-bottom-14 md:-left-14 w-[100px] h-[100px] sm:w-[140px] sm:h-[140px] md:w-[170px] md:h-[170px] z-30 pointer-events-none rotate-90">
-                  <Image
-                    src="/decorations/christmas-corner.png"
-                    alt=""
-                    fill
-                    className="object-contain mix-blend-multiply opacity-80"
-                  />
-                </div>
-              </>
-            )}
           </motion.div>
 
           {/* Organic blur shapes */}
