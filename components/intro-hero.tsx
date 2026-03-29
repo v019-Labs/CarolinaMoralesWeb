@@ -8,7 +8,7 @@ import { useTranslation } from "@/lib/i18n"
 import { WordRotate } from "@/components/ui/word-rotate"
 import { ShinyButton } from "@/components/ui/shiny-button"
 import { LuxuryGoldButton } from "@/components/ui/luxury-gold-button"
-import { AnimatedChristmasTree } from "@/components/ui/animated-christmas-tree"
+import { DotLottieReact } from "@lottiefiles/dotlottie-react"
 import { AnimatePresence } from "framer-motion"
 import { isChristmasTime } from "@/lib/utils-theme"
 
@@ -252,15 +252,20 @@ export function IntroHero() {
             )}
           </motion.div>
 
-          {/* Animated Christmas Tree */}
+          {/* Animated Christmas Wreath (Lottie) */}
           {isChristmas && (
             <motion.div 
               initial={{ opacity: 0, scale: 0.8 }} 
               animate={{ opacity: 1, scale: 1 }} 
               transition={{ duration: 1, delay: 0.6 }} 
-              className="absolute -bottom-10 md:-bottom-16 -left-16 md:-left-24 lg:-left-32 -z-10 scale-75 md:scale-100 lg:scale-[1.15] origin-bottom pointer-events-none"
+              className="absolute -top-12 -right-12 md:-top-16 md:-right-16 z-30 w-32 h-32 md:w-40 md:h-40 pointer-events-none"
+              style={{ filter: "drop-shadow(0 10px 15px rgba(0,0,0,0.2))" }}
             >
-              <AnimatedChristmasTree />
+              <DotLottieReact
+                src="/decorations/Christmas wreath.lottie"
+                loop
+                autoplay
+              />
             </motion.div>
           )}
 
