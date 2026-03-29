@@ -56,7 +56,7 @@ export function ChristmasDecorations() {
           initial={{ y: -80, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
-          className="fixed -top-8 left-0 right-0 z-[90] pointer-events-none w-full select-none flex justify-center overflow-hidden h-[110px] md:h-[130px] items-start"
+          className="absolute -top-8 left-0 right-0 z-[90] pointer-events-none w-full select-none flex justify-center overflow-hidden h-[110px] md:h-[130px] items-start"
         >
           {[...Array(14)].map((_, i) => (
             <motion.div 
