@@ -152,7 +152,13 @@ export function FloatingNavbar() {
 
   return (
     <>
-      <div className="fixed left-0 right-0 z-[100] flex justify-center px-4 pointer-events-none top-0 py-4">
+      <div 
+        className={cn(
+          "fixed left-0 right-0 z-[100] flex justify-center px-4 pointer-events-none transition-all duration-700",
+          // Push navbar down if Christmas garland is present and we haven't scrolled
+          isChristmas && !isScrolled ? "top-8 sm:top-10 md:top-12 lg:top-16" : "top-0 py-4"
+        )}
+      >
         <motion.nav
           className={cn(
             "pointer-events-auto flex items-center transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] relative group/nav",

@@ -75,7 +75,7 @@ export function ChristmasDecorations() {
             initial={{ y: -60, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
-            className="absolute top-0 left-0 right-0 z-[90] pointer-events-none w-full select-none h-[60px] sm:h-[70px] md:h-[85px] lg:h-[100px]"
+            className="absolute top-0 left-0 right-0 z-[110] pointer-events-none w-full select-none h-[60px] sm:h-[70px] md:h-[85px] lg:h-[100px]"
             style={{
               backgroundImage: 'url(/decorations/guinarla.png)',
               backgroundRepeat: 'repeat-x',
