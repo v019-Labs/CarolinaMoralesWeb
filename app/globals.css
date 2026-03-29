@@ -57,6 +57,12 @@
   --christmas-burgundy: #800020;
 }
 
+body.christmas-mode {
+  /* Cambio dinámico del color principal a Rojo Navidad (Burgundy/Crimson) */
+  --primary: oklch(0.45 0.16 25);
+  --ring: oklch(0.45 0.16 25);
+}
+
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
@@ -455,6 +461,11 @@
       0 0 60px rgba(212, 175, 55, 0.25),
       inset 0 0 30px rgba(212, 175, 55, 0.15);
   }
+}
+
+@keyframes swing {
+  0% { transform: rotate(5deg); }
+  100% { transform: rotate(-5deg); }
 }
 
 .christmas-golden-frame {

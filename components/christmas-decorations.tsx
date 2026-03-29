@@ -38,7 +38,14 @@ export function ChristmasDecorations() {
   const [introComplete, setIntroComplete] = useState(false)
 
   useEffect(() => {
-    setIsActive(isChristmasTime())
+    const isXmas = isChristmasTime()
+    setIsActive(isXmas)
+
+    if (isXmas) {
+      document.body.classList.add('christmas-mode')
+    } else {
+      document.body.classList.remove('christmas-mode')
+    }
 
     const checkIntro = () => {
       const sessionSeen = sessionStorage.getItem("introSeen") === "true"
@@ -61,7 +68,10 @@ export function ChristmasDecorations() {
       return () => clearInterval(interval)
     }, 3000)
 
-    return () => clearTimeout(startDelay)
+    return () => {
+      clearTimeout(startDelay)
+      document.body.classList.remove('christmas-mode')
+    }
   }, [])
 
   if (!isActive) return null
@@ -70,6 +80,45 @@ export function ChristmasDecorations() {
     <AnimatePresence>
       {introComplete && (
         <>
+          {/* ===== ANIMATED BAUBLES (Esferas navideñas) ===== */}
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            className="absolute top-0 left-[10%] sm:left-[15%] md:left-[20%] z-50 pointer-events-none origin-top"
+            style={{ animation: 'swing 4s ease-in-out infinite alternate' }}
+          >
+            {/* String */}
+            <div className="w-[1px] h-16 sm:h-24 bg-gradient-to-b from-black/20 to-yellow-600/50 mx-auto" />
+            {/* Bauble */}
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full relative shadow-[0_5px_15px_rgba(184,134,11,0.4)]"
+                 style={{ background: 'radial-gradient(circle at 30% 30%, #FFF9C4, #D4AF37 40%, #8B6508)' }}>
+              {/* Highlight */}
+              <div className="absolute top-1 left-2 w-2 h-2 bg-white/60 rounded-full blur-[1px]" />
+              {/* Cap */}
+              <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-2 bg-gradient-to-r from-yellow-300 to-yellow-600 rounded-sm" />
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.8 }}
+            className="absolute top-0 right-[10%] sm:right-[15%] md:right-[20%] z-50 pointer-events-none origin-top"
+            style={{ animation: 'swing 3.5s ease-in-out infinite alternate-reverse' }}
+          >
+            {/* String */}
+            <div className="w-[1px] h-10 sm:h-16 bg-gradient-to-b from-black/20 to-red-600/50 mx-auto" />
+            {/* Bauble (Red) */}
+            <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full relative shadow-[0_5px_15px_rgba(139,0,0,0.4)]"
+                 style={{ background: 'radial-gradient(circle at 30% 30%, #FFCDD2, #C62828 40%, #5C0000)' }}>
+              {/* Highlight */}
+              <div className="absolute top-1 left-1.5 w-1.5 h-1.5 bg-white/60 rounded-full blur-[1px]" />
+              {/* Cap */}
+              <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-2.5 h-1.5 bg-gradient-to-r from-yellow-300 to-yellow-600 rounded-sm" />
+            </div>
+          </motion.div>
+
           {/* ===== SNOWFALL + GOLDEN FLAKES — fixed overlay ===== */}
           <motion.div
             initial={{ opacity: 0 }}

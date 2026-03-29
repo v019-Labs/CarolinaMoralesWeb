@@ -28,7 +28,7 @@ export function LuxuryGoldButton() {
 
   return (
     <div className="luxury-button-wrapper" onClick={handleClick}>
-      <button className={`button ${isClicked ? "is-clicked" : ""}`}>
+      <button className={`button ${isClicked ? "is-clicked" : ""} ${isChristmas ? "christmas-red-btn" : ""}`}>
         <div className="bg" />
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 342 208" height={208} width={342} className="splash">
           <path strokeLinecap="round" strokeWidth={3} d="M54.1054 99.7837C54.1054 99.7837 40.0984 90.7874 26.6893 97.6362C13.2802 104.485 1.5 97.6362 1.5 97.6362" />
@@ -78,6 +78,14 @@ export function LuxuryGoldButton() {
       {/* Christmas Decoration Overlay Removed */}
 
       <style jsx global>{`
+        .luxury-button-wrapper .button.christmas-red-btn {
+          --gold-100: #FFCDD2;
+          --gold-200: #E53935;
+          --gold-300: #C62828;
+          --gold-400: #8E0000;
+          --gold-500: #5C0000;
+        }
+
         .luxury-button-wrapper .button {
           --white: #fff;
           --gold-100: #FFF9C4;
